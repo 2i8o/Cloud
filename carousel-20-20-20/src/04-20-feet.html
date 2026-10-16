@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .slide { background: var(--white); }
+  .step { top: 112px; right: var(--margin); color: var(--blue); font-size: 34px; font-weight: 600; }
+  .head { top: 160px; right: var(--margin); color: var(--navy); font-size: 104px; font-weight: 700; line-height: 1.15; }
+  .big { top: 290px; right: var(--margin); color: var(--blue); font-size: 210px; font-weight: 700; line-height: 1; }
+  .big .u { font-size: 96px; color: var(--navy); margin-right: 18px; }
+  .eq { top: 540px; right: var(--margin); color: var(--navy); font-size: 50px; font-weight: 600; }
+  .ex { top: 650px; right: var(--margin); color: var(--navy); font-size: 34px; font-weight: 500; line-height: 1.6; opacity: .8; }
+</style></head>
+<body><div class="slide">
+  <svg class="layer" viewBox="0 0 1080 1350">
+    <!-- ground plane in perspective; vanishing point (240, 760) -->
+    <rect x="0" y="760" width="1080" height="590" fill="#5599D9"/>
+    <path d="M240 760 L-260 1350 L560 1350 Z" fill="#FFFFFF" fill-opacity=".22"/>
+    <g fill="#FFFFFF">
+      <path d="M232 790 L238 790 L236 808 L229 808 Z"/>
+      <path d="M215 842 L226 842 L222 872 L208 872 Z"/>
+      <path d="M187 932 L205 932 L198 982 L175 982 Z"/>
+      <path d="M140 1080 L170 1080 L158 1162 L120 1162 Z"/>
+      <path d="M62 1310 L110 1310 L100 1350 L50 1350 Z"/>
+    </g>
+    <line x1="0" y1="760" x2="1080" y2="760" stroke="#0E2A47" stroke-width="4"/>
+    <!-- distant tree on the horizon -->
+    <g transform="translate(150 760)">
+      <rect x="-5" y="-40" width="10" height="40" fill="#0E2A47"/>
+      <circle cx="0" cy="-62" r="30" fill="#0E2A47"/>
+      <circle cx="-20" cy="-48" r="20" fill="#0E2A47"/>
+      <circle cx="20" cy="-48" r="20" fill="#0E2A47"/>
+    </g>
+    <!-- line of sight: eye → tree -->
+    <path d="M760 930 L190 712" stroke="#0E2A47" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 16" fill="none"/>
+    <circle cx="190" cy="712" r="12" fill="#FFFFFF" stroke="#0E2A47" stroke-width="4"/>
+    <!-- viewer seen from behind, right foreground (cropped by canvas) -->
+    <g transform="translate(850 1060) scale(.9)">
+      <path d="M-270 400 L-260 270 C-250 150 -170 100 -70 86 L70 86 C170 100 250 150 260 270 L270 400 Z" fill="#FFFFFF"/>
+      <path d="M-270 400 L-260 270 C-250 150 -170 100 -70 86 L70 86 C170 100 250 150 260 270 L270 400" fill="none" stroke="#0E2A47" stroke-width="5"/>
+      <path d="M-46 30 L46 30 L52 100 L-52 100 Z" fill="#CB9370"/>
+      <ellipse cx="-98" cy="-60" rx="20" ry="32" fill="#CB9370"/>
+      <path d="M0 -190 C78 -190 104 -126 104 -66 C104 0 66 52 0 52 C-66 52 -104 0 -104 -66 C-104 -126 -78 -190 0 -190 Z" fill="#0E2A47"/>
+      <path d="M-66 92 C-30 108 30 108 66 92" stroke="#0E2A47" stroke-opacity=".25" stroke-width="5" fill="none"/>
+    </g>
+  </svg>
+  <div class="abs step">الخطوة الثانية</div>
+  <div class="abs head">باوع على شي بعيد</div>
+  <div class="abs big"><span class="num">20</span><span class="u">قدم</span></div>
+  <div class="abs eq">يعني تقريباً <span class="brush"><span class="num">6</span> متر</span> أو أكثر</div>
+  <div class="abs ex">شباك، شجرة، آخر الشارع… مو الحايط اللي گدامك.</div>
+  <div class="sig" style="right: var(--margin); color: var(--navy);"><span class="dot" style="background:var(--blue)"></span>عباس عبدالمنعم</div>
+  <div class="pager" style="left: var(--margin); color: var(--navy);">04 / 08</div>
+</div></body></html>

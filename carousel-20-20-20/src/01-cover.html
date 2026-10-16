@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .slide { background: var(--blue); }
+  .kicker { top: 104px; right: var(--margin); color: var(--white); font-size: 40px; font-weight: 600; }
+  .kicker::before { content: ""; display: inline-block; width: 46px; height: 6px; border-radius: 3px; background: var(--navy); margin-left: 18px; vertical-align: middle; }
+  .head { top: 168px; right: var(--margin); color: var(--navy); font-size: 128px; font-weight: 700; line-height: 1.12; }
+  .rule { top: 500px; left: var(--margin); color: var(--white); text-align: left; direction: rtl; }
+  .rule .lbl { font-size: 40px; font-weight: 600; display: block; }
+  .rule .n { font-size: 112px; font-weight: 700; line-height: 1; letter-spacing: -2px; }
+  .person { bottom: 0; left: 50%; width: 570px; transform: translateX(-55%); }
+</style></head>
+<body><div class="slide">
+  <svg class="layer" viewBox="0 0 1080 1350">
+    <!-- iris planes: layered solids, cropped by the canvas -->
+    <circle cx="510" cy="1290" r="560" fill="#0E2A47"/>
+    <circle cx="510" cy="1290" r="640" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="3"/>
+    <circle cx="510" cy="1290" r="720" fill="none" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="3"/>
+    <circle cx="510" cy="1290" r="440" fill="none" stroke="#5599D9" stroke-opacity=".35" stroke-width="2"/>
+  </svg>
+  <div class="abs kicker">طلاب السادس وجماعة الموبايل</div>
+  <div class="abs head">عيونك تحتاج<br><span class="brush">استراحة!</span></div>
+  <div class="abs rule"><span class="lbl">قاعدة</span><span class="n num">20-20-20</span></div>
+  <img class="abs person" src="art/person-front.svg" alt="">
+  <div class="sig" style="right: var(--margin); color: var(--white);"><span class="dot" style="background:var(--yellow)"></span>عباس عبدالمنعم</div>
+  <div class="pager" style="left: var(--margin); color: var(--white);">01 / 08</div>
+</div></body></html>
