@@ -2,21 +2,21 @@
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
 <style>
   .slide { background: var(--blue); }
-  .step { top: 112px; right: var(--margin); color: var(--white); font-size: 34px; font-weight: 600; }
+  .step { top: 112px; right: var(--margin); color: var(--navy); font-size: 34px; font-weight: 600; }
   .head { top: 160px; right: var(--margin); color: var(--navy); font-size: 112px; font-weight: 700; line-height: 1.15; }
   .two { top: 300px; left: 40px; color: var(--navy); font-size: 700px; font-weight: 700; line-height: 1; direction: ltr; letter-spacing: -20px; }
   .note { top: 1040px; right: var(--margin); width: 760px; color: var(--navy); font-size: 40px; font-weight: 500; line-height: 1.6; }
-  .note b { color: var(--white); font-weight: 700; }
+  .note b { font-weight: 700; }
 </style></head>
 <body><div class="slide">
   <div class="abs two">2</div>
   <svg class="layer" viewBox="0 0 1080 1350">
     <!-- the "0" of 20 is a clock: 12 → 4 = twenty minutes -->
     <g transform="translate(724 700)">
-      <circle r="300" fill="#0E2A47" fill-opacity=".14"/>
-      <circle r="250" fill="#FFFFFF"/>
-      <path d="M0 0 L0 -228 A228 228 0 0 1 197.45 114 Z" fill="#FFC83D"/>
-      <g stroke="#0E2A47" stroke-linecap="round">
+      <circle style="fill:var(--navy)" r="300" fill-opacity=".14"/>
+      <circle style="fill:var(--white)" r="250"/>
+      <path style="fill:var(--yellow)" d="M0 0 L0 -228 A228 228 0 0 1 197.45 114 Z"/>
+      <g style="stroke:var(--navy)" stroke-linecap="round">
         <line x1="0" y1="-236" x2="0" y2="-206" stroke-width="10"/>
         <line x1="0" y1="236" x2="0" y2="206" stroke-width="10"/>
         <line x1="236" y1="0" x2="206" y2="0" stroke-width="10"/>
@@ -35,15 +35,15 @@
         <line x1="0" y1="0" x2="160" y2="92" stroke-width="16"/>
         <line x1="0" y1="0" x2="-88" y2="-74" stroke-width="20"/>
       </g>
-      <circle r="18" fill="#0E2A47"/>
-      <circle r="7" fill="#FFFFFF"/>
+      <circle style="fill:var(--navy)" r="18"/>
+      <circle style="fill:var(--white)" r="7"/>
       <!-- motion arc outside the dial -->
-      <path d="M0 -276 A276 276 0 0 1 239 138" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 18"/>
+      <path style="stroke:var(--white)" d="M0 -276 A276 276 0 0 1 239 138" fill="none" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 18"/>
     </g>
   </svg>
   <div class="abs step">الخطوة الأولى</div>
   <div class="abs head">كل <span class="num">20</span> دقيقة</div>
-  <div class="abs note">شغّل منبّه بالموبايل، لأن <b>محّد يتذكر</b> وهو غاطس بالدراسة أو بالريلز.</div>
+  <div class="abs note">شغّل منبّه بالموبايل، لأن <b class="brush">محّد يتذكر</b> وهو غاطس بالدراسة أو بالريلز.</div>
   <div class="sig" style="right: var(--margin); color: var(--navy);"><span class="dot" style="background:var(--white)"></span>عباس عبدالمنعم</div>
   <div class="pager" style="left: var(--margin); color: var(--navy);">03 / 08</div>
-</div></body></html>
+</div><script src="shaping.js"></script></body></html>

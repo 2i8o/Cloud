@@ -1,7 +1,7 @@
 // Renders src/*.html → export/*.png at 1080×1350 and builds a contact sheet.
 // Usage: node render.mjs [slide-prefix ...]
 import { createRequire } from 'module';
-import { readdirSync, mkdirSync } from 'fs';
+import { readdirSync, mkdirSync, readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -31,8 +31,37 @@ for (const f of slides) {
     .filter(({ r }) => r.left < 0 || r.top < 0 || r.right > 1080 || r.bottom > 1350)
     .map(({ t, r }) => `${t} [${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.right)},${Math.round(r.bottom)}]`));
   const fontsOk = await page.evaluate(() => document.fonts.check('700 40px "Plex Ar"', 'ع'));
+  // QA: shaping fix applied to every affected word, and never to a lam-alef word
+  const shaping = await page.evaluate(() => {
+    const AFFECTED = /[بتثنيئپ][ً-ْ]*ى/;
+    const issues = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const n = walker.currentNode;
+      if (AFFECTED.test(n.nodeValue) && !n.parentElement.closest('.rlig-off')) issues.push('unwrapped: ' + n.nodeValue.trim());
+    }
+    document.querySelectorAll('.rlig-off').forEach(e => { if (/ل[ً-ْ]*[اأإآ]/.test(e.textContent)) issues.push('lam-alef inside rlig-off: ' + e.textContent); });
+    return issues;
+  });
+  // QA: text blocks that collide with each other
+  const collisions = await page.evaluate(() => {
+    const leaves = [...document.querySelectorAll('.slide .abs, .slide .sig, .slide .pager')]
+      .filter(e => e.textContent.trim() && !e.querySelector('.abs'));
+    const out = [];
+    for (let i = 0; i < leaves.length; i++) for (let j = i + 1; j < leaves.length; j++) {
+      const a = leaves[i].getBoundingClientRect(), b = leaves[j].getBoundingClientRect();
+      if (a.left < b.right - 2 && b.left < a.right - 2 && a.top < b.bottom - 2 && b.top < a.bottom - 2)
+        out.push(`${leaves[i].textContent.trim().slice(0, 14)} × ${leaves[j].textContent.trim().slice(0, 14)}`);
+    }
+    return out;
+  });
+  const hex = (readFileSync(resolve(src, f), 'utf8').match(/#[0-9A-Fa-f]{6}\b/g) || []);
   await page.screenshot({ path: resolve(out, f.replace('.html', '.png')) });
-  console.log(f, fontsOk ? 'font ok' : 'FONT MISSING', overflow.length ? 'OVERFLOW: ' + overflow.join(' | ') : '');
+  console.log(f, fontsOk ? 'font ok' : 'FONT MISSING',
+    overflow.length ? 'OVERFLOW: ' + overflow.join(' | ') : '',
+    shaping.length ? 'SHAPING: ' + shaping.join(' | ') : '',
+    collisions.length ? 'TEXT COLLISION: ' + collisions.join(' | ') : '',
+    hex.length ? 'HARDCODED COLOR: ' + hex.join(' ') : '');
 }
 
 if (!only.length) {
