@@ -53,6 +53,9 @@ svg.layer { position: absolute; inset: 0; width: 1080px; height: 1350px; }
           mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100' preserveAspectRatio='none'><path d='M6 22 C40 10 90 14 140 9 C200 4 260 12 320 7 C350 5 380 9 396 14 L392 30 C396 46 388 62 394 78 C380 90 340 86 300 92 C240 97 170 90 110 95 C70 98 30 94 8 88 C2 70 10 52 3 38 Z'/></svg>") no-repeat center / 100% 100%;
 }
 
+/* Full-height variant: use when the text color equals the background (e.g. navy on navy) */
+.brush.full::before { top: .08em; bottom: -.04em; left: -.18em; right: -.2em; }
+
 /* IBM Plex Sans Arabic 1.101 ships its tooth+alef-maksura ligatures inside `rlig`
    (e.g. تى → glyph uniFC74, which reads as «ق»; نى → uniFC8E, reads as «ف»).
    `rlig` also builds lam-alef (لا), so it must NOT be disabled globally.
