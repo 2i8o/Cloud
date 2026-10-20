@@ -1,0 +1,97 @@
+{
+ "brief": {
+  "subject_terms": [
+   "عيونك",
+   "دموع",
+   "دمعة",
+   "تدمّع",
+   "ناشفة"
+  ],
+  "duration_s": 25,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S91": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "عيونك تدمّع هواية… لأنها ناشفة.",
+   "gloss_en": "Your eyes water a lot... because they are dry.",
+   "mechanism": "M04",
+   "insight_key": "dry-eye-paradox",
+   "tension": "How can dry eyes be watery?",
+   "audience": "Iraqi adults",
+   "first_frame": "Tear streaming from an eye in wind",
+   "continuation": "Reflex tearing",
+   "payoff": "Mechanism",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Dry eye can cause excess tearing",
+     "source": "S91",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Hook gives the answer",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "الدمعة مو ماي بس: ٣ طبقات.",
+   "gloss_en": "A tear isn't just water: three layers.",
+   "mechanism": "M05",
+   "insight_key": "tear-layers",
+   "tension": "What are the layers?",
+   "audience": "Iraqi adults",
+   "first_frame": "Layered animation of tear film",
+   "continuation": "Oil, water, mucus",
+   "payoff": "Roles of each layer",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Tears have oily, watery and mucus layers",
+     "source": "S91",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "List structure",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "عيونك تدمّع وتحرگ؟ يمكن المشكلة بالطبقة الدهنية.",
+   "gloss_en": "Eyes water and burn? Maybe the problem is the oily layer.",
+   "mechanism": "M09",
+   "insight_key": "oily-layer",
+   "tension": "What is the oily layer?",
+   "audience": "Iraqi adults",
+   "first_frame": "Eyelid close-up",
+   "continuation": "Meibomian glands",
+   "payoff": "Evaporative dry eye",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Meibomian gland dysfunction is a leading cause of evaporative dry eye",
+     "source": "S91",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Suggests a cause from symptoms (diagnostic flavour)",
+   "confidence": "likely"
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "brief": {
+  "subject_terms": [
+   "النظارة",
+   "UV",
+   "الشمس"
+  ],
+  "duration_s": 30,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S88": {
+   "access": "partial_text"
+  },
+  "S87": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "النظارة الغامقة بدون UV ممكن تضرك أكثر.",
+   "gloss_en": "Dark sunglasses without UV protection may harm you more.",
+   "mechanism": "M01",
+   "insight_key": "dark-without-uv",
+   "tension": "How could dark be worse?",
+   "audience": "Iraqi adults, hot sunny climate",
+   "first_frame": "Dark lens next to a UV card test (illustrative)",
+   "continuation": "Pupil dilates",
+   "payoff": "Label matters",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Dark glasses without UV filtering may increase risk via larger pupils",
+     "source": "S87",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'may' from a single Q&A",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "ورقة صغيرة على النظارة تهمّك أكثر من سعرها: UV400.",
+   "gloss_en": "A small label on the glasses matters more than the price: UV400.",
+   "mechanism": "M07",
+   "insight_key": "label-over-price",
+   "tension": "What is UV400?",
+   "audience": "Iraqi adults, hot sunny climate",
+   "first_frame": "Label close-up",
+   "continuation": "Standards",
+   "payoff": "How to read the label",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "UV400/100% UV label indicates protection regardless of price",
+     "source": "S88",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Instruction, weak gap",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "عدسات UV اللاصقة تكفي؟ الجواب لا.",
+   "gloss_en": "Are UV contact lenses enough? No.",
+   "mechanism": "M08",
+   "insight_key": "uv-contacts-not-enough",
+   "tension": "What's missing?",
+   "audience": "Iraqi adults, hot sunny climate",
+   "first_frame": "Eye close-up with highlighted unprotected areas",
+   "continuation": "Contacts cover only part",
+   "payoff": "Wear sunglasses",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "UV contact lenses leave surrounding tissue exposed",
+     "source": "S88",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Yes/no question whose answer is in the hook",
+   "confidence": "likely"
+  }
+ ]
+}

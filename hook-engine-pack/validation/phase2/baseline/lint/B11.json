@@ -1,0 +1,102 @@
+{
+ "brief": {
+  "subject_terms": [
+   "الاستجماتزم",
+   "كرة",
+   "عيونك"
+  ],
+  "duration_s": 30,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S84": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "عيونك مثل كرة السلة… لو مثل كرة الرغبي؟",
+   "gloss_en": "Is your eye like a basketball or a rugby ball?",
+   "mechanism": "M06",
+   "insight_key": "eye-shape-analogy",
+   "tension": "What does the shape change?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "A basketball and a rugby ball rotating, light rays overlay",
+   "continuation": "Uneven curvature -> two focal lines",
+   "payoff": "Why astigmatism blurs at all distances",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Astigmatism: cornea or lens shaped like a football rather than a basketball",
+     "source": "S84",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Analogy oversimplifies",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "القراية بضوء خافت أو الجلوس گريب من التلفزيون ما يسبب الاستجماتزم.",
+   "gloss_en": "Reading in dim light or sitting close to the TV does not cause astigmatism.",
+   "mechanism": "M02",
+   "insight_key": "astigmatism-myths",
+   "tension": "So what does?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Child near a TV",
+   "continuation": "AAO myth correction",
+   "payoff": "Real causes: inherited, disease, injury, surgery",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Reading in low light / close TV doesn't cause astigmatism",
+     "source": "S84",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Statement hook, long",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "الاستجماتزم موروث غالباً… مو من الشاشات.",
+   "gloss_en": "Astigmatism is mostly inherited... not from screens.",
+   "mechanism": "M01",
+   "insight_key": "astigmatism-inherited",
+   "tension": "Where does it come from?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Family photo and phone",
+   "continuation": "Risk inherited; doctors don't know why",
+   "payoff": "Causes",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Astigmatism risk is inherited",
+     "source": "S84",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    },
+    {
+     "text": "Screens don't cause it",
+     "source": "S84",
+     "status": "plausible",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'مو من الشاشات' not stated by the source",
+   "confidence": "likely"
+  }
+ ]
+}
