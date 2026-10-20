@@ -1,0 +1,231 @@
+{
+ "brief": {
+  "subject_terms": [
+   "غمّض",
+   "عين",
+   "خنصر",
+   "القمر",
+   "ثقب",
+   "نظرك"
+  ],
+  "duration_s": 30,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S69": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "غمّض عينك اليسار، مدّ إيدك اليمين، وطالع بظفر إبهامك… خنصرك راح يختفي.",
+   "gloss_en": "Close your left eye, extend your right arm, look at your thumbnail... your little finger will vanish.",
+   "mechanism": "M10",
+   "insight_key": "blind-spot-finger-demo",
+   "payoff_key": "where-the-blind-spot-is",
+   "tension": "Why does it vanish?",
+   "audience": "Iraqi 16-45, curious",
+   "first_frame": "Close-up of a hand with spread fingers; the pinky wiggles and fades out of focus (illustrative)",
+   "continuation": "Optic nerve head has no photoreceptors",
+   "payoff": "Where it is and why it is there",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-5",
+     "purpose": "hook + instruction",
+     "new_info": "viewer does the steps",
+     "spoken": "غمّض عينك اليسار، مدّ إيدك اليمين، وطالع بظفر إبهامك… خنصرك راح يختفي."
+    },
+    {
+     "t": "5-12",
+     "purpose": "do it",
+     "new_info": "spread fingers, wiggle the little finger",
+     "spoken": "فرّد أصابعك وحرّك الخنصر… شفته يختفي؟"
+    },
+    {
+     "t": "12-20",
+     "purpose": "why",
+     "new_info": "the optic nerve leaves the retina there; no photoreceptors",
+     "spoken": "هناك العصب البصري يطلع من الشبكية، وماكو خلايا تشوف."
+    },
+    {
+     "t": "20-26",
+     "purpose": "size",
+     "new_info": "about 6 degrees across - room for a dozen moons side by side",
+     "spoken": "حجمه حوالي ٦ درجات — يكفي لـ١٢ قمر بجنب بعض."
+    },
+    {
+     "t": "26-30",
+     "purpose": "close",
+     "new_info": "this is normal anatomy; it differs from a disease finding",
+     "spoken": "هذا تشريح طبيعي موجود عند الكل."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Little finger vanishes at the blind spot when the other eye is closed",
+     "source": "S69",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Now wiggle your little finger. It will fall on your blind spot",
+     "scope": "left eye closed, right arm extended, gaze on thumbnail; Anstis 2010 primer",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Geometry works for the right eye with left closed; reverse for left",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "بكل عين اكو بقعة بدون خلايا مستقبلة… ليش ما تشوفها؟",
+   "gloss_en": "Each eye has a patch without receptors... why don't you see it?",
+   "mechanism": "M04",
+   "insight_key": "brain-fills-in",
+   "payoff_key": "brain-fills-in-the-gap",
+   "tension": "Why is there no visible hole?",
+   "audience": "Iraqi 16-45, curious",
+   "first_frame": "A striped pattern with a gap that visually closes (illustration)",
+   "continuation": "Perceptual filling-in; debated mechanism",
+   "payoff": "What filling-in is and is not known",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "poses the question: Why is there no visible hole? (carried by voice)",
+     "spoken": "بكل عين اكو بقعة بدون خلايا مستقبلة… ليش ما تشوفها؟"
+    },
+    {
+     "t": "3-11",
+     "purpose": "fact",
+     "new_info": "each eye has a spot without photoreceptors",
+     "spoken": "بكل عين اكو بقعة بدون خلايا مستقبلة."
+    },
+    {
+     "t": "11-19",
+     "purpose": "filling-in",
+     "new_info": "the area looks filled with the surrounding colour or texture",
+     "spoken": "الدماغ يعبّيها بلون وملمس اللي حواليها."
+    },
+    {
+     "t": "19-25",
+     "purpose": "debate",
+     "new_info": "how exactly is debated",
+     "spoken": "وكيف يسويها بالضبط لسه نقاش علمي."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close with action",
+     "new_info": "gaps from retinal problems can also be filled in, so routine eye exams matter",
+     "spoken": "وحتى فجوات المرض ممكن تنملأ، لهذا الفحص الدوري مهم."
+    }
+   ],
+   "claims": [
+    {
+     "text": "The blind spot is a retinal region devoid of photoreceptors",
+     "source": "S69",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "a retinal region devoid of photoreceptors",
+     "scope": "Anstis 2010 primer",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Scotomas from retinal damage or glaucoma are also filled in, so patients may not notice",
+     "source": "S69",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "a scotoma is also perceptually filled-in, so effectively that the patient is often not aware",
+     "scope": "primer statement; closing beat only, attributed",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "The closing health line must stay attributed and action-oriented",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "البقعة العمياء بعرض ٦ درجات… تخبّي ١٢ قمر!",
+   "gloss_en": "The blind spot is 6 degrees wide - enough to hide 12 moons!",
+   "mechanism": "M01",
+   "insight_key": "blind-spot-size",
+   "payoff_key": "size-comparison",
+   "tension": "How can something that big go unnoticed?",
+   "audience": "Iraqi 16-45, curious",
+   "first_frame": "12 moons lined up across a circle on a night-sky photograph (illustration)",
+   "continuation": "Size comparison",
+   "payoff": "Scale of the blind spot",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: How can something that big go unnoticed? (carried by frame)",
+     "spoken": "البقعة العمياء بعرض ٦ درجات… تخبّي ١٢ قمر!"
+    },
+    {
+     "t": "4-12",
+     "purpose": "proof by comparison",
+     "new_info": "each moon is ~0.5 degree, so a dozen fit",
+     "spoken": "القمر نص درجة تقريباً، فـ١٢ يكفون."
+    },
+    {
+     "t": "12-20",
+     "purpose": "why unnoticed",
+     "new_info": "the other eye covers the area and the brain fills it in",
+     "spoken": "العين الثانية تغطيها، والدماغ يعبّيها."
+    },
+    {
+     "t": "20-27",
+     "purpose": "check it",
+     "new_info": "try the finger demo from the previous video",
+     "spoken": "جرّب تجربة الخنصر اللي بالفيديو السابق."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "size is normal",
+     "spoken": "وهذا طبيعي عند كل الناس."
+    }
+   ],
+   "claims": [
+    {
+     "text": "The blind spot is about 6 degrees in diameter, large enough to hold a dozen moons",
+     "source": "S69",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "about 6° in diameter — large enough to hold a dozen moons side by side",
+     "scope": "Anstis 2010 primer; a dozen = 12 moons",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Moon size (~0.5 degree) is general knowledge not in the source; script-only",
+   "confidence": "likely"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+# Failure patterns in the v1.0.0 baseline (39 finalists: 30 tuned-on + 9 held-out)
+
+Counts come from `review/review_v1.py` + `review/review_v1_heldout.py` (human-style review by the generating model - bias applies) and from `review/analyze_baseline.py` / `review/lint_vs_review.py` (objective counts). Ranked by frequency.
+
+| # | Pattern | Frequency (baseline) | Where it comes from in the skills | Fix (v1.1) |
+|---|---|---|---|---|
+| 1 | **No curiosity gap**: bare statements, instructions, or conclusions as hooks (e.g. "look far for 20 s", "23 trials, 13k children: lenses slow myopia") | 13/39 flagged NOGAP; curiosity <= 2 in 14/39 (mean curiosity 2.87 on the 10 tuned-on briefs) | hook-writing taxonomy examples for M07/M18 are statements; hook-evaluation had no gap floor | Gap rule + `gap_carrier` + G9; M07/M18 must be rewritten as questions |
+| 2 | **Evidence/scope overreach**: parameter not in any source ("pin-sized"), wrong population (US data presented without scope), source too weak or dated, category shift | SCOPE 11, MISLEAD 6, CITATION 3 of 39 | `verified` meant "a source id exists"; `plausible` allowed in hooks (5/39 hook assertions rested on `plausible`) | Evidence record (quote + scope), assertion needs verified, parameter rule |
+| 3 | **Formulaic retention plans**: all 39 plans had five beats with near-identical splits (0-3/3-10/10-20...); **36/39 ended with an empty "Close"** (no closing line) | 39/39; 36/39 | hook-retention asked for "one honest closing line" but not a written one; no plan format | Beat table with new information; written closing line; linter checks |
+| 4 | **Low originality** (a standard explainer: blue-light myth, "outdoors helps", notation decoding) | originality <= 2 in 12/39; GENERIC flag 8 | idea gate scored novelty but no finalist had to state its own angle | "Angle a standard explainer lacks" in the verdict; RE-ANGLE when absent |
+| 5 | **Weak or abstract first frames** (a caption on a stock shot; filter toggled on/off that shows nothing) | visual <= 2 in 11/39 | visual brief allowed "first frame" as a phrase | Concrete-or-it-doesn't-count rule + parameters from sources |
+| 6 | **Fear-adjacent or diagnostic-flavoured wording** (risk multipliers, "maybe your problem is the oily layer", "the brain hides disease gaps") | DIAG 6/39 | v1.0 forbade diagnosis but not hedged cause-naming or disease words in hooks | G7 symptom-to-cause guard; disease words need attribution and an action |
+| 7 | **Demo presented as the test** ("هذا نص الفحص") and unfilmable demos | MISLEAD (B10-C), UNFILMABLE 1 | the rule existed in prose (hook-visual-design) but was not a gate | G7 + `not_a_test_disclaimer` + E_DEMO_AS_TEST |
+| 8 | **Finalists converge on one takeaway** | DUP 3 (B02) | diversity was by mechanism + insight only | add `payoff_key` (E_PAYOFF_DUP) |
+| 9 | **Confusing hooks** (device-led "what does X do to your eyes?", vague withholding "until a certain moment") | CONFUSING 4 | taxonomy templates | anti-pattern list in hook-writing |
+| 10 | **Overdramatic register** ("تتعطل", "ممنوع") | 2/39 | no verb-strength rule | verb strength must not exceed the source |
+| 11 | **Example anchoring** | one wrong phrase in 21 files | examples reused as fixtures | phrase removed everywhere; rule "re-check parameters, never copy from examples" |
+
+## What the v1.0 linter caught
+Against the 39 frozen baseline finalists the v1.0 `hook_lint.py` flagged **9**; of the **26** finalists the review judged weak (any dimension <= 2 or >= 2 flags) it flagged **8 (31%)**. Its topic-term check (`E_GENERIC`) agreed with the review's GENERIC flag in 3 cases, raised 4 false alarms and missed 5. By flag type the linter found 1/3 CITATION, 1/6 MISLEAD, 2/11 SCOPE, 3/6 DIAG, 4/13 NOGAP (`review/lint_vs_review_output.txt`). **Conclusion: passing the v1.0 automated checks said almost nothing about whether a hook was good.**
+
+## What the first v1.1 draft showed
+Written by the same author after the rules changed: **31 of 39 finalists failed the new linter** (48 errors): 36 empty beats (28 were blank hook-beat fields, 8 were other empty beats, mostly closings), 5 duplicate mechanisms, 5 closing lines under four words, 1 fear verb, 1 unsupported number, 4 single-shape sets. After fixing those, the review of the iteration-1 outputs found **8 further substantive defects the linter cannot see** (wrong anatomical location "in the middle of your vision", observer effect in a self-count demo, a "nap" category shift, hedged cause-naming for the viewer's symptom, a comparator the source does not give, a payoff that needs research not yet done, a hook that assumed unseen context, a mis-set `answer_in_hook`). They were corrected (iteration 2) and are listed in `review/review_v11.py::ITER1_DEFECTS`.

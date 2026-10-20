@@ -10,6 +10,12 @@
   "platform": "instagram_reels"
  },
  "sources": {
+  "S64": {
+   "access": "abstract_only"
+  },
+  "S65": {
+   "access": "partial_text"
+  },
   "S44": {
    "access": "partial_text"
   },
@@ -41,6 +47,7 @@
    "gloss_en": "(gloss)",
    "mechanism": "M02",
    "insight_key": "glasses-dont-weaken",
+   "payoff_key": "glasses-safe",
    "tension": "q",
    "audience": "Iraqi adults 18-40",
    "first_frame": "Parent-and-child glasses shot with the claim on screen",
@@ -48,6 +55,10 @@
    "payoff": "What glasses do and do not change",
    "payoff_answers_gap": true,
    "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
    "scores": {
     "clarity": 5,
     "payoff": 4,
@@ -65,8 +76,43 @@
      "text": "AAO: using glasses will not worsen vision or cause eye disease",
      "source": "S35",
      "status": "verified",
+     "claim_form": "assertion",
      "in_hook": true,
+     "support_quote": "Using your glasses won't worsen your vision or lead to any eye disease",
+     "scope": "AAO myths page 2022 (reviewed 2024); myth 14",
      "needs_professional_review": false
+    }
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "the visual reveal of the key effect",
+     "spoken": "يگولون النظارة تضعّف العين. الأكاديمية الأمريكية لطب العيون تگول: لا."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen",
+     "new_info": "what is being asked and why it matters",
+     "spoken": "ليش يصير هيچ؟"
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "the mechanism that explains the effect",
+     "spoken": "السبب بالضبط هذا."
+    },
+    {
+     "t": "18-25",
+     "purpose": "limit",
+     "new_info": "where the explanation stops and what it does not show",
+     "spoken": "وهذا حده."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close",
+     "new_info": "the practical implication for the viewer",
+     "spoken": "هذا مو تشخيص، بس يفسّر ليش الفحص مهم."
     }
    ],
    "risk": "r",
@@ -78,6 +124,7 @@
    "gloss_en": "(gloss)",
    "mechanism": "M03",
    "insight_key": "blink-rate",
+   "payoff_key": "blink-habit",
    "tension": "q",
    "audience": "Iraqi adults 18-40",
    "first_frame": "Close-up of a phone with a blink counter overlay",
@@ -85,6 +132,10 @@
    "payoff": "A practical break habit",
    "payoff_answers_gap": true,
    "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
    "scores": {
     "clarity": 5,
     "payoff": 4,
@@ -102,8 +153,43 @@
      "text": "AAO: discomfort is linked to reduced blinking and device use",
      "source": "S32",
      "status": "verified",
+     "claim_form": "assertion",
      "in_hook": true,
+     "support_quote": "we blink less when we stare at our devices",
+     "scope": "AAO digital devices page 2025",
      "needs_professional_review": false
+    }
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "the visual reveal of the key effect",
+     "spoken": "عيونك تحترق بعد ساعة ريلز؟ تغمّض أقل من المعتاد."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen",
+     "new_info": "what is being asked and why it matters",
+     "spoken": "ليش يصير هيچ؟"
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "the mechanism that explains the effect",
+     "spoken": "السبب بالضبط هذا."
+    },
+    {
+     "t": "18-25",
+     "purpose": "limit",
+     "new_info": "where the explanation stops and what it does not show",
+     "spoken": "وهذا حده."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close",
+     "new_info": "the practical implication for the viewer",
+     "spoken": "هذا مو تشخيص، بس يفسّر ليش الفحص مهم."
     }
    ],
    "risk": "r",
@@ -115,6 +201,7 @@
    "gloss_en": "(gloss)",
    "mechanism": "M18",
    "insight_key": "myopia-lenses-slow",
+   "payoff_key": "lenses-not-a-cure",
    "tension": "q",
    "audience": "Iraqi adults 18-40",
    "first_frame": "Number counter then lens close-up",
@@ -122,6 +209,10 @@
    "payoff": "Not a cure; clinical advice needed",
    "payoff_answers_gap": true,
    "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
    "scores": {
     "clarity": 5,
     "payoff": 4,
@@ -139,8 +230,43 @@
      "text": "23 RCTs: specialty lenses slow progression on average",
      "source": "S39",
      "status": "verified",
+     "claim_form": "assertion",
      "in_hook": true,
+     "support_quote": "23 RCTs with a total of 13.315 subjects",
+     "scope": "children and adolescents; mean effect vs single-vision lenses; 2025 meta-analysis",
      "needs_professional_review": false
+    }
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "the visual reveal of the key effect",
+     "spoken": "٢٣ تجربة، ١٣ ألف طفل: عدسات خاصة تبطّئ قصر النظر بالمتوسط."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen",
+     "new_info": "what is being asked and why it matters",
+     "spoken": "ليش يصير هيچ؟"
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "the mechanism that explains the effect",
+     "spoken": "السبب بالضبط هذا."
+    },
+    {
+     "t": "18-25",
+     "purpose": "limit",
+     "new_info": "where the explanation stops and what it does not show",
+     "spoken": "وهذا حده."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close",
+     "new_info": "the practical implication for the viewer",
+     "spoken": "هذا مو تشخيص، بس يفسّر ليش الفحص مهم."
     }
    ],
    "risk": "r",

@@ -1,0 +1,236 @@
+{
+ "brief": {
+  "subject_terms": [
+   "نظارة",
+   "UV",
+   "الشمس",
+   "ملصق",
+   "عدسة"
+  ],
+  "duration_s": 30,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S88": {
+   "access": "partial_text"
+  },
+  "S87": {
+   "access": "partial_text"
+  },
+  "S90": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "نظارة شمس غامقة بدون فلتر UV… شنو ممكن يصير ببؤبؤك؟",
+   "gloss_en": "Dark sunglasses without a UV filter - what may happen to your pupil?",
+   "mechanism": "M01",
+   "insight_key": "dark-without-uv",
+   "payoff_key": "tint-is-not-protection",
+   "tension": "What happens to the pupil behind dark lenses with no UV filter?",
+   "audience": "Iraqi adults, hot sunny climate",
+   "first_frame": "Dark lens next to a clear lens, both held to the sun (illustrative)",
+   "continuation": "Pupil dilates",
+   "payoff": "Label vs tint",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: More than what? (carried by voice)",
+     "spoken": "نظارة شمس غامقة بدون فلتر UV… شنو ممكن يصير ببؤبؤك؟"
+    },
+    {
+     "t": "4-12",
+     "purpose": "logic",
+     "new_info": "darker view -> pupil stays larger",
+     "spoken": "النظر الغامق يخلي البؤبؤ أكبر."
+    },
+    {
+     "t": "12-21",
+     "purpose": "consequence",
+     "new_info": "if UV is not filtered, more unfiltered UV can enter",
+     "spoken": "وإذا ماكو فلتر، يدخل UV أكثر."
+    },
+    {
+     "t": "21-27",
+     "purpose": "what to check",
+     "new_info": "the label says 100% UV or UV400",
+     "spoken": "دوّر على 'UV400' أو '100% UV'."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "tint is not protection",
+     "spoken": "اللون الغامق مو حماية."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Without a UV filter, pupils may stay larger behind dark lenses, letting more unfiltered UV enter",
+     "source": "S87",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "because your pupils may remain larger, thus allowing more unfiltered UV rays to enter",
+     "scope": "AAO Q&A 2021; single ophthalmologist answer; 'may'",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Comparator not stated in the source; hook is a question and the video says 'may'",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "شنو الملصق الي يخلي نظارتك تحمي فعلاً؟",
+   "gloss_en": "Which label makes your sunglasses actually protect?",
+   "mechanism": "M08",
+   "insight_key": "uv-label",
+   "payoff_key": "read-the-label",
+   "tension": "Which label?",
+   "audience": "Iraqi adults, hot sunny climate",
+   "first_frame": "Close-up of a lens sticker with the code blurred, then revealed",
+   "continuation": "Standards",
+   "payoff": "How to read the protection claim",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "poses the question: Which label? (carried by frame)",
+     "spoken": "شنو الملصق الي يخلي نظارتك تحمي فعلاً؟"
+    },
+    {
+     "t": "3-10",
+     "purpose": "reveal",
+     "new_info": "UV400 or 100% UV protection",
+     "spoken": "UV400 أو 100% UV."
+    },
+    {
+     "t": "10-19",
+     "purpose": "what it means",
+     "new_info": "100% UV: transmittance below 0.05% up to 380 nm",
+     "spoken": "يعني السماحية أقل من ٠.٠٥٪ لحد ٣٨٠ نانومتر."
+    },
+    {
+     "t": "19-26",
+     "purpose": "not tint, not price",
+     "new_info": "protection depends on material and coating, not darkness or price",
+     "spoken": "الحماية من المادة، مو من الغمق ولا السعر."
+    },
+    {
+     "t": "26-30",
+     "purpose": "close",
+     "new_info": "check wear: protection fades and scratches reduce it",
+     "spoken": "والخدوش والزمن يقللون الحماية."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Sunglasses labelled UV400 or 100% UV protect regardless of fanciness or darkness",
+     "source": "S88",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "As long as they are labeled with “UV400” or “100% UV protection”",
+     "scope": "AAO 2022; no brands used",
+     "needs_professional_review": false
+    },
+    {
+     "text": "100% UV = transmittance below 0.05% up to 380 nm",
+     "source": "S90",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "transmittance at wavelengths up to 380 nm is less than 0.05%",
+     "scope": "ISO 12312-1:2022 as summarised by Swiss BAG",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "None major",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "عدسة UV لاصقة لحالها ما تكفي. عيونك وجلدك حواليها مكشوفين.",
+   "gloss_en": "A UV contact lens alone isn't enough: your eye surface and the skin around it stay exposed.",
+   "mechanism": "M02",
+   "insight_key": "uv-contacts-not-enough",
+   "payoff_key": "need-sunglasses-too",
+   "tension": "What stays unprotected?",
+   "audience": "Iraqi adults, hot sunny climate",
+   "first_frame": "Eye close-up with the covered cornea highlighted and the rest shaded; text `الباقي؟`",
+   "continuation": "Coverage",
+   "payoff": "What contacts don't cover",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "text",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: What stays unprotected? (carried by text)",
+     "spoken": "عدسة UV لاصقة لحالها ما تكفي. عيونك وجلدك حواليها مكشوفين."
+    },
+    {
+     "t": "4-12",
+     "purpose": "what they cover",
+     "new_info": "only the cornea area",
+     "spoken": "تغطي القرنية بس."
+    },
+    {
+     "t": "12-21",
+     "purpose": "what remains",
+     "new_info": "eyelid, conjunctiva and surrounding skin",
+     "spoken": "الجفن والملتحمة والجلد حواليها."
+    },
+    {
+     "t": "21-27",
+     "purpose": "best practice",
+     "new_info": "sunglasses labelled UV400 plus a hat",
+     "spoken": "نظارة UV400 وقبعة."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "protect eyes and surrounding skin together",
+     "spoken": "احمي عيونك وجلدك سوا بنظارة UV وقبعة."
+    }
+   ],
+   "claims": [
+    {
+     "text": "UV-blocking contacts leave the eyelid, conjunctiva and surrounding skin exposed",
+     "source": "S88",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "leave the outside of the eye — including the eyelid, conjunctiva and surrounding skin — exposed",
+     "scope": "AAO 2022 quote of an ophthalmologist",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Last spoken line short (4 words)",
+   "confidence": "likely"
+  }
+ ]
+}

@@ -34,7 +34,7 @@ Load only what the current stage needs. Invoke sibling skills with the Skill too
 | 2 Idea diagnosis | Gate: PROCEED / RE-ANGLE / RESEARCH / REJECT. Separate weak idea from weak wording. | `hook-idea-diagnosis` |
 | 3 Curiosity map | Belief, misconception, missing info, accurate surprise, evidence. | `hook-idea-diagnosis` |
 | 4 Candidates | 10-15 across >= 6 mechanisms; dedupe by insight. | `hook-writing` |
-| 5 Critical evaluation | Hard gates, rubric, first-3-seconds diagnostic, diversity. | `hook-evaluation` + `hook-scientific-validation` |
+| 5 Critical evaluation | Hard gates (G1-G9), rubric, first-3-seconds diagnostic, diversity (mechanism + insight + payoff), adversarial self-check. | `hook-evaluation` + `hook-scientific-validation` |
 | 6 Retention design | Map opening -> payoff for each finalist. | `hook-retention` |
 | 6b Visual brief | First frame, first action, text, sound, transition. | `hook-visual-design` |
 | 7 Creator selection | Three different finalists + one recommendation. | this file (output format) |
@@ -48,7 +48,9 @@ Quick modes: **Audit** (user gives a hook -> stages 2, 5 only, plus a rewrite if
 Capture: subject / audience (who exactly, what they already believe) / one-sentence takeaway / evidence in hand / visuals available / duration and platform / constraints. If evidence is missing for a factual claim, do not guess it - mark the claim `unverified` and route to hook-scientific-validation.
 
 ## Stage 7 - what the creator sees (keep it short)
-Show **exactly three** finalists with different mechanisms AND different underlying insights (if the source material cannot support three, say why and propose angles). Do not dump all 10-15 candidates unless asked; offer them on request.
+Show **exactly three** finalists with different mechanisms, underlying insights AND payoffs (if the source material cannot support three, say why and propose angles). Do not dump all 10-15 candidates unless asked; offer them on request.
+
+Before showing, run the adversarial self-check in hook-evaluation (Step 6). Keep per finalist the evidence record (claim, source id, 15-word quote, scope) and a retention plan whose every beat carries new information and whose last beat contains the written closing line - show these compactly; keep full tables on request.
 
 For each finalist:
 1. Hook text (Iraqi Arabic) + one-line English gloss

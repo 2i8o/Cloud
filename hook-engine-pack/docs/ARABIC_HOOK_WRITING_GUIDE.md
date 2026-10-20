@@ -60,9 +60,22 @@ Choose Natural Iraqi for the hook, hybrid for the explanatory beat, formal for t
 ## 8. Rewrite drills (use when polishing)
 | Draft | Problem | Rewrite |
 |---|---|---|
-| `سوف نتعرف اليوم على سر الرؤية الواضحة` | MSA, generic, "سر" | `ثقب بحجم دبوس… والمشوّش يصير واضح.` |
+| `سوف نتعرف اليوم على سر الرؤية الواضحة` | MSA, generic, "سر" | `ثقب صغير بورقة… والمشوّش يصير واضح.` |
 | `هل تعلم أن الشاشات تضر بعينيك؟` | generic opener, unsupported fear | `عيونك تحترق بعد ساعة ريلز؟ تغمّض أقل من المعتاد.` |
 | `أخطر عادة تدمر عينك` | superlative + fear | `عادة صغيرة تتعب عيونك يومياً… وعلاجها ٢٠ ثانية.` (needs 20-20-20 wording check) |
+
+## 8b. Vocabulary flags from Phase-2 testing (Guess-level; the creator confirms)
+| Used in a draft | Concern | Safer candidate (confirm) |
+|---|---|---|
+| تغمّض (for blinking) | means "close the eyes"; blink is probably **ترمش / رمش** | `ترمش أقل` |
+| قبل لا (before) | likely not Iraqi | `گبل ما` |
+| أضعاف | formal | `مرات` / `ضعف` |
+| يعتبر | formal | `ينحسب` / `يعدّونه` |
+| إجهاد العين | formal | `تعب العين` |
+| صفحة الألوان / ورقة (sticker) | odd | `لوحة الألوان` / `الملصق` |
+| تتعطل / تدمّر for gradual change | overdramatic and inaccurate | `تصير أقل مرونة` |
+| ممنوع | stronger than most medical sources | `يُنصح بإزالتها` -> `الأفضل تشيلها` |
+Keep a confirmed-terms list per creator; until he confirms, mark these words in the output.
 
 ## 9. Checks the model can and cannot do
 Can: spot MSA markers, generic phrases, repeated frames, over-length. Cannot: guarantee natural pronunciation or regional acceptability -> always flag "needs native review".

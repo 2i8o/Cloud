@@ -102,7 +102,7 @@ def build_cases():
     L = [HDR.format(src="tests/cases.json"), "# Test cases\n",
          f"{len(cs)} cases, {sum(1 for c in cs if c['held_out'])} marked held-out (topic/wording not used as an example inside any skill file).\n",
          "> " + d["note"] + "\n",
-         "**How they are used.** Cases with an `automated_check` are executed by `tests/run_tests.py` (linter, installer, validator). The rest are behaviour specifications for the model-driven workflow: they are specifications only; eight were dry-run by the package author (a language model) and self-graded in `tests/DRY_RUNS.md` - not scored by an independent grader. See `tests/RESULTS.md`.\n"]
+         "**How they are used.** Cases with an `automated_check` are executed by `tests/run_tests.py` (linter, installer, validator). The rest are behaviour specifications for the model-driven workflow: they are specifications only; eight were dry-run in Phase 1 (`tests/DRY_RUNS.md`) and thirteen briefs were run and reviewed in Phase 2 (`validation/phase2/`), all by the same model - not scored by an independent grader. See `tests/RESULTS.md`.\n"]
     for c in cs:
         L.append(f"\n### {c['id']} - {c['category']}{' (held-out)' if c['held_out'] else ''}\n")
         L.append(f"**Input brief:** {c['input_brief']}\n")

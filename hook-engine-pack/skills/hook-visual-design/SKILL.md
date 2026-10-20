@@ -9,6 +9,7 @@ user-invocable: true
 The creator already produces high-quality visuals. This skill does not ask for more stimulation; it asks whether each visual/audio choice makes the **question** or the **payoff** clearer.
 
 ## Production brief (one per finalist)
+0. **Concrete or it doesn't count.** Name the object, its position, the action and the camera setup ("black card with a ~1 mm hole enters from the right over a defocused printed line"), never "stock shot of eyes". For physics-dependent demos list the parameters that make it work (sizes, distances, lighting) from a sourced claim - not from memory or an example line - and say how it will be filmed legibly; if it cannot be filmed legibly, mark UNFILMABLE and change the frame.
 1. **First frame** - what is readable in frame 1 (<= 3 elements to attend to; Galloway's 3-element rule is for thumbnails, applied here to the first frame as an *inference* [Guess], S52).
 2. **First visible action** - the first meaningful visual event and when (a hypothesis: within ~1-2 s).
 3. **Spoken opening** - the hook; sync the keyword to the visual reveal (word lands as the object appears).
@@ -26,6 +27,8 @@ The creator already produces high-quality visuals. This skill does not ask for m
 - **Text timing:** appears with the word it supports, stays long enough to read at one pass (rule of thumb: ~3 words per second, test on a colleague).
 
 ## Optics-specific accuracy rules (hard)
+0a. **Participatory-measurement validity.** If the viewer is asked to measure something about themselves (count blinks, time a reaction), ask: does attending to it change it (blinking and breathing do)? If yes, present it as an informal observation of someone else or as an illustration, never as data to compare with a norm.
+0. **Demo != test != result.** Never write that a home/screen demo is "the test" or tells the viewer what their own result means; label demos as illustrative.
 1. **Camera != eye.** A phone camera has different optics, exposure and sensor behaviour. Never present camera footage as "what your eye sees" unless the effect is verified for human vision; label simulations ("محاكاة").
 2. **Screen demos depend on the viewer's screen/distance/brightness.** Acuity or colour demos on a phone are not tests (ISO 8596 itself is not a clinical measurement standard, S42; test conditions matter, S43). Say "ليس فحصاً".
 3. **Before/after honesty:** same lighting, same distance, same exposure, no retouching of the "after". If any parameter differs, disclose it.

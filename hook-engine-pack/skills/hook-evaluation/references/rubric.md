@@ -25,6 +25,11 @@
 - G5: `النظارة يوصفها جراح بصريات` -> fail (profession confusion).
 - G6: `هذا اللي تشوفه عيونك` over a phone-camera clip -> fail unless verified/simulation labelled.
 
+## Added in v1.1 (from Phase-2 failures)
+- Gates G7-G9 (demo-as-test, claim evidence, gap floor) and Step 6 adversarial self-check are in SKILL.md.
+- Originality is judged as: "is there an angle here that a typical explainer on this topic lacks (mechanism, demonstration, number, counter-intuitive twist)?" 1 = the standard explainer, 3 = new framing, 5 = new demonstrable insight. It informs the Novelty score; it does not override the gates.
+- The linter's generic-topic check is advisory (see CHANGELOG 1.1.0): across 30 baseline hooks it agreed with the human review on only 3 of 7 generic cases and produced 4 false alarms.
+
 ## Selection record (fill per finalist)
 ```
 id | mechanism | insight_key | gates G1-G6 | weighted score | main weakness |

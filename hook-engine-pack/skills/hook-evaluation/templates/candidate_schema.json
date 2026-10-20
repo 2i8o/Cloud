@@ -1,37 +1,102 @@
 {
-  "_comment": "Template for hook_lint.py input. Replace example values. Scores are 1-5 integers. claim.status: verified | plausible | unverified | contested | false.",
-  "brief": {
-    "subject_terms": ["ثقب", "السطر", "pinhole"],
-    "duration_s": 30,
-    "product_mention_requested": false,
-    "platform": "youtube_shorts"
+ "_comment": "Template for hook_lint.py (v1.1). Scores 1-5. claim.status: verified|plausible|unverified|contested|false. claim_form: assertion (default) | question. A hook ASSERTION needs status=verified AND support_quote (<=15 words from that source) AND scope. gap_carrier: voice|frame|text|none. Use exactly 3 finalists with different mechanism, insight_key AND payoff_key.",
+ "brief": {
+  "subject_terms": [
+   "ثقب",
+   "السطر",
+   "pinhole"
+  ],
+  "duration_s": 30,
+  "platform": "youtube_shorts",
+  "product_mention_requested": false
+ },
+ "sources": {
+  "S65": {
+   "access": "partial_text"
   },
-  "sources": {
-    "S45": {"access": "partial_text"},
-    "S46": {"access": "partial_text"}
-  },
-  "diversity_exception": "",
-  "recommended": "B",
-  "candidates": [
+  "S46": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "B",
+ "candidates": [
+  {
+   "id": "B",
+   "hook_ar": "ثقب صغير بورقة… والسطر المشوّش يصير واضح.",
+   "gloss_en": "A small hole in a card and the blurred line becomes clear.",
+   "mechanism": "M05",
+   "insight_key": "pinhole-sharpens",
+   "payoff_key": "why-small-aperture-sharpens",
+   "tension": "Why does a small hole sharpen a blurred line?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Blurred printed line on a desk; a black card with a ~1 mm hole slides in front of the lens; the line sharpens (filmed with a deliberately defocused lens; labelled as an optics demo)",
+   "continuation": "The aperture blocks peripheral rays so the blur circle shrinks",
+   "payoff": "Why it works, the trade-off (darker, narrower), and why clinics use ~1.2 mm occluders",
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "not_a_test_disclaimer": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 5,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
     {
-      "id": "B",
-      "hook_ar": "ثقب بحجم دبوس… والسطر المشوّش يصير واضح.",
-      "gloss_en": "A pin-sized hole makes a blurred line clear.",
-      "mechanism": "M05",
-      "insight_key": "pinhole-sharpens",
-      "tension": "Why does a small hole sharpen a blurred line?",
-      "audience": "Iraqi adults 18-40 who wear or need glasses",
-      "first_frame": "Blurred printed line; a card with a pin hole slides in.",
-      "continuation": "Pinhole blocks peripheral rays so the blur circle shrinks.",
-      "payoff": "Why it works, a safe replication, and what it does and does not tell you.",
-      "payoff_answers_gap": true,
-      "sound_off_ok": true,
-      "scores": {"clarity": 5, "payoff": 4, "curiosity": 4, "relevance": 4, "specificity": 5, "visual": 5, "naturalness": 4, "novelty": 3, "retention": 4, "significance": 3},
-      "claims": [
-        {"text": "Looking through a pinhole reduces blur; improvement suggests refractive error", "source": "S45", "status": "verified", "in_hook": true, "needs_professional_review": false}
-      ],
-      "risk": "Camera footage differs from what the eye sees.",
-      "confidence": "likely"
+     "text": "A ~1 mm aperture can make text blurred by refractive error look sharper",
+     "source": "S65",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "most useful pinhole diameter for clinical purposes is 1.2 millimeters",
+     "scope": "clinical occluder ~1.2 mm; adults without ocular disease; refractive errors up to +-5 D",
+     "needs_professional_review": false
     }
-  ]
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook + reveal",
+     "new_info": "blurred line becomes readable through the card",
+     "spoken": "ثقب صغير بورقة… والسطر المشوّش يصير واضح."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen the question",
+     "new_info": "the same card without a hole does nothing; only the hole matters",
+     "spoken": "ليش؟ الورقة نفسها ما سوت شي."
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "aperture blocks peripheral rays so the blur circle shrinks",
+     "spoken": "الثقب يوقّف الأشعة الجانبية، فالتشويش يصغر."
+    },
+    {
+     "t": "18-25",
+     "purpose": "trade-off",
+     "new_info": "too small a hole is darker and blurrier (diffraction); about 1 mm works best",
+     "spoken": "بس إذا صغّرته أكثر، يصير أغمق وأشوش."
+    },
+    {
+     "t": "25-30",
+     "purpose": "limit + close",
+     "new_info": "in clinics it is a clue under controlled conditions, not a self-test",
+     "spoken": "بالعيادة يستعملونه كمؤشر، مو فحص بالبيت."
+    }
+   ],
+   "risk": "A camera's blur is defocus, not the viewer's eye",
+   "confidence": "likely"
+  }
+ ]
 }

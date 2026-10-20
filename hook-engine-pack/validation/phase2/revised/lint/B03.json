@@ -1,0 +1,245 @@
+{
+ "brief": {
+  "subject_terms": [
+   "نظارة",
+   "الضوء الأزرق",
+   "شبكية",
+   "نظارات"
+  ],
+  "duration_s": 30,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S32": {
+   "access": "partial_text"
+  },
+  "S34": {
+   "access": "partial_text"
+  },
+  "S33": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "شلون تسوي تجربة على نظارة الضوء الأزرق… واللابس يعرف إنها الحقيقية؟",
+   "gloss_en": "How do you run a trial of blue-light glasses when the wearer knows they are the real ones?",
+   "mechanism": "M20",
+   "insight_key": "blinding-problem",
+   "payoff_key": "why-trials-are-weak",
+   "tension": "Why is it hard to test them fairly?",
+   "audience": "Iraqi 20-40 considering glasses",
+   "first_frame": "A clear lens beside a yellow-tinted lens held to the camera",
+   "continuation": "Yellow tint prevents masking",
+   "payoff": "Why the evidence is weak without saying they are useless",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-5",
+     "purpose": "hook + visual",
+     "new_info": "clear vs yellow lens",
+     "spoken": "شلون تسوي تجربة على نظارة الضوء الأزرق… واللابس يعرف إنها الحقيقية؟"
+    },
+    {
+     "t": "5-12",
+     "purpose": "the problem",
+     "new_info": "these lenses are yellow, so participants can tell which pair they got",
+     "spoken": "لأنها صفرة، المشارك يعرف أي نظارة لبس."
+    },
+    {
+     "t": "12-19",
+     "purpose": "what else limits studies",
+     "new_info": "studies are small and short",
+     "spoken": "والدراسات صغيرة وقصيرة."
+    },
+    {
+     "t": "19-26",
+     "purpose": "what is concluded",
+     "new_info": "a 2023 review found no consistent evidence of benefit for eye strain; AAO does not recommend special eyewear for screens",
+     "spoken": "مراجعة ٢٠٢٣ ما لقت دليل ثابت، والأكاديمية ما توصي بيها."
+    },
+    {
+     "t": "26-30",
+     "purpose": "close",
+     "new_info": "absence of strong evidence is not proof of harm; habits help",
+     "spoken": "مو معناها مضرّة، معناها الدليل ضعيف. والعادات أوضح فايدة."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Blue-blocking lens studies used yellow-tinted lenses, limiting masking",
+     "source": "S34",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "all of these studies have used yellow-tinted blue-blocking lenses, limiting the adequate masking",
+     "scope": "2023 narrative review citing Lawrenson et al.; small (<50) short studies",
+     "needs_professional_review": false
+    },
+    {
+     "text": "No consistent evidence supports blue-blocking spectacle lenses for eye strain",
+     "source": "S34",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "there is no consistent evidence to support the use of blue-blocking filters in spectacle lenses",
+     "scope": "2023 narrative review (not systematic)",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Long hook (13 content words); needs a read-aloud trim",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "قبل النوم، المشكلة مو نظارتك. هي ساعات الشاشة.",
+   "gloss_en": "Before bed the issue isn't your glasses - it's screen hours.",
+   "mechanism": "M16",
+   "insight_key": "sleep-timing-not-glasses",
+   "payoff_key": "screen-timing-for-sleep",
+   "tension": "What should I do for sleep then?",
+   "audience": "Iraqi 20-40 considering glasses",
+   "first_frame": "On-screen text: `نظارة ← نوم؟` crossed out, then a clock",
+   "continuation": "AAO advice on timing",
+   "payoff": "Practical sleep advice with attribution",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "text",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "reframes the cause",
+     "spoken": "قبل النوم، المشكلة مو نظارتك. هي ساعات الشاشة."
+    },
+    {
+     "t": "4-12",
+     "purpose": "evidence",
+     "new_info": "some evidence that blue light affects the sleep-wake cycle (AAO)",
+     "spoken": "الأكاديمية تگول اكو دليل إن الضوء يأثر على دورة النوم."
+    },
+    {
+     "t": "12-20",
+     "purpose": "advice",
+     "new_info": "avoid screens two to three hours before bed; use night mode",
+     "spoken": "ابتعد عن الشاشة ٢-٣ ساعات گبل النوم، وفعّل الوضع الليلي."
+    },
+    {
+     "t": "20-26",
+     "purpose": "why not glasses",
+     "new_info": "AAO says sleep can be improved without special glasses",
+     "spoken": "ما تحتاج نظارة خاصة حسب الأكاديمية."
+    },
+    {
+     "t": "26-30",
+     "purpose": "close",
+     "new_info": "a realistic nightly plan the viewer can try tonight",
+     "spoken": "جرّب الليلة تبعد الشاشة، وشوف نومك."
+    }
+   ],
+   "claims": [
+    {
+     "text": "AAO advises avoiding screens two to three hours before bed",
+     "source": "S33",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "avoid using screens two to three hours before bed",
+     "scope": "AAO 2021; adults; 2-3 hours",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Sleep is adjacent to the brief; kept because glasses are marketed for sleep",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "الضوء الأزرق من شاشتك يضر شبكيتك؟ الدليل لحد هسه ما يقول هيچ.",
+   "gloss_en": "Does your screen's blue light harm your retina? The evidence so far doesn't say so.",
+   "mechanism": "M08",
+   "insight_key": "no-retinal-link",
+   "payoff_key": "no-meaningful-link-to-retina",
+   "tension": "What does the evidence say about retinal damage?",
+   "audience": "Iraqi 20-40 considering glasses",
+   "first_frame": "Phone beside a retina diagram with a question mark",
+   "continuation": "Lab studies did not mimic screens",
+   "payoff": "What is and isn't known",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": true,
+   "beat2_question": "If lab studies showed damage, why don't they apply to screens?",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "asks and answers carefully",
+     "spoken": "الضوء الأزرق من شاشتك يضر شبكيتك؟ الدليل لحد هسه ما يقول هيچ."
+    },
+    {
+     "t": "4-12",
+     "purpose": "why people worry",
+     "new_info": "lab and animal studies showed cell damage in dishes",
+     "spoken": "التجارب بالأطباق والحيوانات شافت ضرر."
+    },
+    {
+     "t": "12-19",
+     "purpose": "why it doesn't transfer",
+     "new_info": "those studies did not mimic screen exposure",
+     "spoken": "بس ما قلّدت ضوء الشاشات الحقيقي."
+    },
+    {
+     "t": "19-26",
+     "purpose": "unknowns",
+     "new_info": "long-term cumulative effects are unknown",
+     "spoken": "والأثر الطويل المدى لسه مجهول."
+    },
+    {
+     "t": "26-30",
+     "purpose": "close",
+     "new_info": "AAO links overexposure to sun blue/UV light to eye-disease risk",
+     "spoken": "الأكاديمية تربط التعرض الزايد لضوء الشمس بأمراض العين."
+    }
+   ],
+   "claims": [
+    {
+     "text": "So far the evidence shows no meaningful link between blue light and damage to human retinas",
+     "source": "S32",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "the evidence shows no meaningful link between blue light and: damage to human retinas",
+     "scope": "AAO Dec 2025; screens; lab/animal studies did not mimic screens",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Overexposure to blue light and UV from the sun can raise eye-disease risk",
+     "source": "S32",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "overexposure to blue light and UV light rays from the sun can raise the risk of eye disease",
+     "scope": "AAO Dec 2025; sun exposure",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Last line 'الشمس أخطر' compares two exposures not directly measured in the source; soften or source before publishing",
+   "confidence": "likely"
+  }
+ ]
+}

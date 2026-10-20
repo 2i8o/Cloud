@@ -16,6 +16,15 @@ Preconditions: the idea passed `hook-idea-diagnosis` (PROCEED) and every factual
 5. **Prune** duplicates by insight and by sentence pattern; send survivors to `hook-evaluation`. Do not show all 10-15 unless asked.
 6. **After the creator picks (stage 8):** write the script beat by beat with `hook-retention`; the final payoff must answer the hook's question in the same terms. Re-verify any number that appears.
 
+## Hook shape and gap rules (added in v1.1 after Phase-2 testing: 9/30 baseline hooks had no gap, 16/30 were bare statements/instructions)
+- Every hook must carry an unanswered question in **voice, frame or on-screen text** (`gap_carrier`). A conclusion ("23 trials, 13k children: lenses slow myopia") or instruction ("look far for 20 s") is not a hook until the frame/text poses the question it answers ("what does 'slow' mean for my child?").
+- Statistic/evidence hooks (M18) and action hooks (M07) must be rewritten as: *question about the number or action* + *withheld answer*.
+- If the hook already states the answer, set `answer_in_hook: true` and write the different `beat2_question` now (otherwise rewrite the hook to withhold the mechanism).
+- The three finalists must use at least two different shapes (question / statement / instruction / visual-led) and different `payoff_key`s.
+- Comparators must be explicit ("worse than what?"), and verbs must not exceed the source ("ممنوع" vs "يُنصح بإزالتها").
+- Parameters (sizes, numbers, distances) appear in a hook only if they are in the claim's `support_quote`. Never copy a parameter from an example line without re-checking it.
+- Rhetorical frames to avoid because they recur and carry no information: "ليش ...؟" as the default, "شنو يسوي ...؟", yes/no questions whose answer is in the phrase ("... يكفي؟ لا."), cataphora ("جرّب هذا", "هذا السر").
+
 ## Rules
 - Never use: "هل تعلم" as an opener, "اسرار/سر ... " , "لن تصدق", "الحقيقة التي لا يريدك أن تعرفها", "صدمة", fake urgency, invented personal stories. (Linter: `hook-evaluation/scripts/hook_lint.py`.)
 - A rhetorical question must be answerable by this video only. Test: swap the topic - if the sentence still works, it is generic.

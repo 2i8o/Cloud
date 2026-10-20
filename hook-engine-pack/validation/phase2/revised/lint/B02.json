@@ -1,0 +1,233 @@
+{
+ "brief": {
+  "subject_terms": [
+   "عيون",
+   "ريلز",
+   "رمش",
+   "ترمش",
+   "20"
+  ],
+  "duration_s": 25,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S32": {
+   "access": "partial_text"
+  },
+  "S33": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "B",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "ليش عيونك تحرگ بعد ريلز… ومو بسبب الضوء الأزرق؟",
+   "gloss_en": "Why do your eyes burn after reels - and it is not the blue light?",
+   "mechanism": "M02",
+   "insight_key": "blue-light-not-cause",
+   "payoff_key": "cause-is-use-not-light",
+   "tension": "If not blue light, then what?",
+   "audience": "Iraqi 18-35 heavy phone users",
+   "first_frame": "Phone in dark room with blue-light filter toggled; on-screen `ضوء أزرق؟`",
+   "continuation": "AAO attribution on screen",
+   "payoff": "Cause is how we use screens (blinking), not blue light",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "negates the popular cause",
+     "spoken": "ليش عيونك تحرگ بعد ريلز… ومو بسبب الضوء الأزرق؟"
+    },
+    {
+     "t": "3-9",
+     "purpose": "authority",
+     "new_info": "AAO: digital eye discomfort is not caused by blue light",
+     "spoken": "الأكاديمية الأمريكية لطب العيون تگول: التعب مو من الضوء الأزرق."
+    },
+    {
+     "t": "9-17",
+     "purpose": "real driver",
+     "new_info": "we blink less when staring at screens, so the surface dries",
+     "spoken": "السبب انك ترمش أقل لما تطالع الشاشة، فالسطح يناشف."
+    },
+    {
+     "t": "17-22",
+     "purpose": "what helps",
+     "new_info": "breaks and looking away; artificial tears per AAO",
+     "spoken": "استراحات، وطالع بعيد، ودموع اصطناعية إذا ناشفة."
+    },
+    {
+     "t": "22-25",
+     "purpose": "close",
+     "new_info": "discomfort is temporary but persistent symptoms deserve an exam",
+     "spoken": "وإذا استمر التعب، راجع مختص نظر."
+    }
+   ],
+   "claims": [
+    {
+     "text": "AAO: digital eye discomfort is not caused by blue light",
+     "source": "S32",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Digital eye discomfort is not caused by blue light",
+     "scope": "AAO digital devices page, Dec 2025; screen use in adults",
+     "needs_professional_review": false
+    },
+    {
+     "text": "We blink less when staring at screens",
+     "source": "S32",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "blink rate can be cut in half when staring at screens",
+     "scope": "AAO page; population-level statement",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Same domain as B; payoffs differ (cause vs self-observation)",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "طالع بوجه واحد يتفرج ريلز دقيقة… وعدّ كم مرة يرمش.",
+   "gloss_en": "Watch someone scroll reels for a minute and count how often they blink.",
+   "mechanism": "M10",
+   "insight_key": "blink-self-count",
+   "payoff_key": "your-own-count-vs-normal",
+   "tension": "Is my number low?",
+   "audience": "Iraqi 18-35 heavy phone users",
+   "first_frame": "Close-up of a friend scrolling; blink counter overlay starting at 0",
+   "continuation": "Compare your count with the usual rate",
+   "payoff": "What a 'low' count means and does not mean",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook + task",
+     "new_info": "viewer is asked to count",
+     "spoken": "طالع بوجه واحد يتفرج ريلز دقيقة… وعدّ كم مرة يرمش."
+    },
+    {
+     "t": "3-14",
+     "purpose": "observe",
+     "new_info": "a minute of scrolling with the counter visible",
+     "spoken": "(ريلز بدقيقة — العدّاد يشتغل)"
+    },
+    {
+     "t": "14-19",
+     "purpose": "benchmark",
+     "new_info": "normal blink rate is around 15 per minute and can be cut in half at screens",
+     "spoken": "الطبيعي حوالي ١٥ بالدقيقة، وبالشاشة ينزل للنص تقريباً."
+    },
+    {
+     "t": "19-23",
+     "purpose": "meaning",
+     "new_info": "counting is informal: attending to your own blinking changes it, and this is not a measurement",
+     "spoken": "هذا مو قياس دقيق، بس يعطيك فكرة ليش تحرگ."
+    },
+    {
+     "t": "23-25",
+     "purpose": "close",
+     "new_info": "one habit to try",
+     "spoken": "جرّب ترمش عمداً بعد كل شاشة، وشوف الفرق."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Normal blink rate is around 15 per minute and can be cut in half at screens",
+     "source": "S32",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Normally, we blink around 15 times per minute",
+     "scope": "AAO digital devices page; adults; 15 blinks per minute normal",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "A self-count is imprecise; must not be framed as a test",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "قاعدة ٢٠-٢٠-٢٠: تنفع لو بس نصيحة؟",
+   "gloss_en": "The 20-20-20 rule: does it work or is it just advice?",
+   "mechanism": "M08",
+   "insight_key": "twenty-twenty-twenty-evidence",
+   "payoff_key": "what-is-recommended-vs-proven",
+   "tension": "Is there evidence behind the rule?",
+   "audience": "Iraqi 18-35 heavy phone users",
+   "first_frame": "Timer overlay while someone looks out of a window",
+   "continuation": "AAO recommends it; efficacy evidence needs retrieval",
+   "payoff": "What the rule is, who recommends it, what is not shown",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": false,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "asks about evidence",
+     "spoken": "قاعدة ٢٠-٢٠-٢٠: تنفع لو بس نصيحة؟"
+    },
+    {
+     "t": "4-11",
+     "purpose": "rule",
+     "new_info": "every 20 minutes look at something 20 feet away for 20 seconds",
+     "spoken": "كل ٢٠ دقيقة، طالع شي بعيد ٢٠ قدم لمدة ٢٠ ثانية."
+    },
+    {
+     "t": "11-18",
+     "purpose": "status",
+     "new_info": "AAO recommends it; efficacy trials must be sourced before publishing (RESEARCH)",
+     "spoken": "الأكاديمية توصي بيها، وأنا راح أجيب الدراسات قبل لا أگول إنها مثبتة."
+    },
+    {
+     "t": "18-23",
+     "purpose": "fallback",
+     "new_info": "other AAO tips that do not depend on the rule: blink, distance, lighting",
+     "spoken": "وتوصيات ثانية: رمش، مسافة ٢٥ إنج، وإضاءة مناسبة."
+    },
+    {
+     "t": "23-25",
+     "purpose": "close",
+     "new_info": "tell the viewer what is proven and what is advice",
+     "spoken": "النصيحة موجودة، والإثبات نشوفه بالمصدر."
+    }
+   ],
+   "claims": [
+    {
+     "text": "AAO recommends the 20-20-20 rule",
+     "source": "S33",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Take regular breaks using the “20-20-20” rule",
+     "scope": "AAO 2021; screen users; recommendation, efficacy not reviewed",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Payoff incomplete until the efficacy evidence is retrieved (marked RESEARCH)",
+   "confidence": "likely"
+  }
+ ]
+}

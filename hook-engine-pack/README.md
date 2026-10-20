@@ -1,4 +1,4 @@
-# Hook Engine - Claude Code skill package (v1.0.0)
+# Hook Engine - Claude Code skill package (v1.1.0)
 
 A modular set of nine Claude Code skills for designing **short-form educational video hooks and retention** for Abbas Abdulmunem's optometry / optics / vision-science channel (YouTube Shorts, Instagram Reels, TikTok; 20-45 s; scripts in natural Iraqi Arabic, documentation in English).
 
@@ -8,7 +8,7 @@ It optimises two separate things that are easy to confuse:
 
 An opening that attracts and then disappoints is treated as a failure.
 
-> **Read this first - what this package is and is not.** It is a disciplined *process* with hard gates (accuracy, honesty, diversity), built from 63 sources that were actually opened. It is **not** a proven predictor of virality; no hook formula here was validated on 20-45 s feeds. Iraqi Arabic examples are drafts for the creator's review. See `SOURCE_BIBLIOGRAPHY.md` ("What was NOT accessed") and `tests/RESULTS.md` for limits.
+> **Read this first - what this package is and is not.** It is a disciplined *process* with hard gates (accuracy, honesty, diversity), built from 94 sources that were actually opened (see `validation/phase2/FINAL_REPORT.md` for what Phase-2 testing did and did not show). It is **not** a proven predictor of virality; no hook formula here was validated on 20-45 s feeds. Iraqi Arabic examples are drafts for the creator's review. See `SOURCE_BIBLIOGRAPHY.md` ("What was NOT accessed") and `tests/RESULTS.md` for limits.
 
 ## Contents
 
@@ -25,10 +25,11 @@ hook-engine-pack/
     hook-analytics/            metric dictionary, experiment protocol; scripts/analytics_compare.py
     hook-research/             source grading + ledger maintenance
   docs/                        long-form documents (generated from the skills' references)
-  RESEARCH_LEDGER.csv          63 sources with access status, extraction, limits, confidence
+  RESEARCH_LEDGER.csv          94 sources with access status, extraction, limits, confidence
   SOURCE_BIBLIOGRAPHY.md       readable bibliography + what was not accessed + recorded disagreements
   RESEARCH_METHODOLOGY.md      how research was done and graded
-  TEST_CASES.md                38 behaviour specifications (12 held-out)
+  TEST_CASES.md                49 behaviour specifications (10 held-out)
+  validation/phase2/           audit, 13-brief before/after evaluation, failure patterns, improvement log, experiment plan
   tests/                       cases.json, fixtures, run_tests.py, RESULTS.md, DRY_RUNS.md
   scripts/                     install.sh, validate_package.py, build_docs.py
   QUICKSTART.md  CHANGELOG.md  VERSION
@@ -72,7 +73,7 @@ See `QUICKSTART.md`. In short: `/hook-engine` + topic -> idea verdict -> three d
 ## Verify the install
 ```bash
 python3 scripts/validate_package.py .        # structure, frontmatter, paths, ledger, cases
-python3 tests/run_tests.py                   # 47 machine checks (see tests/RESULTS.md)
+python3 tests/run_tests.py                   # machine checks (see tests/RESULTS.md)
 claude plugin validate ~/.claude/skills      # Claude Code's own validator (v2.1.233+)
 ```
 

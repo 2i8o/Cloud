@@ -9,6 +9,12 @@
   "platform": "youtube_shorts"
  },
  "sources": {
+  "S64": {
+   "access": "abstract_only"
+  },
+  "S65": {
+   "access": "partial_text"
+  },
   "S44": {
    "access": "partial_text"
   },
@@ -40,13 +46,18 @@
    "gloss_en": "(gloss)",
    "mechanism": "M01",
    "insight_key": "twenty-twenty-is-normal",
+   "payoff_key": "numbers-decoded",
    "tension": "q",
    "audience": "Iraqi adults 18-40",
    "first_frame": "Big chart line with 20/20 overlay and a not-equal sign",
-   "continuation": "Top number = your distance; bottom = distance a normal-sighted person reads the line; 20/15 example",
-   "payoff": "The two numbers decoded and why normal is not perfect",
+   "continuation": "Top number = your distance; bottom = distance a normal-sighted person reads the line",
+   "payoff": "Decode the two numbers and why normal is not perfect",
    "payoff_answers_gap": true,
    "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
    "scores": {
     "clarity": 5,
     "payoff": 4,
@@ -64,8 +75,43 @@
      "text": "20/20 is normal, not perfect",
      "source": "S44",
      "status": "verified",
+     "claim_form": "assertion",
      "in_hook": true,
+     "support_quote": "20/20 vision is not perfect vision",
+     "scope": "AAO explainer 2025; definition of 20/20",
      "needs_professional_review": false
+    }
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "the visual reveal of the key effect",
+     "spoken": "20/20 مو يعني نظرك ممتاز… يعني نظرك عادي."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen",
+     "new_info": "what is being asked and why it matters",
+     "spoken": "ليش يصير هيچ؟"
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "the mechanism that explains the effect",
+     "spoken": "السبب بالضبط هذا."
+    },
+    {
+     "t": "18-25",
+     "purpose": "limit",
+     "new_info": "where the explanation stops and what it does not show",
+     "spoken": "وهذا حده."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close",
+     "new_info": "the practical implication for the viewer",
+     "spoken": "هذا مو تشخيص، بس يفسّر ليش الفحص مهم."
     }
    ],
    "risk": "r",
@@ -73,17 +119,22 @@
   },
   {
    "id": "B",
-   "hook_ar": "ثقب بحجم دبوس… والسطر المشوّش يصير واضح.",
+   "hook_ar": "ثقب صغير بورقة… والسطر المشوّش يصير واضح.",
    "gloss_en": "(gloss)",
    "mechanism": "M05",
    "insight_key": "pinhole-sharpens",
+   "payoff_key": "aperture-tradeoff",
    "tension": "q",
    "audience": "Iraqi adults 18-40",
-   "first_frame": "Blurred printed line; card with pin hole slides in",
-   "continuation": "Pinhole blocks peripheral rays so the blur circle shrinks",
-   "payoff": "Why it works, safe replication, what it does not prove",
+   "first_frame": "Blurred printed line on a desk; black card with a ~1 mm hole slides in (optics demo, defocused lens)",
+   "continuation": "The aperture blocks peripheral rays so the blur circle shrinks",
+   "payoff": "Why it works, the trade-off, why clinics use ~1.2 mm",
    "payoff_answers_gap": true,
    "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
    "scores": {
     "clarity": 5,
     "payoff": 4,
@@ -101,8 +152,43 @@
      "text": "Pinhole effect",
      "source": "S50",
      "status": "verified",
+     "claim_form": "assertion",
      "in_hook": true,
+     "support_quote": "supporting words from the source",
+     "scope": "adults; general statement",
      "needs_professional_review": false
+    }
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "the visual reveal of the key effect",
+     "spoken": "ثقب صغير بورقة… والسطر المشوّش يصير واضح."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen",
+     "new_info": "what is being asked and why it matters",
+     "spoken": "ليش يصير هيچ؟"
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "the mechanism that explains the effect",
+     "spoken": "السبب بالضبط هذا."
+    },
+    {
+     "t": "18-25",
+     "purpose": "limit",
+     "new_info": "where the explanation stops and what it does not show",
+     "spoken": "وهذا حده."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close",
+     "new_info": "the practical implication for the viewer",
+     "spoken": "هذا مو تشخيص، بس يفسّر ليش الفحص مهم."
     }
    ],
    "risk": "r",
@@ -114,6 +200,7 @@
    "gloss_en": "(gloss)",
    "mechanism": "M16",
    "insight_key": "acuity-not-health",
+   "payoff_key": "exam-still-matters",
    "tension": "q",
    "audience": "Iraqi adults 18-40",
    "first_frame": "Chart line beside an exam-room object",
@@ -121,6 +208,10 @@
    "payoff": "Why a full exam still matters, without fear",
    "payoff_answers_gap": true,
    "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
    "scores": {
     "clarity": 5,
     "payoff": 4,
@@ -135,11 +226,46 @@
    },
    "claims": [
     {
-     "text": "20/20 acuity does not replace a comprehensive eye exam",
+     "text": "20/20 acuity does not replace comprehensive eye exams",
      "source": "S44",
-     "status": "plausible",
+     "status": "verified",
+     "claim_form": "assertion",
      "in_hook": true,
+     "support_quote": "you still need eye exams as you get older",
+     "scope": "AAO explainer; adults",
      "needs_professional_review": false
+    }
+   ],
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "the visual reveal of the key effect",
+     "spoken": "نتيجة فحص نظرك 20/20؟ هذا ما يعني إن عيونك سليمة."
+    },
+    {
+     "t": "3-9",
+     "purpose": "sharpen",
+     "new_info": "what is being asked and why it matters",
+     "spoken": "ليش يصير هيچ؟"
+    },
+    {
+     "t": "9-18",
+     "purpose": "mechanism",
+     "new_info": "the mechanism that explains the effect",
+     "spoken": "السبب بالضبط هذا."
+    },
+    {
+     "t": "18-25",
+     "purpose": "limit",
+     "new_info": "where the explanation stops and what it does not show",
+     "spoken": "وهذا حده."
+    },
+    {
+     "t": "25-30",
+     "purpose": "close",
+     "new_info": "the practical implication for the viewer",
+     "spoken": "هذا مو تشخيص، بس يفسّر ليش الفحص مهم."
     }
    ],
    "risk": "r",

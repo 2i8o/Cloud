@@ -75,7 +75,7 @@ def main(argv):
         "R02_sensational_recommended": {"E_UNVERIFIED_CLAIM", "E_RECOMMEND_SCI", "E_FEAR"},
         "R03_spoils_payoff": {"E_SPOILS_PAYOFF"},
         "R04_no_continuation": {"E_MISSING_FIELD"},
-        "R05_generic_question": {"E_GENERIC_OPENER", "E_GENERIC"},
+        "R05_generic_question": {"E_GENERIC_OPENER", "W_GENERIC"},
         "R06_effects_instead_of_premise": {"E_EFFECT_FIX"},
         "R07_invented_citation": {"E_UNKNOWN_SOURCE"},
         "R08_not_accessed_source": {"E_SOURCE_NOT_ACCESSED"},
@@ -85,6 +85,10 @@ def main(argv):
         "R12_ambiguity_rewarded": {"E_RECOMMEND_CLARITY"},
         "R_fear": {"E_FEAR"}, "R_diagnostic": {"E_DIAGNOSTIC"}, "R_banned": {"E_BANNED_PHRASE"},
         "R_product": {"E_PRODUCT"}, "R_brand": {"E_BRAND"},
+        "R16_plausible_assertion": {"E_UNVERIFIED_CLAIM"}, "R17_number_not_in_quote": {"E_PARAM_NOT_SUPPORTED"},
+        "R18_demo_as_test": {"E_DEMO_AS_TEST"}, "R19_no_gap": {"E_NO_GAP"}, "R20_payoff_dup": {"E_PAYOFF_DUP"},
+        "R21_empty_beats": {"E_EMPTY_BEAT", "E_NO_CLOSING_LINE"}, "R22_answer_in_hook_no_beat2": {"E_ANSWER_IN_HOOK_NO_BEAT2"},
+        "R23_no_evidence_record": {"E_NO_EVIDENCE_RECORD"},
     }
     for name, want in expected.items():
         codes, rc = lint_codes(FIX / "redteam" / f"{name}.json")
@@ -112,6 +116,20 @@ def main(argv):
     r = run([PY, "-I", str(LINT), "--causal-text", str(FIX / "gold/G_causal_ok.md")])
     check("causal-language detector accepts hedged analytics prose", r.returncode == 0, r.stdout)
 
+    # Phase 2: revised outputs must lint clean; frozen baseline must be byte-identical to its manifest
+    rev = sorted((ROOT / "validation/phase2/revised/lint").glob("B*.json"))
+    bad = [q.name for q in rev if lint_codes(q)[1] != 0]
+    check(f"phase2: all {len(rev)} v1.1 brief outputs pass the v1.1 linter (0 errors)", len(rev) == 13 and not bad, str(bad))
+    mf = ROOT / "validation/phase2/baseline/BASELINE_MANIFEST.sha256"
+    mism = []
+    for line in mf.read_text().splitlines():
+        h, name = line.split(None, 1)
+        f = mf.parent / name.strip()
+        if hashlib.sha256(f.read_bytes()).hexdigest() != h: mism.append(name.strip())
+    check("phase2: frozen v1.0.0 baseline files unchanged (sha256 manifest)", not mism, str(mism))
+    r = run([PY, "-I", str(ROOT / "validation/phase2/review/compare_versions.py")])
+    check("phase2: comparison script runs", r.returncode == 0 and "HELD-OUT" in r.stdout, r.stderr[-200:])
+
     # 6 analytics script
     csvp = FIX / "analytics_sample.csv"
     r = run([PY, "-I", str(ANA), str(csvp), "NEW1"])
@@ -120,6 +138,9 @@ def main(argv):
     check("analytics_compare: output has no causal language", run([PY, "-I", str(LINT), "--causal-text", "/dev/stdin"], input=r.stdout).returncode == 0)
     r2 = run([PY, "-I", str(ANA), str(csvp), "SMALL1"])
     check("analytics_compare: small baseline -> hypothesis mode, no 'typical' value", "INSUFFICIENT BASELINE" in r2.stdout and "median" not in r2.stdout.split("Descriptive")[0], r2.stdout[-300:])
+
+    r = run([PY, "-I", str(ROOT / "skills/hook-analytics/scripts/sample_size.py"), "0.60", "0.05"])
+    check("sample_size: 60% vs 65% needs 1468 per arm (hand-computed value)", r.returncode == 0 and "~1468" in r.stdout, r.stdout)
 
     # 7 installer (R14) in a throw-away HOME
     with tempfile.TemporaryDirectory() as td:
@@ -187,9 +208,9 @@ def main(argv):
                  "| Result | Check |", "|---|---|"]
         lines += [f"| {'PASS' if k else 'FAIL'} | {n} |" for n, k, _ in results]
         lines += ["", "## What these results do and do not show", "",
-                  "- They show the helper scripts, installer, validator and fixtures behave as specified, and that the linter's gates fire on the 17 red-team fixtures while accepting the 2 gold fixtures.",
+                  "- They show the helper scripts, installer, validator and fixtures behave as specified, and that the linter's gates fire on the 25 red-team fixtures while accepting the 2 gold fixtures.",
                   "- They do **not** show that model-written hooks are good, that Iraqi phrasing is natural, that claims are true, or that any hook performs better on a platform.",
-                  "- The 38 behaviour specifications in `TEST_CASES.md` (12 held-out) are specifications. Eight were dry-run by the package author (`DRY_RUNS.md`, self-graded); no independent grader or live model-run harness was executed in this environment, so the model-driven workflow is NOT verified end to end."]
+                  "- The 49 behaviour specifications in `TEST_CASES.md` (10 held-out) are specifications. Eight were dry-run by the package author in Phase 1 (`DRY_RUNS.md`); in Phase 2 thirteen briefs were run through the workflow and reviewed by the same model (`validation/phase2/`). No independent grader, audience test or live harness was run, so the model-driven workflow is NOT verified end to end."]
         (ROOT / "tests/RESULTS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return 0 if ok == len(results) else 1
 

@@ -1,0 +1,73 @@
+== B01
+ERROR E_FEAR                   [C] fear framing: 'يخرب'
+ERROR E_MECH_DUP               [B+C] same mechanism M04
+WARN  W_SHAPE                  [-] all finalists share one hook shape (all questions or all statements)
+== B02
+== B03
+WARN  W_MSA                    [A] MSA marker(s): كيف - native review
+WARN  W_GENERIC                [B] hook contains none of the brief's subject terms - apply the swap-the-topic test by hand (advisory: low precision in Phase-2 testing)
+ERROR E_NO_CLOSING_LINE        [B] final beat lacks a written closing line (>= 4 words)
+WARN  W_MSA                    [C] MSA marker(s): الان - native review
+== B04
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+== B05
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+WARN  W_GENERIC                [C] hook contains none of the brief's subject terms - apply the swap-the-topic test by hand (advisory: low precision in Phase-2 testing)
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+WARN  W_UNVERIFIED_SCRIPT_CLAIM [C] script claim unverified: 'Clinics with limited space use mirrors'
+ERROR E_MECH_DUP               [A+C] same mechanism M05
+== B06
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+WARN  W_GENERIC                [C] hook contains none of the brief's subject terms - apply the swap-the-topic test by hand (advisory: low precision in Phase-2 testing)
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+== B07
+ERROR E_PARAM_NOT_SUPPORTED    [A] number '100' in the hook does not appear in any claim's support_quote/scope
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_NO_CLOSING_LINE        [B] final beat lacks a written closing line (>= 4 words)
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+ERROR E_MECH_DUP               [A+C] same mechanism M08
+== B08
+WARN  W_FEAR_MILD              [A] possible fear framing: 'خطر' - ensure evidence and an efficacy action
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+WARN  W_FEAR_MILD              [B] possible fear framing: 'خطر' - ensure evidence and an efficacy action
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+ERROR E_MECH_DUP               [B+C] same mechanism M09
+WARN  W_SHAPE                  [-] all finalists share one hook shape (all questions or all statements)
+== B09
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+WARN  W_SHAPE                  [-] all finalists share one hook shape (all questions or all statements)
+== B10
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [A] beat 5 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+WARN  W_SHAPE                  [-] all finalists share one hook shape (all questions or all statements)
+== B11
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 5 has no real new information
+ERROR E_NO_CLOSING_LINE        [B] final beat lacks a written closing line (>= 4 words)
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 5 has no real new information
+== B12
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 5 has no real new information
+== B13
+ERROR E_EMPTY_BEAT             [A] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [A] beat 5 has no real new information
+ERROR E_NO_CLOSING_LINE        [A] final beat lacks a written closing line (>= 4 words)
+ERROR E_EMPTY_BEAT             [B] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [B] beat 5 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 1 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 3 has no real new information
+ERROR E_EMPTY_BEAT             [C] beat 5 has no real new information
+ERROR E_NO_CLOSING_LINE        [C] final beat lacks a written closing line (>= 4 words)
+ERROR E_MECH_DUP               [B+C] same mechanism M05

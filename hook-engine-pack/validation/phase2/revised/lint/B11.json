@@ -1,0 +1,220 @@
+{
+ "brief": {
+  "subject_terms": [
+   "قرنية",
+   "استجماتزم",
+   "الاستجماتزم",
+   "الأطفال",
+   "رگبي"
+  ],
+  "duration_s": 30,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S84": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "ليش قرنية بشكل كرة الرگبي تخلي النظر مشوّش قريب وبعيد؟",
+   "gloss_en": "Why does a rugby-ball-shaped cornea blur both near and far?",
+   "mechanism": "M05",
+   "insight_key": "two-curvatures",
+   "payoff_key": "blur-at-all-distances",
+   "tension": "Why both near and far?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "A basketball and a rugby ball rotating with light rays overlaid",
+   "continuation": "Mismatched curvature",
+   "payoff": "Mechanism of blur at all distances",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Why both near and far? (carried by voice)",
+     "spoken": "ليش قرنية بشكل كرة الرگبي تخلي النظر مشوّش قريب وبعيد؟"
+    },
+    {
+     "t": "4-12",
+     "purpose": "normal eye",
+     "new_info": "round surfaces bend light equally to one focus",
+     "spoken": "السطح المدور يجمع الضوء بنقطة وحدة."
+    },
+    {
+     "t": "12-21",
+     "purpose": "astigmatism",
+     "new_info": "two curves bend light differently; two focus points",
+     "spoken": "منحنيين مختلفين يعطون نقطتين تركيز."
+    },
+    {
+     "t": "21-27",
+     "purpose": "correction",
+     "new_info": "glasses with a cylindrical lens compensate",
+     "spoken": "عدسة اسطوانية تعوّض."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "symptoms need an exam to confirm",
+     "spoken": "والأعراض لحالها ما تأكّد، الفحص يأكّد."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Astigmatism is an imperfection in the curvature of the cornea or lens; near and far vision are blurry",
+     "source": "S84",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "With either type of astigmatism, near and far vision is blurry",
+     "scope": "AAO 2025; analogy: football vs basketball",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Analogy invites self-diagnosis if not framed; closing beat holds",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "القراية بضوء خافت أو الجلوس گريب من التلفزيون… ما يسبب الاستجماتزم.",
+   "gloss_en": "Reading in dim light or sitting close to the TV doesn't cause astigmatism.",
+   "mechanism": "M02",
+   "insight_key": "astigmatism-myths",
+   "payoff_key": "what-doesnt-cause-it",
+   "tension": "So what does?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Child close to a TV with `شنو يسببه؟` on screen",
+   "continuation": "AAO myth",
+   "payoff": "What doesn't and what might",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: So what does? (carried by frame)",
+     "spoken": "القراية بضوء خافت أو الجلوس گريب من التلفزيون… ما يسبب الاستجماتزم."
+    },
+    {
+     "t": "4-12",
+     "purpose": "AAO",
+     "new_info": "it's a myth",
+     "spoken": "الأكاديمية الأمريكية تسميها خرافة."
+    },
+    {
+     "t": "12-21",
+     "purpose": "what is known",
+     "new_info": "risk is inherited; disease, injury or surgery can also cause it",
+     "spoken": "الخطر يتوارث، ويمكن من مرض أو إصابة أو عملية."
+    },
+    {
+     "t": "21-27",
+     "purpose": "child sitting close",
+     "new_info": "may signal a vision problem worth checking",
+     "spoken": "الطفل اللي يگعد گريب يستاهل فحص."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "a child who sits close to the TV is worth an eye exam",
+     "spoken": "والطفل اللي يگعد گريب، فحصه يطمّنك أو يلگى الحل."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Reading in low light or sitting close to the TV does not cause astigmatism",
+     "source": "S84",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "It is a myth that reading in low light or sitting very close",
+     "scope": "AAO 2025",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Last beat spoken line is short (3 words)",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "ليش الأطفال بالاستجماتزم ما يشتكون من التشويش؟",
+   "gloss_en": "Why don't children with astigmatism complain about blur?",
+   "mechanism": "M20",
+   "insight_key": "kids-dont-complain",
+   "payoff_key": "why-child-exams-matter",
+   "tension": "Why are they silent?",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Child squinting at a whiteboard (staged)",
+   "continuation": "Children don't know normal",
+   "payoff": "Why exams, not symptoms, find it",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Why are they silent? (carried by voice)",
+     "spoken": "ليش الأطفال بالاستجماتزم ما يشتكون من التشويش؟"
+    },
+    {
+     "t": "4-12",
+     "purpose": "reason",
+     "new_info": "they may not realize they see blurry",
+     "spoken": "لأن الطفل ما يعرف إن اللي يشوفه مو طبيعي."
+    },
+    {
+     "t": "12-21",
+     "purpose": "consequence",
+     "new_info": "untreated astigmatism can affect school or sports and lead to amblyopia",
+     "spoken": "ممكن يأثر بالدراسة أو الرياضة وحتى الكسل البصري."
+    },
+    {
+     "t": "21-28",
+     "purpose": "action",
+     "new_info": "a comprehensive eye exam finds it",
+     "spoken": "فحص النظر الشامل يلقاه."
+    },
+    {
+     "t": "28-30",
+     "purpose": "close",
+     "new_info": "early detection protects school and sport performance",
+     "spoken": "فحص طفلك الشامل يلگى المشكلة بدري."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Children may not realize they have blurry vision and are unlikely to complain",
+     "source": "S84",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Children may not realize they have blurry vision",
+     "scope": "AAO 2025; children",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Paediatric; review; wording 'يوفر عليه سنين' is rhetorical",
+   "confidence": "likely"
+  }
+ ]
+}

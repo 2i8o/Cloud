@@ -32,7 +32,7 @@ Evidence tags: **E** established (replicated / meta-analytic / official), **L** 
 - **Supports:** Surprise only matters when it changes beliefs (S26); curiosity enhanced memory especially for answers people had guessed wrongly (S12).
 - **Overstated:** random shock. A shocking image unrelated to the idea creates a gap about the image, not the topic.
 - **Use:** ensure the surprise IS the insight.
-- **Good:** `ثقب بحجم دبوس… والسطر المشوّش يصير واضح.` (pinhole, S45, S46) **Bad:** `شوف هذا الحيوان الغريب!` then lens talk.
+- **Good:** `ثقب صغير بورقة… والسطر المشوّش يصير واضح.` (pinhole, S45, S46) **Bad:** `شوف هذا الحيوان الغريب!` then lens talk.
 
 ## 5. Novelty, relevance and attention [L/G]
 - **Supports:** novelty alone is weak; relevance to the viewer's own situation and prior knowledge increases engagement with narratives (Green 2004: prior knowledge -> more transportation, S30).

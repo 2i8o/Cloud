@@ -1,0 +1,235 @@
+{
+ "brief": {
+  "subject_terms": [
+   "قصر النظر",
+   "طفل",
+   "نظارة",
+   "برا"
+  ],
+  "duration_s": 40,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S40": {
+   "access": "abstract_only"
+  },
+  "S41": {
+   "access": "partial_text"
+  },
+  "S39": {
+   "access": "abstract_only"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "B",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "٢٣ دراسة على ١٣ ألف طفل… شنو يعني \"تبطّئ\" قصر النظر؟",
+   "gloss_en": "23 trials on 13k children... what does 'slows' myopia mean?",
+   "mechanism": "M18",
+   "insight_key": "lenses-average-effect",
+   "payoff_key": "what-slowing-means",
+   "tension": "What does 'slow' mean for my child?",
+   "audience": "Iraqi parents of children 6-12",
+   "first_frame": "Number counter, then an animated eye growing slightly longer with and without special lenses",
+   "continuation": "Average effect is modest and design-dependent",
+   "payoff": "Quantified meaning of 'slow' and what it is not",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-6",
+     "purpose": "hook",
+     "new_info": "numbers raise a question",
+     "spoken": "٢٣ دراسة على ١٣ ألف طفل… شنو يعني \"تبطّئ\" قصر النظر؟"
+    },
+    {
+     "t": "6-14",
+     "purpose": "what myopia progression is",
+     "new_info": "the eye grows longer, power increases",
+     "spoken": "قصر النظر يتقدم لما العين تطول."
+    },
+    {
+     "t": "14-24",
+     "purpose": "quantified",
+     "new_info": "on average axial length growth is ~0.15 mm less and refraction ~0.31 D less than with single-vision lenses",
+     "spoken": "بالمتوسط العين تطول أقل بحوالي ٠.١٥ ملم، وتقدّم القوة أقل بحوالي ٠.٣ دايوبتر."
+    },
+    {
+     "t": "24-33",
+     "purpose": "limits",
+     "new_info": "slowing, not stopping; designs differ; individual response varies",
+     "spoken": "هذا تبطئة مو إيقاف، وتختلف حسب التصميم والطفل."
+    },
+    {
+     "t": "33-40",
+     "purpose": "close",
+     "new_info": "decision belongs to the child's eye professional",
+     "spoken": "القرار مع مختص يفحص طفلك."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Specialty lenses slowed progression on average in 23 RCTs",
+     "source": "S39",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "23 RCTs with a total of 13.315 subjects",
+     "scope": "children and adolescents; pooled vs single-vision lenses; AL -0.15 mm, SER -0.31 D; design-specific",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Paediatric advice; review required",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "تقليل قوة نظارة الطفل ما يبطّئ قصر النظر… وممكن يسرّعه.",
+   "gloss_en": "Under-correcting a child's glasses doesn't slow myopia and may speed it.",
+   "mechanism": "M02",
+   "insight_key": "undercorrection-myth",
+   "payoff_key": "use-the-full-prescription",
+   "tension": "Is that really true?",
+   "audience": "Iraqi parents of children 6-12",
+   "first_frame": "Parent adjusting child's glasses (staged) with `أقل قوة = أبطأ؟` on screen",
+   "continuation": "RCT evidence",
+   "payoff": "Why full correction is advised",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "text",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Is that really true? (carried by text)",
+     "spoken": "تقليل قوة نظارة الطفل ما يبطّئ قصر النظر… وممكن يسرّعه."
+    },
+    {
+     "t": "4-12",
+     "purpose": "why parents try it",
+     "new_info": "belief that weaker lenses 'rest' the eye",
+     "spoken": "كثير أهل يفكرون إن النظارة الأضعف ترتاح بيها العين."
+    },
+    {
+     "t": "12-24",
+     "purpose": "what trials found",
+     "new_info": "binocular undercorrection did not slow progression and may accelerate it",
+     "spoken": "التجارب لقت إنها ما تبطّئ، وبعضها لقى تسارع."
+    },
+    {
+     "t": "24-33",
+     "purpose": "what is different",
+     "new_info": "specialty lenses are designed differently; they are not 'weaker glasses'",
+     "spoken": "عدسات التحكم بقصر النظر مصممة بشكل ثاني، مو نظارة أضعف."
+    },
+    {
+     "t": "33-40",
+     "purpose": "close",
+     "new_info": "use the prescribed power and ask about options",
+     "spoken": "استعمل القوة المكتوبة، واسأل المختص عن الخيارات."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Binocular undercorrection does not slow myopia progression and may accelerate it",
+     "source": "S41",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "undercorrection does not slow myopia progression; instead, it may even accelerate the progression",
+     "scope": "review of RCTs; children; one paired-eye monovision study showed the opposite for the undercorrected eye",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Review excerpt only (primary RCTs not opened)",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "وقت العطلة برا البيت… هل يغيّر قصر النظر عند الطفل؟",
+   "gloss_en": "Holiday time outdoors... does it change a child's myopia?",
+   "mechanism": "M08",
+   "insight_key": "outdoor-time",
+   "payoff_key": "outdoor-time-evidence",
+   "tension": "Does outdoor time really matter?",
+   "audience": "Iraqi parents of children 6-12",
+   "first_frame": "Children on a school playground in bright light",
+   "continuation": "Seven RCTs in China",
+   "payoff": "Evidence and its limits",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Does outdoor time really matter? (carried by voice)",
+     "spoken": "وقت العطلة برا البيت… هل يغيّر قصر النظر عند الطفل؟"
+    },
+    {
+     "t": "4-14",
+     "purpose": "evidence",
+     "new_info": "7 randomized trials, 9,437 children: lower incidence of myopia",
+     "spoken": "٧ تجارب عشوائية على أكثر من ٩٠٠٠ طفل: اقل ظهور لقصر النظر."
+    },
+    {
+     "t": "14-26",
+     "purpose": "limits",
+     "new_info": "all trials in China; dose unclear; mixed evidence once a child is already myopic",
+     "spoken": "كلها بالصين، وما نعرف الجرعة، والأثر على اللي عنده قصر نظر أضعف."
+    },
+    {
+     "t": "26-34",
+     "purpose": "safety",
+     "new_info": "sun protection matters",
+     "spoken": "وانتبه للشمس: قبعة ونظارة بحماية UV."
+    },
+    {
+     "t": "34-40",
+     "purpose": "close",
+     "new_info": "one realistic target",
+     "spoken": "جرّب تزيد وقت اللعب برا بشكل منتظم."
+    }
+   ],
+   "claims": [
+    {
+     "text": "More outdoor time lowered myopia incidence in children in 7 RCTs",
+     "source": "S40",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "seven randomized controlled trials involving a total of 9,437 subjects",
+     "scope": "children; all trials conducted in China; RR 0.84 for incidence",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Outdoor-time effect on children who are already myopic is mixed",
+     "source": "S41",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Whether the protective effect ... extends to those who are already myopic is equivocal",
+     "scope": "review",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Iraqi heat/UV context not covered by the trials",
+   "confidence": "likely"
+  }
+ ]
+}

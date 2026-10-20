@@ -33,7 +33,9 @@ REQUIRED_TOP = ["README.md", "QUICKSTART.md", "RESEARCH_METHODOLOGY.md", "SOURCE
                 "docs/ARABIC_HOOK_WRITING_GUIDE.md", "docs/SCIENTIFIC_ACCURACY_RULES.md",
                 "docs/ANALYTICS_EXPERIMENT_PROTOCOL.md", "docs/EVALUATION_RUBRIC.md",
                 "docs/EXAMPLES.md", "scripts/install.sh", "scripts/validate_package.py",
-                "scripts/build_docs.py", "tests/run_tests.py", "tests/cases.json"]
+                "scripts/build_docs.py", "tests/run_tests.py", "tests/cases.json",
+                "validation/phase2/AUDIT.md", "validation/phase2/FAILURE_PATTERNS.md", "validation/phase2/IMPROVEMENT_LOG.md",
+                "validation/phase2/EXPERIMENT_PLAN.md", "validation/phase2/FINAL_REPORT.md", "validation/phase2/BRIEFS_AND_FINALISTS.md"]
 LEDGER_COLS = ("source_id title author url source_type publication_date date_accessed access_status "
                "timestamps_verified timestamps concept_extracted evidence_supporting application_20_45s "
                "limitations evidence_class confidence skill_module").split()

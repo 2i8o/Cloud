@@ -1,0 +1,235 @@
+{
+ "brief": {
+  "subject_terms": [
+   "لوحات",
+   "الألوان",
+   "اختبار",
+   "أحمر"
+  ],
+  "duration_s": 35,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S74": {
+   "access": "partial_text"
+  },
+  "S73": {
+   "access": "partial_text"
+  },
+  "S35": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "لوحات الألوان تكشف ٩٦٪ بس من الحالات… والباقي؟",
+   "gloss_en": "Colour plates detect only about 96% of cases... and the rest?",
+   "mechanism": "M18",
+   "insight_key": "plates-miss-some",
+   "payoff_key": "why-screening-is-not-diagnosis",
+   "tension": "Who do plates miss, and why?",
+   "audience": "Iraqi adults and parents",
+   "first_frame": "Ishihara-style plate (own artwork) with `96%` counter",
+   "continuation": "Screening vs diagnosis",
+   "payoff": "What screening can and cannot tell",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Why do plates miss some people? (carried by voice)",
+     "spoken": "لوحات الألوان تكشف ٩٦٪ بس من الحالات… والباقي؟"
+    },
+    {
+     "t": "4-12",
+     "purpose": "what plates are",
+     "new_info": "dots hide a number; red-green screening",
+     "spoken": "نقاط ملونة تخفي رقم، وتفحص الأحمر والأخضر."
+    },
+    {
+     "t": "12-21",
+     "purpose": "why some are missed",
+     "new_info": "some mild cases read the hidden digits; some normal people misread a plate",
+     "spoken": "بعض الحالات الخفيفة تقرأ الرقم، وبعض الناس الطبيعيين يغلطون."
+    },
+    {
+     "t": "21-28",
+     "purpose": "what diagnoses",
+     "new_info": "an anomaloscope is the clinical instrument",
+     "spoken": "التشخيص النهائي بجهاز اسمه anomaloscope."
+    },
+    {
+     "t": "28-35",
+     "purpose": "close",
+     "new_info": "a plate result is a prompt to get examined, not a verdict",
+     "spoken": "نتيجة اللوحة تنبيه، مو حكم."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Plate tests detect about 96% of cases confirmed by anomaloscope",
+     "source": "S74",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "detect about 96 percent of the cases confirmed by anomaloscope",
+     "scope": "validated plate series (Ishihara, Dvorine, AO H-R-R); red-green congenital defects",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Source is an older report; confirm against a recent source before publishing",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "أغلب عمى الألوان يشوف ألوان — بس بشكل مختلف.",
+   "gloss_en": "Most colour blindness still sees colour - just differently.",
+   "mechanism": "M02",
+   "insight_key": "partial-colour",
+   "payoff_key": "most-see-colour",
+   "tension": "What do they actually see?",
+   "audience": "Iraqi adults and parents",
+   "first_frame": "Split image: normal vs a simulated deficiency (clearly labelled `محاكاة`)",
+   "continuation": "Simulation caveat",
+   "payoff": "Corrects the black-and-white myth",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: What do they actually see? (carried by frame)",
+     "spoken": "أغلب عمى الألوان يشوف ألوان — بس بشكل مختلف."
+    },
+    {
+     "t": "4-13",
+     "purpose": "myth",
+     "new_info": "most colour-blind people see partial colour",
+     "spoken": "الأغلبية تشوف ألوان جزئية."
+    },
+    {
+     "t": "13-22",
+     "purpose": "typical confusion",
+     "new_info": "reds and greens can look similar",
+     "spoken": "الأحمر والأخضر يتشابهون."
+    },
+    {
+     "t": "22-29",
+     "purpose": "caveat",
+     "new_info": "a simulation is an approximation, not what a person sees",
+     "spoken": "هذي محاكاة تقريبية، مو بالضبط اللي يشوفه الشخص."
+    },
+    {
+     "t": "29-35",
+     "purpose": "close",
+     "new_info": "complete colour loss exists but is rare",
+     "spoken": "والنوع الكامل نادر، والفحص يحدد نوعك."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Most people who are colour blind see partial colour",
+     "source": "S35",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Most people who are color blind see partial color",
+     "scope": "AAO myths page 2022; myth 9",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Simulations can mislead; label them",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "اختبار ألوان على موبايلك… شنو ما يگدر يگوله لك؟",
+   "gloss_en": "A colour test on your phone... what can't it tell you?",
+   "mechanism": "M08",
+   "insight_key": "online-test-limits",
+   "payoff_key": "online-tests-cannot-diagnose",
+   "tension": "What can't a phone test tell me?",
+   "audience": "Iraqi adults and parents",
+   "first_frame": "Phone showing a plate, `تشخيص؟` crossed out",
+   "continuation": "Cleveland Clinic: online tests cannot diagnose",
+   "payoff": "Limits and the next step",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: What can't a phone test tell me? (carried by voice)",
+     "spoken": "اختبار ألوان على موبايلك… شنو ما يگدر يگوله لك؟"
+    },
+    {
+     "t": "4-12",
+     "purpose": "what they are",
+     "new_info": "examples of what real tests look like",
+     "spoken": "هي أمثلة تشبه الفحص الحقيقي."
+    },
+    {
+     "t": "12-21",
+     "purpose": "limit",
+     "new_info": "online tests can't diagnose",
+     "spoken": "بس ما تشخّص."
+    },
+    {
+     "t": "21-28",
+     "purpose": "why",
+     "new_info": "screen colours and conditions vary; diagnosis needs a trained examiner",
+     "spoken": "ألوان الشاشة تختلف، والتشخيص يحتاج مختص."
+    },
+    {
+     "t": "28-35",
+     "purpose": "close",
+     "new_info": "if you suspect a problem, book an exam",
+     "spoken": "إذا شاكك، احجز فحص."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Online colour tests can't diagnose",
+     "source": "S73",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "But they can’t diagnose anything.",
+     "scope": "Cleveland Clinic patient page 2023; online tests",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Ishihara identifies red-green deficiency only",
+     "source": "S73",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "Ishihara tests only diagnose red-green color deficiency.",
+     "scope": "Cleveland Clinic",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Secondary (health-system) source; the 'screen colours vary' reason is script-only reasoning",
+   "confidence": "likely"
+  }
+ ]
+}

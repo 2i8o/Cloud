@@ -1,0 +1,10 @@
+v1.0.0 linter flagged 9/39 baseline finalists (any code)
+human-style review: 26 weak finalists, 34 with >=1 flag
+weak finalists the linter flagged: 8/26  -> missed 18
+linter-flagged finalists that review did not consider weak: ['B08-C']
+E_GENERIC agreement with review GENERIC flag: both 3, linter-only (false alarm) 4, review-only (miss) 5
+review flag CITATION: 3 finalists; linter flagged 1 of them
+review flag MISLEAD: 6 finalists; linter flagged 1 of them
+review flag SCOPE: 11 finalists; linter flagged 2 of them
+review flag DIAG: 6 finalists; linter flagged 3 of them
+review flag NOGAP: 13 finalists; linter flagged 4 of them

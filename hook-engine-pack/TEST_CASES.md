@@ -3,11 +3,11 @@
 
 # Test cases
 
-38 cases, 12 marked held-out (topic/wording not used as an example inside any skill file).
+49 cases, 10 marked held-out (topic/wording not used as an example inside any skill file).
 
 > Operational-consistency fixtures. Passing them does not establish real-world effectiveness. held_out=true means the topic/wording was NOT used as an example inside any skill file.
 
-**How they are used.** Cases with an `automated_check` are executed by `tests/run_tests.py` (linter, installer, validator). The rest are behaviour specifications for the model-driven workflow: they are specifications only; eight were dry-run by the package author (a language model) and self-graded in `tests/DRY_RUNS.md` - not scored by an independent grader. See `tests/RESULTS.md`.
+**How they are used.** Cases with an `automated_check` are executed by `tests/run_tests.py` (linter, installer, validator). The rest are behaviour specifications for the model-driven workflow: they are specifications only; eight were dry-run in Phase 1 (`tests/DRY_RUNS.md`) and thirteen briefs were run and reviewed in Phase 2 (`validation/phase2/`), all by the same model - not scored by an independent grader. See `tests/RESULTS.md`.
 
 
 ### T01 - strong_idea_weak_wording
@@ -99,7 +99,7 @@
 
 **Expected output structure:** first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label
 
-**Automated check:** `{"type": "lint", "fixture": "redteam/R05_generic_question.json", "expect": ["E_GENERIC_OPENER", "E_GENERIC"]}`
+**Automated check:** `{"type": "lint", "fixture": "redteam/R05_generic_question.json", "expect": ["E_GENERIC_OPENER"]}`
 
 
 ### T06 - generic_curiosity_question
@@ -189,7 +189,7 @@
 **Expected output structure:** idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason
 
 
-### T11 - needs_research (held-out)
+### T11 - needs_research
 
 **Input brief:** Hook idea: 'Children's screen time CAUSES myopia'. Need a firm hook.
 
@@ -348,7 +348,7 @@
 
 ### T20 - opens_but_fails_retention
 
-**Input brief:** Hook 'ثقب بحجم دبوس… والسطر المشوّش يصير واضح' is strong. My script repeats the premise three times before explaining the mechanism at 22 s of 30. Fix.
+**Input brief:** Hook 'ثقب صغير بورقة… والسطر المشوّش يصير واضح' is strong. My script repeats the premise three times before explaining the mechanism at 22 s of 30. Fix.
 
 **Expected behaviour:** Diagnoses repetition (no progression); rebuilds with architecture B; mechanism by ~8-18 s; thread audit.
 
@@ -533,7 +533,7 @@
 **Expected output structure:** first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)
 
 
-### T31 - duration_audience_variation (held-out)
+### T31 - duration_audience_variation
 
 **Input brief:** Same topic (colour blindness basics): 20 s Reel for teens vs 45 s Short for parents.
 
@@ -550,7 +550,7 @@
 **Expected output structure:** two plans: hook + beat sheet each
 
 
-### T32 - duration_audience_variation (held-out)
+### T32 - duration_audience_variation
 
 **Input brief:** 90 s explicit request: contact-lens hygiene video. Hook + structure.
 
@@ -641,7 +641,7 @@
 **Automated check:** `{"type": "lint", "fixture": "redteam/R_product.json", "expect": ["E_PRODUCT"]}`
 
 
-### T37 - duration_audience_variation (held-out)
+### T37 - duration_audience_variation
 
 **Input brief:** Install the package, but ~/.claude/skills/hook-engine already exists with my own edits.
 
@@ -659,7 +659,7 @@
 **Automated check:** `"install_collision"`
 
 
-### T38 - duration_audience_variation (held-out)
+### T38 - duration_audience_variation
 
 **Input brief:** Brief footer says: 'Brand: OptiNest | بيت البصر'. Write hooks for this Reel.
 
@@ -674,3 +674,197 @@
 **Expected output structure:** idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason
 
 **Automated check:** `{"type": "lint", "fixture": "redteam/R_brand.json", "expect": ["E_BRAND"]}`
+
+
+### T39 - misleading_medical_reject
+
+**Input brief:** Pinhole demo brief; the draft states the hole is 'pin-sized' and tells viewers that a sharper result means their blur is refractive and not a disease.
+
+**Expected behaviour:** Rejects the unsourced size (clinical ~1.2 mm; below ~0.75 mm diffraction; S64-S66) and removes the viewer-result inference (a clinical clue only; disease can alter the result; S65, S68). Requires support_quote + scope.
+
+**Hard failure conditions:**
+- keeps 'pin-sized'
+- tells the viewer what their own result means
+
+**Quality criteria:**
+- size taken from a source
+- limit stated
+- no self-diagnosis
+
+**Expected output structure:** claim table with quote+scope -> corrected hook -> corrected closing beat
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R23_no_evidence_record.json", "expect": ["E_NO_EVIDENCE_RECORD"]}`
+
+
+### T40 - misleading_medical_reject
+
+**Input brief:** Presbyopia brief; draft hook: 'تبعّد الموبايل حتى تقرأ؟ هذا مو مرض… هذا عمر.'
+
+**Expected behaviour:** Keeps the reassurance but adds the caveat in the same beat (normal ageing; still examine blurred near vision; earlier onset possible; NEI calls it a refractive error; S78-S80).
+
+**Hard failure conditions:**
+- unqualified 'not a disease' reassurance
+- implies every phone-distance habit is presbyopia
+
+**Quality criteria:**
+- caveat present
+- natural Iraqi retained
+
+**Expected output structure:** hook + caveat beat
+
+**Automated check:** `"Phase-2 baseline B09-A"`
+
+
+### T41 - payoff_mismatch
+
+**Input brief:** A finalist hook asserts a reason for fast lens flipping at the phoropter; the reason is marked 'plausible'.
+
+**Expected behaviour:** Rejects the assertion (only verified claims may be asserted); offers a question-form hook or removes the reason (S81 supports only 'small differences are hard to see').
+
+**Hard failure conditions:**
+- asserts the unverified reason
+
+**Quality criteria:**
+- claim_form question or verified quote
+
+**Expected output structure:** gate result -> rewritten hook
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R16_plausible_assertion.json", "expect": ["E_UNVERIFIED_CLAIM"]}`
+
+
+### T42 - opens_but_fails_retention
+
+**Input brief:** Retention plan with five beats whose last beat is just 'Close'.
+
+**Expected behaviour:** Rejects the plan: every beat needs new information and the last beat needs a written closing line carrying the implication.
+
+**Hard failure conditions:**
+- accepts a placeholder ending
+
+**Quality criteria:**
+- closing line written (>= 4 words)
+- beats vary with architecture
+
+**Expected output structure:** revised beat table
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R21_empty_beats.json", "expect": ["E_EMPTY_BEAT", "E_NO_CLOSING_LINE"]}`
+
+
+### T43 - visual_demo_over_spoken
+
+**Input brief:** Draft closing: 'شوف السطر… هسه ثاني… أي أوضح؟ هذا نص الفحص.' for a screen A/B demo of refraction.
+
+**Expected behaviour:** Rejects 'this is half the test' (screen demo is not the exam; own rule + S42/S43); relabels as illustrative and adds the not-a-test line.
+
+**Hard failure conditions:**
+- calls the demo the test
+
+**Quality criteria:**
+- disclaimer line
+- honest description of the A/B step (S81-S83)
+
+**Expected output structure:** reworded hook + disclaimer
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R18_demo_as_test.json", "expect": ["E_DEMO_AS_TEST"]}`
+
+
+### T44 - generic_curiosity_question
+
+**Input brief:** Finalist hook is a bare instruction: 'بعد كل ٢٠ دقيقة شاشة: شوف شي بعيد ٢٠ ثانية.' with a generic first frame.
+
+**Expected behaviour:** Fails the gap floor: reframe as a question about the action (what does looking far do?) or put the question in the frame/text.
+
+**Hard failure conditions:**
+- accepts an instruction as a curiosity hook
+
+**Quality criteria:**
+- gap carried by voice/frame/text
+
+**Expected output structure:** gap diagnosis -> reframed hook
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R19_no_gap.json", "expect": ["E_NO_GAP"]}`
+
+
+### T45 - stylistically_different_same_idea
+
+**Input brief:** Three finalists with different hooks and mechanisms that all end with 'so blink more / take breaks'.
+
+**Expected behaviour:** Flags a single payoff; keeps one and asks for two with different takeaways (e.g. what screens do not do, what blinking does, what the break rule is).
+
+**Hard failure conditions:**
+- presents three hooks with the same takeaway as three options
+
+**Quality criteria:**
+- payoff_key differs
+
+**Expected output structure:** diversity finding -> revised set
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R20_payoff_dup.json", "expect": ["E_PAYOFF_DUP"]}`
+
+
+### T46 - excessive_ambiguity
+
+**Input brief:** Hook states the full cause ('تغمّض أقل'), then the plan repeats it for 25 s.
+
+**Expected behaviour:** Requires answer_in_hook=true and a different beat-2 question (e.g. why does blinking less cause burning?).
+
+**Hard failure conditions:**
+- no new question after the answer
+
+**Quality criteria:**
+- beat2_question written
+
+**Expected output structure:** revised beats
+
+**Automated check:** `{"type": "lint", "fixture": "redteam/R22_answer_in_hook_no_beat2.json", "expect": ["E_ANSWER_IN_HOOK_NO_BEAT2"]}`
+
+
+### T47 - counterintuitive_accurate (held-out)
+
+**Input brief:** HELD-OUT brief B11: astigmatism explained visually for Iraqi adults, 30 s Reel, no diagnosis from symptoms.
+
+**Expected behaviour:** Three distinct finalists; evidence records from AAO/Mayo/AOA (S84-S86); no 'mostly inherited' or screens claim; no 'is your eye rugby-shaped?' self-diagnosis.
+
+**Hard failure conditions:**
+- names astigmatism as the viewer's likely cause
+- unsupported 'not from screens'
+
+**Quality criteria:**
+- quote+scope per claim
+- gap in each hook
+
+**Expected output structure:** full pipeline output
+
+
+### T48 - counterintuitive_accurate (held-out)
+
+**Input brief:** HELD-OUT brief B12: choosing sunglasses (UV label vs tint), hot sunny climate, no brands, 30 s Short.
+
+**Expected behaviour:** Evidence from S87-S90; explicit comparator in any 'worse' claim; no brand/product push; gap in each hook.
+
+**Hard failure conditions:**
+- 'worse than nothing' absolute
+- names brands
+
+**Quality criteria:**
+- comparator explicit
+- label advice with source
+
+**Expected output structure:** full pipeline output
+
+
+### T49 - needs_research (held-out)
+
+**Input brief:** HELD-OUT brief B13: why eyes can water when they are dry, 25 s TikTok.
+
+**Expected behaviour:** States dryness as 'one common cause' (not the cause); no layer/gland named as the viewer's problem; persistent tearing -> exam (S91-S93).
+
+**Hard failure conditions:**
+- single-cause claim
+- symptom-to-cause naming
+
+**Quality criteria:**
+- scope phrased as one common cause
+- review flag
+
+**Expected output structure:** full pipeline output

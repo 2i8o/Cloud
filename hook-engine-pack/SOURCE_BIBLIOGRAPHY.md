@@ -3,7 +3,7 @@
 
 # Source bibliography
 
-63 sources, accessed 2026-10-20 unless a row says otherwise. Full extraction columns (concept, evidence, application, limits, confidence, module) are in `RESEARCH_LEDGER.csv`. `Access` is what was actually opened; it is never upgraded.
+94 sources, accessed 2026-10-20 unless a row says otherwise. Full extraction columns (concept, evidence, application, limits, confidence, module) are in `RESEARCH_LEDGER.csv`. `Access` is what was actually opened; it is never upgraded.
 
 ## What was NOT accessed (read this before trusting the bibliography)
 
@@ -40,6 +40,11 @@
 | S21 | The (Null) Effects of Clickbait Headlines on Polarization, Trust and Learning | Stanford PACS authors | 2019-03-31 (working paper) | partial_text | established | <https://pacscenter.stanford.edu/wp-content/uploads/2019/05/clickbait_POQ-71.pdf/> |
 | S55 | How to Tell Stories That People Want to Share with Colin and Samir (Musicbed) | Will Meier | 2020-08-14 | partial_text | practitioner_heuristic | <https://www.musicbed.com/articles/filmmaking/youtube/the-biggest-mistake-filmmakers-make-with-colin-and-samir/> |
 | S61 | TikTok Analytics Explained: The Metrics That Actually Matter | post-bridge (jack friks) | 2024-09-01 | search_snippet | anecdotal | <https://www.post-bridge.com/blog/tiktok-analytics> |
+| S67 | A Peek at the Pinhole | Bisant A. Labib, OD (Review of Optometry) | 2020-03-15 | partial_text | practitioner_heuristic | <https://www.reviewofoptometry.com/article/a-peek-at-the-pinhole> |
+| S81 | Axis of Evil (just-noticeable differences in refraction) | Taub & Harris, Review of Optometry | 2015-08-15 | partial_text | practitioner_heuristic | <https://www.reviewofoptometry.com/article/eeny-meeny-miny-moe> |
+| S82 | Common Errors in the Refractive Process | Ophthalmology Management | 2008-02-01 | partial_text | practitioner_heuristic | <https://ophthalmologymanagement.com/issues/2008/february/common-errors-in-the-refractive-process/> |
+| S83 | A subjective refraction technique | Mark Wilkinson, Optometric Management | 2024-08-30 | search_snippet | practitioner_heuristic | <https://www.optometricmanagement.com/issues/2024/september/a-subjective-refraction-technique> |
+| S89 | Sunglasses, eye protection and cancer: 9 things to know | MD Anderson Cancer Center | 2024-07-31 | partial_text | anecdotal | <https://www.mdanderson.org/cancerwise/9-things-to-know-about-sunglasses--eye-protection-and-cancer.h00-159699123.html> |
 
 ## Peer-reviewed research and meta-analyses
 
@@ -76,6 +81,14 @@
 | S60 | Phonological variation and change in Mesopotamia | Abdulkareem Ahmed (Newcastle PhD thesis) | 2018 | partial_text | established | <https://theses.ncl.ac.uk/jspui/bitstream/10443/4345/1/Ahmed%20A%20Y%202018.pdf> |
 | S62 | Snellen or logMAR in clinical ophthalmology | Spileers | 2010 | abstract_only | established | <https://doi.org/10.1111/j.1755-3768.2010.4422.x> |
 | S63 | Spoilers Affect the Enjoyment of Television Episodes but Not Short Stories | Daniel & Katz | 2019 (Psychol Rep) | search_snippet | hypothesis | <https://pubmed.ncbi.nlm.nih.gov/30115003/> |
+| S64 | The Ideal Pinhole | Whitney & O'Connor | 2009 (IOVS abstract) | abstract_only | established | <https://iovs.arvojournals.org/article.aspx?articleid=2366370> |
+| S66 | Quantitative Analysis of Functional Changes Caused by Pinhole Glasses | Kim, Park, Chun | 2014-10-01 (IOVS) | partial_text | established | <https://iovs.arvojournals.org/article.aspx?articleid=2166618> |
+| S68 | Results of the pinhole test correlate with hybrid contact lens VA in corneal disease | (authors not extracted) | n/a | partial_text | established | <https://pmc.ncbi.nlm.nih.gov/articles/PMC9249474/> |
+| S69 | Visual filling-in | Stuart Anstis (Current Biology) | 2010-08-24 | partial_text | established | <https://www.cell.com/current-biology/fulltext/S0960-9822(10)00775-X> |
+| S70 | Filling in the blind spot | V. S. Ramachandran | 1992 (Nature) | partial_text | established | <https://doi.org/10.1038/356115a0> |
+| S71 | On the filling in of the visual blind spot: some rules of thumb | Durgin, Tripathy, Levi | 1995 (Perception) | abstract_only | contested | <https://doi.org/10.1068/p240827> |
+| S93 | Assessment of the Watery Eye | StatPearls (Lopez Montes, Gurnani, Stokkermans) | n/a | partial_text | established | <https://www.ncbi.nlm.nih.gov/books/NBK587369/> |
+| S94 | Spherical Refraction for General Eye Workers | (Community Eye Health Journal; author not extracted) | n/a | partial_text | established | <https://pmc.ncbi.nlm.nih.gov/articles/PMC1705956/> |
 
 ## Professional bodies and standards (AAO, AOA, ISO, ICO)
 
@@ -90,6 +103,24 @@
 | S42 | ISO 8596:2017 Ophthalmic optics - Visual acuity testing - Standard and clinical optotypes and their presentation | ISO | 2017 | search_snippet | established | <https://www.iso.org/standard/69042.html> |
 | S43 | Visual Acuity Measurement Standard (ICO 1984) | August Colenbrander | 1984 | partial_text | established | <https://files.givewell.org/files/DWDA%202009/Interventions/Cataract/VisualAcuityMeasurementStandard-1984.pdf> |
 | S44 | What Does 20/20 Vision Mean? | American Academy of Ophthalmology | 2025-02-25 | partial_text | established | <https://www.aao.org/eye-health/anatomy/what-does-20-20-vision-mean> |
+| S65 | General Refraction Techniques (pinhole section) | Mark E. Wilkinson (Univ. Iowa) | n/a | partial_text | established | <https://webeye.ophth.uiowa.edu/eyeforum/video/Refraction/pdfs/Std-subj-Refract-Plus-MinusCyl-Clinicans.pdf> |
+| S72 | How Color Blindness Is Tested | American Academy of Ophthalmology | 2017-08-25 | partial_text | established | <https://www.aao.org/eye-health/diseases/how-color-blindness-is-tested> |
+| S73 | What To Know About Color Blindness Tests | Cleveland Clinic | 2023-03-27 | partial_text | established | <https://my.clevelandclinic.org/health/diagnostics/color-blind-test> |
+| S74 | Using Color Vision Tests (Procedures for Testing Color Vision) | NAS/NRC (NBK217826) | n/a | partial_text | established | <https://www.ncbi.nlm.nih.gov/books/NBK217826/> |
+| S75 | Preventing Eye Infections When Wearing Contacts | CDC | 2025-08-22 | partial_text | established | <https://www.cdc.gov/contact-lenses/prevention/index.html> |
+| S76 | Corneal Infections Associated with Sleeping in Contact Lenses - Six Cases, US 2016-2018 | CDC MMWR | 2018-08-17 | partial_text | established | <https://www.cdc.gov/mmwr/volumes/67/wr/mm6732a2.htm> |
+| S77 | Healthy Contact Lens Behaviors Communicated by Eye Care Providers - US 2018 | CDC MMWR | 2019-08-15 | partial_text | established | <https://www.cdc.gov/mmwr/volumes/68/wr/mm6832a2.htm> |
+| S78 | Presbyopia | National Eye Institute | n/a | partial_text | established | <https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/presbyopia> |
+| S79 | What Is Presbyopia? | American Academy of Ophthalmology | 2026-05-21 | partial_text | established | <https://www.aao.org/eye-health/diseases/what-is-presbyopia> |
+| S80 | Presbyopia - Symptoms and causes | Mayo Clinic | 2026-07-01 | partial_text | established | <https://www.mayoclinic.org/diseases-conditions/presbyopia/symptoms-causes/syc-20363328> |
+| S84 | Astigmatism Explained | American Academy of Ophthalmology | 2025-01-20 | partial_text | established | <https://www.aao.org/eye-health/astigmatism> |
+| S85 | Astigmatism - Symptoms & causes | Mayo Clinic | 2025-04-30 | partial_text | established | <https://www.mayoclinic.org/diseases-conditions/astigmatism/symptoms-causes/syc-20353835> |
+| S86 | Astigmatism | American Optometric Association | n/a | partial_text | established | <https://www.aoa.org/healthy-eyes/eye-and-vision-conditions/astigmatism> |
+| S87 | Is the UV coating on prescription lenses enough protection? | Aaron P. Weingeist, MD (AAO) | 2021-11-03 | partial_text | established | <https://www.aao.org/eye-health/ask-ophthalmologist-q/can-prescription-lenses-block-uv-like-sunglasses> |
+| S88 | UV-Blocking Contact Lenses Won't Protect Your Eyes From the Sun | AAO | 2022-07-26 | partial_text | established | <https://www.aao.org/eye-health/tips-prevention/uv-blocking-contact-lens-sun-protection> |
+| S90 | Factsheet sunglasses for general use | Swiss Federal Office of Public Health (BAG) | n/a | partial_text | established | <https://www.bag.admin.ch/dam/en/sd-web/SRRA-pHbch8q/faktenblatt-sonnenbrillen.pdf> |
+| S91 | What Is Dry Eye? | Michael A. Puente Jr., MD (AAO) | 2025-12-08 | partial_text | established | <https://www.aao.org/eye-health/diseases/what-is-dry-eye> |
+| S92 | What causes an overactive tear duct and how is it treated? | Richard E. Bensinger, MD (AAO) | 2014-03-10 | partial_text | established | <https://www.aao.org/eye-health/ask-ophthalmologist-q/causes-of-tear-overflow> |
 
 ## Creator education (interviews, transcripts, posts, book chapter)
 

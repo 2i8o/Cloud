@@ -1,0 +1,260 @@
+{
+ "brief": {
+  "subject_terms": [
+   "ثقب",
+   "السطر",
+   "الثقب"
+  ],
+  "duration_s": 30,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S68": {
+   "access": "partial_text"
+  },
+  "S65": {
+   "access": "partial_text"
+  },
+  "S46": {
+   "access": "partial_text"
+  },
+  "S66": {
+   "access": "partial_text"
+  },
+  "S45": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "نفس السطر. نفس الكاميرا. شنو تغيّر؟",
+   "gloss_en": "Same line, same camera. What changed?",
+   "mechanism": "M11",
+   "insight_key": "pinhole-aperture",
+   "payoff_key": "aperture-shrinks-blur",
+   "tension": "What did the card with a hole change?",
+   "audience": "Iraqi adults 18-40, many wear glasses",
+   "first_frame": "Defocused printed line; black card with a ~1 mm hole enters from the right; the line becomes readable (optics demo, labelled)",
+   "continuation": "Control: the same card without a hole changes nothing",
+   "payoff": "Mechanism: smaller aperture, smaller blur spots; costs light",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook + reveal",
+     "new_info": "line sharpens when the holed card enters",
+     "spoken": "نفس السطر. نفس الكاميرا. شنو تغيّر؟"
+    },
+    {
+     "t": "3-8",
+     "purpose": "control",
+     "new_info": "the same card without a hole changes nothing; the hole is the variable",
+     "spoken": "الورقة بدون ثقب ما تسوي شي. الثقب هو الفرق."
+    },
+    {
+     "t": "8-17",
+     "purpose": "mechanism",
+     "new_info": "each object point becomes a blur spot; a narrow aperture makes the spot smaller",
+     "spoken": "كل نقطة تصير بقعة مشوشة، والثقب يضيّق الشعاع فتصغر البقعة."
+    },
+    {
+     "t": "17-24",
+     "purpose": "cost",
+     "new_info": "less light reaches the sensor/eye, so the image is dimmer",
+     "spoken": "وتدفع ثمنها: ضوء أقل، فالصورة تصير أغمق."
+    },
+    {
+     "t": "24-30",
+     "purpose": "limit + re-hook",
+     "new_info": "this is an optics demo not an eye test; clinics use a specific size",
+     "spoken": "هذا شرح بصريات مو فحص نظر. وبالعيادة يستعملون حجم معيّن — ليش؟"
+    }
+   ],
+   "claims": [
+    {
+     "text": "A small aperture can make blur from a focusing error look sharper",
+     "source": "S45",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "people with a refractive error, such as myopia, can usually see better with the pinhole",
+     "scope": "clinical pinhole test; refractive error; shown here with a defocused camera as an optics analogy",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Decreasing pupil size increases depth of focus",
+     "source": "S46",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Decreasing pupil size increases the depth of focus",
+     "scope": "StatPearls pupil-size chapter; optics principle",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "A camera's defocus is an analogy, not the viewer's eye",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "تصغّر ثقب الورقة تشوف أحدّ… وتصغّره أكثر يصير أسوأ. ليش؟",
+   "gloss_en": "Make the hole smaller and you see sharper... smaller still and it gets worse. Why?",
+   "mechanism": "M05",
+   "insight_key": "pinhole-size-tradeoff",
+   "payoff_key": "why-not-smaller",
+   "tension": "Why would a smaller hole be worse?",
+   "audience": "Iraqi adults 18-40, many wear glasses",
+   "first_frame": "Three cards with holes of decreasing size photographed through the same defocused lens; the smallest is dark and soft",
+   "continuation": "Diffraction and brightness",
+   "payoff": "Why ~1.2 mm is the working size",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook + contrast",
+     "new_info": "a middle hole is sharp; a tiny hole is darker and softer",
+     "spoken": "تصغّر ثقب الورقة تشوف أحدّ… وتصغّره أكثر يصير أسوأ. ليش؟"
+    },
+    {
+     "t": "4-12",
+     "purpose": "evidence of the effect",
+     "new_info": "the smallest hole looks worse than the middle one on camera",
+     "spoken": "شوف: الثقب الأصغر أغمق وأنعم من الوسط."
+    },
+    {
+     "t": "12-21",
+     "purpose": "reason",
+     "new_info": "below about 0.75 mm diffraction blurs the image again and the view darkens",
+     "spoken": "تحت حدود ٠.٧٥ ملم، الضوء ينثني على الحافة فالصورة تتشوّش مرة ثانية."
+    },
+    {
+     "t": "21-27",
+     "purpose": "working size",
+     "new_info": "clinical occluders use about 1.2 mm",
+     "spoken": "عيادات النظر تستقر على حوالي ١.٢ ملم."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "optics is a trade-off",
+     "spoken": "بالبصريات دايماً اكو ثمن لكل تحسين."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Clinical pinhole is about 1.2 mm; smaller apertures add diffraction blur",
+     "source": "S65",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "if the pinhole aperture is smaller than 1.2 millimeters, the blurring effects of diffraction",
+     "scope": "clinical pinhole for refractive-error assessment; Whitney 2009 tested 0.5-1.5 mm; Kim 2014 reports blur below ~0.75 mm",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Apertures below ~0.75 mm cause considerable diffraction blurring",
+     "source": "S66",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "aperture size smaller than 0.75 mm causes considerable diffraction blurring",
+     "scope": "IOVS 2014 pinhole-glasses study discussion",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Hard to film the three sizes legibly (marked UNFILMABLE if the smallest hole is not visible on camera)",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "نفس الثقب يحسّن النظر عند ناس، ويخليه أسوأ عند ناس آخرين.",
+   "gloss_en": "The same pinhole improves sight for some people and makes it worse for others.",
+   "mechanism": "M16",
+   "insight_key": "pinhole-clue-limits",
+   "payoff_key": "clinical-clue-and-its-limits",
+   "tension": "Why does the same hole help some people and not others?",
+   "audience": "Iraqi adults 18-40, many wear glasses",
+   "first_frame": "Clinician-style hand holding a pinhole occluder in front of an eye-chart line, then a second line that does not improve; on-screen text `ليش؟`",
+   "continuation": "If blur is from focusing error it improves; some eye conditions do not",
+   "payoff": "Clue vs diagnosis",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "text",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "the same device gives opposite results",
+     "spoken": "نفس الثقب يحسّن النظر عند ناس، ويخليه أسوأ عند ناس آخرين."
+    },
+    {
+     "t": "4-12",
+     "purpose": "case 1",
+     "new_info": "with a focusing error, acuity usually improves through the hole",
+     "spoken": "إذا التشويش من التركيز، الثقب يساعد."
+    },
+    {
+     "t": "12-20",
+     "purpose": "case 2",
+     "new_info": "with macular disease or lens opacities the pinhole may not help or may worsen",
+     "spoken": "وإذا اكو مشكلة بالشبكية أو العدسة، ممكن ما يساعد أو يخرّب."
+    },
+    {
+     "t": "20-27",
+     "purpose": "why clinicians use it",
+     "new_info": "the result is a clue under controlled conditions that guides the next test",
+     "spoken": "الدكتور يستعمله كمؤشر، وبعدها يكمّل الفحص."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close (not a self-test)",
+     "new_info": "a home attempt cannot tell you which case you are",
+     "spoken": "وبالبيت ما تگدر تعرف أنت أي حالة. الفحص هو الجواب."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Through a pinhole, vision improves with refractive error and may be unchanged or worse with macular disease",
+     "source": "S68",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "Worse vision might indicate macular diseases or lens opacities",
+     "scope": "pinhole test discussion in a keratoconus paper; WHO uses it in rapid surveys; not accurate for estimating post-refraction acuity",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Individuals with macular disease may have similar or even reduced acuity through a pinhole",
+     "source": "S65",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "may have similar or even reduced acuity through a pinhole",
+     "scope": "clinical teaching document; macular and other central-vision disease",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Could be misread as a self-test; closing beat must hold",
+   "confidence": "likely"
+  }
+ ]
+}

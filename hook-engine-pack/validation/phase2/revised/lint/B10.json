@@ -1,0 +1,222 @@
+{
+ "brief": {
+  "subject_terms": [
+   "واحد",
+   "اثنين",
+   "الجهاز",
+   "فحص"
+  ],
+  "duration_s": 30,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S82": {
+   "access": "partial_text"
+  },
+  "S81": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "\"واحد لو اثنين؟\" وانت مو متأكد؟ هذا متوقع.",
+   "gloss_en": "\"One or two?\" and you're not sure? That's expected.",
+   "mechanism": "M13",
+   "insight_key": "unsure-is-expected",
+   "payoff_key": "neither-is-crystal-clear",
+   "tension": "Is it okay to be unsure?",
+   "audience": "Iraqi adults anxious about eye tests",
+   "first_frame": "Phoropter close-up, lenses flipping; viewer POV",
+   "continuation": "Examiner script",
+   "payoff": "Why unsure happens and what to answer",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Is it okay to be unsure? (carried by voice)",
+     "spoken": "\"واحد لو اثنين؟\" وانت مو متأكد؟ هذا متوقع."
+    },
+    {
+     "t": "4-12",
+     "purpose": "clinician reports",
+     "new_info": "patients often can't decide which is better",
+     "spoken": "كثير مرضى ما يگدرون يقررون."
+    },
+    {
+     "t": "12-20",
+     "purpose": "what examiners say",
+     "new_info": "neither choice will be crystal clear",
+     "spoken": "الفاحص يگولك: ولا وحدة راح تكون صافية تماماً."
+    },
+    {
+     "t": "20-27",
+     "purpose": "allowed answer",
+     "new_info": "'about the same' is acceptable",
+     "spoken": "وإذا نفسهم، گول: نفس الشي."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "the viewer's job is an honest comparison and 'about the same' is a valid answer",
+     "spoken": "جاوب بصدق، والباقي على الفاحص."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Patients often cannot decide 'one or two'",
+     "source": "S81",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "they can’t decide “which is better, one or two”",
+     "scope": "trade-journal clinician report; practitioner evidence, not a trial",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Practitioner evidence only",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "بفحص الاستجماتزم، الفرق بين \"واحد\" و\"اثنين\" أكبر مما تحس.",
+   "gloss_en": "In astigmatism testing the difference between 'one' and 'two' is bigger than you feel.",
+   "mechanism": "M05",
+   "insight_key": "jcc-step",
+   "payoff_key": "why-the-choices-are-exaggerated",
+   "tension": "If it feels small, why is it large?",
+   "audience": "Iraqi adults anxious about eye tests",
+   "first_frame": "Handheld Jackson cross-cylinder flipping in front of a lens; on-screen text `ليش؟`",
+   "continuation": "JCC mechanism",
+   "payoff": "A mechanism that explains the odd question",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "text",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-5",
+     "purpose": "hook",
+     "new_info": "poses the question: If it feels small, why is it large? (carried by voice)",
+     "spoken": "بفحص الاستجماتزم، الفرق بين \"واحد\" و\"اثنين\" أكبر مما تحس."
+    },
+    {
+     "t": "5-13",
+     "purpose": "tool",
+     "new_info": "a Jackson cross-cylinder flips two lens versions",
+     "spoken": "أداة اسمها Jackson cross-cylinder تقلب بين خيارين."
+    },
+    {
+     "t": "13-22",
+     "purpose": "numbers",
+     "new_info": "a +0.25 D cross-cylinder gives a whole-diopter difference between the choices",
+     "spoken": "فرق ٠.٢٥ بالأداة يعطي فرق دايوبتر كامل بين الخيارين."
+    },
+    {
+     "t": "22-27",
+     "purpose": "why",
+     "new_info": "a big enough difference lets you compare without moving focus off the retina",
+     "spoken": "حتى تگدر تقارن بدون ما يطلع التركيز عن الشبكية."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "this is one step among several",
+     "spoken": "وهذي خطوة وحدة من خطوات."
+    }
+   ],
+   "claims": [
+    {
+     "text": "A traditional +0.25 D JCC gives a whole-diopter difference between the two choices",
+     "source": "S82",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "A traditional +0.25 D JCC actually gives a whole diopter difference",
+     "scope": "trade article 2008; Jackson cross-cylinder step; astigmatism refinement",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Technical for laypeople",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "شوف الصورتين… أي أوضح؟ (مو فحص — بس تحس الإحساس).",
+   "gloss_en": "Look at the two images - which is clearer? (not a test - just the feeling).",
+   "mechanism": "M23",
+   "insight_key": "small-differences",
+   "payoff_key": "just-noticeable-difference",
+   "tension": "Can I tell them apart?",
+   "audience": "Iraqi adults anxious about eye tests",
+   "first_frame": "Two slightly different blurred lines labelled 1 and 2",
+   "continuation": "JND",
+   "payoff": "Why small differences are hard",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook + disclaimer",
+     "new_info": "poses the question: Can I tell them apart? (carried by frame)",
+     "spoken": "شوف الصورتين… أي أوضح؟ (مو فحص — بس تحس الإحساس)."
+    },
+    {
+     "t": "4-12",
+     "purpose": "viewer tries",
+     "new_info": "the images differ by a small step",
+     "spoken": "الفرق صغير جداً."
+    },
+    {
+     "t": "12-21",
+     "purpose": "concept",
+     "new_info": "just-noticeable difference: the smallest change that produces an effect",
+     "spoken": "اسمه JND — أقل فرق ينحس."
+    },
+    {
+     "t": "21-27",
+     "purpose": "relevance",
+     "new_info": "why examiners use clear steps",
+     "spoken": "لهذا الفاحص يخلي الفرق واضح."
+    },
+    {
+     "t": "27-30",
+     "purpose": "close",
+     "new_info": "the real exam is done with calibrated lenses",
+     "spoken": "الفحص الحقيقي بعدسات مضبوطة."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Just-noticeable difference is the minimal amount of change needed to produce an effect",
+     "source": "S81",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "just-noticeable differences” (JND), or the minimal amount of change needed to produce an effect",
+     "scope": "trade article; refraction context",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Screen A/B rendering is a simulation; disclaimer must stay",
+   "confidence": "likely"
+  }
+ ]
+}

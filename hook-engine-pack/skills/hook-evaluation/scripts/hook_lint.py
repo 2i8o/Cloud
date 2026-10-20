@@ -19,8 +19,8 @@ import sys
 import unicodedata
 from itertools import combinations
 
-REQUIRED = ["id", "hook_ar", "mechanism", "insight_key", "first_frame",
-            "continuation", "payoff"]
+REQUIRED = ["id", "hook_ar", "mechanism", "insight_key", "payoff_key", "first_frame",
+            "continuation", "payoff", "gap_carrier"]
 SCI_RANK = {"verified": 3, "plausible": 2, "unverified": 1,
             "contested": 1, "false": 0}
 
@@ -49,8 +49,11 @@ OPTOM = ["optometrist", "optometry", "اخصائي بصريات", "اخصائي 
 SURGERY = ["surgery", "surgeon", "جراحة", "جراح", "عملية ليزك", "lasik", "عملية الماء", "عملية الساد"]
 BRAND = ["optinest", "بيت البصر"]
 PRODUCT = ["اشتر", "اشتري", "buy now", "discount", "خصم", "عرض خاص", "اطلب الان", "كود خصم"]
+MSA_SOFT = ["اضعاف", "يعتبر", "اجهاد", "فجوات", "تتعطل", "نتعرف", "يتضح", "بالتالي", "حيث"]
+DEMO_AS_TEST = [r"نص الفحص", r"هذا الفحص", r"اختبر نفسك", r"هذا هو الاختبار", r"this is the test", r"test yourself", r"نتيجتك تعني"]
 MSA_MARKERS = ["سوف", "لقد", "حيث ان", "ماذا", "لماذا", "كيف", "اين", "الان",
                "جدا", "يوجد", "ليس", "هؤلاء", "في هذا الفيديو"]
+COMPARATIVES = ["اكثر", "اقل", "اخطر", "اسوا", "اعلى", "اكبر", "افضل", "اقوى", "اضعف", "اسرع"]
 EFFECT_WORDS = ["louder", "faster cuts", "more effects", "zoom", "flash", "riser",
                 "bass", "اسرع", "مؤثرات اكثر", "موسيقى اعلى", "تقطيع اسرع"]
 CAUSAL = [
@@ -68,7 +71,7 @@ def norm(s):
     s = unicodedata.normalize("NFKC", s or "").lower()
     s = re.sub(r"[ً-ٰٟـ]", "", s)
     s = re.sub("[أإآ]", "ا", s).replace("ى", "ي").replace("ؤ", "و").replace("ئ", "ي")
-    return s
+    return s.translate(str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789"))
 
 
 def tokens(s):
@@ -126,7 +129,7 @@ def lint(data):
                 err("E_GENERIC_OPENER", cid, f"generic opener: {b!r}")
         terms = brief.get("subject_terms") or []
         if terms and not any(norm(t) in norm(hook) for t in terms):
-            err("E_GENERIC", cid, "hook contains no subject-specific term (swap-the-topic test fails)")
+            warn("W_GENERIC", cid, "hook contains none of the brief's subject terms - apply the swap-the-topic test by hand (advisory: low precision in Phase-2 testing)")
         if len(tokens(hook)) > 14:
             warn("W_LONG", cid, f"hook has {len(tokens(hook))} content tokens; read aloud and test speakability")
 
@@ -165,14 +168,57 @@ def lint(data):
         elif j >= 0.5:
             warn("W_SPOIL_RISK", cid, f"hook and payoff overlap {j:.2f}")
 
+        # gap, answer-in-hook, demo-as-test, soft MSA, parameters, absolutes
+        if str(c.get("gap_carrier", "")).strip().lower() in ("none", ""):
+            err("E_NO_GAP", cid, "gap_carrier is none: neither voice, frame nor on-screen text poses an unanswered question")
+        if c.get("answer_in_hook") is True and not str(c.get("beat2_question", "")).strip():
+            err("E_ANSWER_IN_HOOK_NO_BEAT2", cid, "the hook states the answer but no different beat-2 question is given")
+        for pat in DEMO_AS_TEST:
+            if re.search(norm(pat), norm(visible + " " + c.get("payoff", "")), re.I) and not c.get("not_a_test_disclaimer"):
+                err("E_DEMO_AS_TEST", cid, f"demo/screen presented as the test or as the viewer's result ({pat!r}); add not_a_test_disclaimer or reword")
+        nh_tokens = norm(hook).split()
+        comp = [w for w in COMPARATIVES if w in nh_tokens]
+        if comp and not any(k in nh_tokens for k in ("من", "مما", "مقابل", "بدل", "عن")):
+            warn("W_COMPARATIVE", cid, f"comparative {comp} without an explicit comparator ('more than what?')")
+        if c.get("payoff_ready") is False:
+            warn("W_PAYOFF_PENDING", cid, "payoff depends on research not yet done: show only as conditional, never recommend")
+        soft = [m for m in MSA_SOFT if norm(m) in norm(hook)]
+        if soft:
+            warn("W_MSA_SOFT", cid, f"formal-register word(s): {', '.join(soft)} - native review")
+        quotes = " ".join(str(cl.get("support_quote", "")) + " " + str(cl.get("scope", "")) for cl in c.get("claims") or [] if cl.get("in_hook", True))
+        qnums = set(re.findall(r"\d+(?:[.,]\d+)?", norm(quotes).replace(",", "")))
+        for n in re.findall(r"\d+(?:\.\d+)?", norm(hook).replace(",", "")):
+            if n in ("20",) and "20/20" in norm(hook):
+                continue
+            if not any(q == n or (len(n) >= 2 and q.startswith(n)) for q in qnums):
+                err("E_PARAM_NOT_SUPPORTED", cid, f"number {n!r} in the hook does not appear in any claim's support_quote/scope")
+        for ab in ("دايما", "دائما", "ابدا", "كل الناس", "always", "never"):
+            if norm(ab) in norm(hook) and norm(ab) not in norm(quotes):
+                warn("W_ABSOLUTE", cid, f"absolute {ab!r} in hook is not in the supporting quote")
+        # retention plan
+        beats = c.get("beats")
+        if not beats:
+            err("E_NO_PLAN", cid, "no retention plan (beats) supplied")
+        else:
+            for i, b in enumerate(beats):
+                ni = str(b.get("new_info", "")).strip() if isinstance(b, dict) else ""
+                if len(ni.split()) < 3:
+                    err("E_EMPTY_BEAT", cid, f"beat {i + 1} has no real new information")
+            last = beats[-1] if isinstance(beats[-1], dict) else {}
+            if len(str(last.get("spoken", "")).split()) < 4 or str(last.get("spoken", "")).strip().lower().startswith("close"):
+                err("E_NO_CLOSING_LINE", cid, "final beat lacks a written closing line (>= 4 words)")
+
         # claims
         for cl in c.get("claims") or []:
             st = cl.get("status", "unverified")
             src = str(cl.get("source", "")).strip()
             in_hook = cl.get("in_hook", True)
-            if st in ("unverified", "false", "contested") and in_hook:
-                err("E_UNVERIFIED_CLAIM", cid, f"hook relies on {st} claim: {cl.get('text','')[:70]!r}")
-            elif st in ("unverified", "false", "contested"):
+            is_q = cl.get("claim_form") == "question"
+            if in_hook and not is_q and st != "verified":
+                err("E_UNVERIFIED_CLAIM", cid, f"hook asserts a {st} claim (only verified claims may be asserted; use claim_form=question): {cl.get('text','')[:70]!r}")
+            elif in_hook and not is_q and not (str(cl.get("support_quote", "")).strip() and str(cl.get("scope", "")).strip()):
+                err("E_NO_EVIDENCE_RECORD", cid, f"verified hook claim lacks support_quote and/or scope: {cl.get('text','')[:60]!r}")
+            elif st in ("unverified", "false", "contested", "plausible") and not in_hook:
                 warn("W_UNVERIFIED_SCRIPT_CLAIM", cid, f"script claim {st}: {cl.get('text','')[:70]!r}")
             if st in ("verified", "plausible"):
                 if not src:
@@ -194,6 +240,14 @@ def lint(data):
         if ov >= 0.5:
             err("E_TEXT_OVERLAP", f"{a.get('id')}+{b.get('id')}", f"hook wording overlap {ov:.2f}")
 
+    keys = [c.get("payoff_key") for c in cands]
+    for a, b in combinations(cands, 2):
+        if a.get("payoff_key") and a.get("payoff_key") == b.get("payoff_key"):
+            err("E_PAYOFF_DUP", f"{a.get('id')}+{b.get('id')}", f"same payoff_key {a['payoff_key']}: finalists end in the same takeaway")
+    shapes = {("q" if "؟" in c.get("hook_ar", "") or "?" in c.get("hook_ar", "") else "s") for c in cands}
+    if len(cands) >= 3 and len(shapes) == 1:
+        warn("W_SHAPE", "-", "all finalists share one hook shape (all questions or all statements)")
+
     # recommendation
     rid = data.get("recommended")
     if rid is not None:
@@ -201,6 +255,8 @@ def lint(data):
         if rec is None:
             err("E_RECOMMEND_MISSING", str(rid), "recommended id is not among the finalists")
         else:
+            if rec.get("payoff_ready") is False:
+                err("E_RECOMMEND_PENDING", str(rid), "recommended option's payoff still needs research")
             if (rec.get("scores") or {}).get("clarity", 5) < 3:
                 err("E_RECOMMEND_CLARITY", str(rid), "recommended option has clarity < 3 (ambiguity rewarded over comprehension)")
 

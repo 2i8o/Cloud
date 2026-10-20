@@ -1,0 +1,236 @@
+{
+ "brief": {
+  "subject_terms": [
+   "دموع",
+   "تدمّع",
+   "دمعة",
+   "الدمعة",
+   "عيون"
+  ],
+  "duration_s": 25,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S91": {
+   "access": "partial_text"
+  },
+  "S92": {
+   "access": "partial_text"
+  },
+  "S93": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "الدموع الزايدة مرات سببها جفاف. شلون يصير هيچ؟",
+   "gloss_en": "Excess tears sometimes come from dryness. How does that happen?",
+   "mechanism": "M04",
+   "insight_key": "dry-eye-paradox",
+   "payoff_key": "reflex-tearing",
+   "tension": "How can dry eyes water?",
+   "audience": "Iraqi adults",
+   "first_frame": "Eye in wind with tear running, then a dry-surface close-up",
+   "continuation": "Reflex tearing",
+   "payoff": "Mechanism, with scope",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "poses the question: How can dry eyes water? (carried by voice)",
+     "spoken": "الدموع الزايدة مرات سببها جفاف. شلون يصير هيچ؟"
+    },
+    {
+     "t": "3-10",
+     "purpose": "mechanism",
+     "new_info": "irritation from dry surface signals the gland to make more tears",
+     "spoken": "السطح الناشف يتهيج، فالجسم يطلع دموع أكثر."
+    },
+    {
+     "t": "10-17",
+     "purpose": "scope",
+     "new_info": "dryness is one of the most common causes; blocked drainage is another",
+     "spoken": "الجفاف من أشهر الأسباب، والتصريف المسدود سبب ثاني."
+    },
+    {
+     "t": "17-22",
+     "purpose": "action",
+     "new_info": "if tearing persists, an exam sorts out the cause",
+     "spoken": "إذا يستمر الدمع، الفحص يحدد السبب."
+    },
+    {
+     "t": "22-25",
+     "purpose": "close",
+     "new_info": "the exam, not guessing, finds the cause",
+     "spoken": "ما نخمّن السبب، الفحص هو اللي يحدده."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Dry eyes are one of the most common causes of excessive tearing",
+     "source": "S93",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "This is one of the most common causes of excessive tearing",
+     "scope": "StatPearls; adults; reflex tearing",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Dry eyes are one of the most common causes of excessive tearing",
+     "source": "S93",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "This is one of the most common causes of excessive tearing",
+     "scope": "StatPearls",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Last line short (4 words) but carries the action",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "ليش الدمعة تحتاج طبقة دهنية؟",
+   "gloss_en": "Why does a tear need an oily layer?",
+   "mechanism": "M05",
+   "insight_key": "tear-film-oil",
+   "payoff_key": "oil-slows-evaporation",
+   "tension": "What does oil do in a tear?",
+   "audience": "Iraqi adults",
+   "first_frame": "Three-layer tear animation with the oil layer glowing",
+   "continuation": "Oil layer role",
+   "payoff": "One layer explained",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "poses the question: What does oil do in a tear? (carried by frame)",
+     "spoken": "ليش الدمعة تحتاج طبقة دهنية؟"
+    },
+    {
+     "t": "3-10",
+     "purpose": "layers",
+     "new_info": "tears have oily, watery and mucus layers",
+     "spoken": "الدمعة ٣ طبقات: دهنية ومائية ومخاطية."
+    },
+    {
+     "t": "10-18",
+     "purpose": "oil role",
+     "new_info": "the outer oil layer keeps tears from drying up too quickly",
+     "spoken": "الدهنية تمنع الدمعة تنشف بسرعة."
+    },
+    {
+     "t": "18-23",
+     "purpose": "where it comes from",
+     "new_info": "meibomian glands in the eyelids",
+     "spoken": "تطلع من غدد بالجفن."
+    },
+    {
+     "t": "23-25",
+     "purpose": "close",
+     "new_info": "the tear film is more structured than a drop of water",
+     "spoken": "الدمعة أعقد بكثير من قطرة ماي."
+    }
+   ],
+   "claims": [
+    {
+     "text": "The oily layer keeps tears from drying up too quickly",
+     "source": "S91",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "keeps tears from drying up too quickly",
+     "scope": "AAO 2025 explainer",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Closing line is rhetorical",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "الدمعة الزايدة لها أكثر من سبب: إنتاج أكثر… أو تصريف أقل.",
+   "gloss_en": "Excess tears have more than one cause: more production or less drainage.",
+   "mechanism": "M16",
+   "insight_key": "production-vs-drainage",
+   "payoff_key": "two-ways-to-overflow",
+   "tension": "Which is it?",
+   "audience": "Iraqi adults",
+   "first_frame": "Sink analogy: tap on vs drain blocked (labelled analogy)",
+   "continuation": "Overflow causes",
+   "payoff": "Two broad mechanisms",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: Which is it? (carried by frame)",
+     "spoken": "الدمعة الزايدة لها أكثر من سبب: إنتاج أكثر… أو تصريف أقل."
+    },
+    {
+     "t": "4-12",
+     "purpose": "tap",
+     "new_info": "too much production, e.g. reflex tearing",
+     "spoken": "إنتاج زايد، مثل الدمع الانعكاسي."
+    },
+    {
+     "t": "12-19",
+     "purpose": "drain",
+     "new_info": "outflow obstruction: the drainage channel is blocked so tears overflow",
+     "spoken": "أو مجرى مسدود."
+    },
+    {
+     "t": "19-23",
+     "purpose": "action",
+     "new_info": "persistent cases need evaluation",
+     "spoken": "الحالة المستمرة تحتاج فحص."
+    },
+    {
+     "t": "23-25",
+     "purpose": "close",
+     "new_info": "an exam separates production from drainage problems",
+     "spoken": "الفحص هو اللي يفرّق بين المشكلتين."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Tear overflow is most often outflow obstruction or dryness-triggered excess",
+     "source": "S92",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "most tear overflow is either due to outflow obstruction",
+     "scope": "AAO Q&A 2014; also poor distribution (StatPearls S93)",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Source ranks obstruction first for overflow, dryness for reflex tearing; not a ranking for the viewer",
+   "confidence": "likely"
+  }
+ ]
+}

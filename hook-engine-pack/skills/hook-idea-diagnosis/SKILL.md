@@ -35,6 +35,10 @@ If more than one verdict applies, report the most blocking one first in this ord
 Write six lines: (1) what the audience believes/knows, (2) what they likely misunderstand, (3) what relevant information is missing, (4) the accurate, surprising insight that closes the gap, (5) what the viewer should expect to learn, (6) the evidence or demonstration that delivers it.
 Check the **partial-knowledge rule**: the hook should touch something the viewer already half-knows (e.g. "20/20", glasses, screens). Curiosity in lab studies peaks at intermediate confidence and falls when people know nothing or know everything (Kang 2009; Kidd & Hayden 2015) - **Likely** for short video; transfer from lab trivia is untested.
 
+## Topic fidelity and originality (added in v1.1)
+- Every finalist must serve the brief's topic and takeaway; a candidate that drifts to an adjacent topic (a blue-light-glasses brief answered with sleep advice) is dropped, not shown.
+- State the **angle that a standard explainer on this topic lacks** (a demonstration, a mechanism, a counter-intuitive number, a clinician-only detail). If you cannot, the verdict is RE-ANGLE. Phase-2 review rated 10/30 baseline candidates originality <= 2.
+
 ## Guardrails
 - Never invent audience demand. Mark signals `verified` or `inferred`.
 - Popularity of a topic is not proof of a claim.

@@ -11,7 +11,8 @@ Retention is earned by progression, not by repetition or withholding. Every beat
 ## Procedure
 1. State the **promise** in one sentence (what the hook implies the viewer will learn/see).
 2. Choose an architecture (`references/retention-architecture.md`): A Myth -> contradiction -> explanation -> practical conclusion; B Demonstration -> unexpected result -> mechanism -> takeaway; C Common belief -> evidence -> correction -> implication; D Problem -> overlooked cause -> demonstration -> resolution; E Question -> clues -> explanation -> reveal; F Micro-story -> conflict -> discovery -> lesson. These are starting patterns; adapt or abandon if the idea fits none.
-3. Build the **beat sheet**: for each beat, write `purpose | new information | thread status (opens/sharpens/closes) | visual | approx seconds`. Seconds are hypotheses.
+3. Build the **beat sheet** as a table: `time | purpose | NEW INFORMATION (>= 3 words, never "close"/"intro") | thread status | visual | draft spoken line`. Seconds are hypotheses and must follow the architecture, not a default 0-3/3-10/10-20/20-25/25-30 split (Phase-2 baseline: all 30 plans used 5 beats with near-identical splits, and 27/30 ended with an empty "Close"). The **last beat must contain the written closing line** (>= 4 words) that carries the implication or honest invitation, not a label.
+   If the hook already states the answer, beat 2 must open a *different* question (write it out).
 4. Run the **thread audit**: exactly ONE primary curiosity thread; at most ONE secondary thread, opened only if it will be closed before the end.
 5. Run the **progress test** on every beat: "What does the viewer know after this beat that they did not know before?" If nothing, cut or merge.
 6. Run the **payoff test**: does the final answer resolve the hook's question in the same terms? Is the payoff worth the wait (not cheaper than the withholding)?

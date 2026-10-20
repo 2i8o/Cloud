@@ -1,0 +1,245 @@
+{
+ "brief": {
+  "subject_terms": [
+   "لوحة",
+   "حروف",
+   "السطر",
+   "متر"
+  ],
+  "duration_s": 25,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S94": {
+   "access": "partial_text"
+  },
+  "S47": {
+   "access": "partial_text"
+  },
+  "S43": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "C",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "ليش سماكة خط الحرف بلوحة الفحص بالضبط خُمس ارتفاعه؟",
+   "gloss_en": "Why is the stroke of a chart letter exactly one fifth of its height?",
+   "mechanism": "M05",
+   "insight_key": "letter-geometry",
+   "payoff_key": "detail-equals-one-arcminute",
+   "tension": "Why that ratio?",
+   "audience": "Iraqi 18-40",
+   "first_frame": "Chart letter with a grid overlay highlighting stroke and gap widths",
+   "continuation": "Critical detail = 1/5 height",
+   "payoff": "Geometry ties to one arcminute",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "poses the question: Why that ratio? (carried by voice)",
+     "spoken": "ليش سماكة خط الحرف بلوحة الفحص بالضبط خُمس ارتفاعه؟"
+    },
+    {
+     "t": "3-10",
+     "purpose": "show",
+     "new_info": "stroke and gap are each one fifth of the height",
+     "spoken": "السماكة والفتحة، كل وحدة خُمس الارتفاع."
+    },
+    {
+     "t": "10-18",
+     "purpose": "reason",
+     "new_info": "at 6/6 each stroke subtends one arcminute",
+     "spoken": "عند ٦/٦ كل خط يشغل دقيقة قوسية واحدة."
+    },
+    {
+     "t": "18-22",
+     "purpose": "consequence",
+     "new_info": "the test asks if you can resolve that detail",
+     "spoken": "الفحص يسأل: تگدر تفرّق هذي التفاصيل؟"
+    },
+    {
+     "t": "22-25",
+     "purpose": "close",
+     "new_info": "a tidy design behind a simple chart",
+     "spoken": "وراء اللوحة هندسة مدروسة."
+    }
+   ],
+   "claims": [
+    {
+     "text": "Snellen letters have critical detail equal to one fifth of letter height",
+     "source": "S47",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "subtends 1/5th of the overall height",
+     "scope": "Snellen design; at 6/6 stroke subtends one arcminute",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'خُمس' may be unfamiliar; test spoken phrasing",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "السطر يُحسب مقروء إذا قريت أكثر من نصف حروفه — حسب معيار ١٩٨٤.",
+   "gloss_en": "A line counts as read if you read more than half its letters, per a 1984 standard.",
+   "mechanism": "M01",
+   "insight_key": "line-scoring-rule",
+   "payoff_key": "how-scoring-works",
+   "tension": "So how exact is 20/20?",
+   "audience": "Iraqi 18-40",
+   "first_frame": "Chart line with some letters struck out and a `؟` on screen",
+   "continuation": "Standard rule vs modern practice",
+   "payoff": "The scoring convention and its date",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "frame",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-4",
+     "purpose": "hook",
+     "new_info": "poses the question: So how exact is 20/20? (carried by frame)",
+     "spoken": "السطر يُحسب مقروء إذا قريت أكثر من نصف حروفه — حسب معيار ١٩٨٤."
+    },
+    {
+     "t": "4-12",
+     "purpose": "example",
+     "new_info": "read 3 of 5 and the line counts",
+     "spoken": "قريت ٣ من ٥؟ السطر يُحسب."
+    },
+    {
+     "t": "12-19",
+     "purpose": "date and scope",
+     "new_info": "this is the 1984 ICO standard; practice varies today",
+     "spoken": "هذا معيار ١٩٨٤، والممارسة اليوم تختلف."
+    },
+    {
+     "t": "19-23",
+     "purpose": "meaning",
+     "new_info": "20/20 is a convention, not a razor-sharp threshold",
+     "spoken": "فـ٢٠/٢٠ اتفاق عملي، مو خط حاد."
+    },
+    {
+     "t": "23-25",
+     "purpose": "close",
+     "new_info": "exams add other tests",
+     "spoken": "وبالفحص الكامل اكو اختبارات ثانية."
+    }
+   ],
+   "claims": [
+    {
+     "text": "A line counts as read when more than 50% of its optotypes are read (1984 ICO standard)",
+     "source": "S43",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "considered to have been read correctly when more than 50%",
+     "scope": "1984 International Council of Ophthalmology standard text; clinical practice varies",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Source copy hosted on an unusual domain",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "ليش فحص النظر يصير على ٦ أمتار؟",
+   "gloss_en": "Why is the eye test done at 6 metres?",
+   "mechanism": "M08",
+   "insight_key": "why-six-metres",
+   "payoff_key": "relaxed-focus-at-distance",
+   "tension": "Why 6 m and not 3?",
+   "audience": "Iraqi 18-40",
+   "first_frame": "Tape measure from chart to chair labelled 6 m",
+   "continuation": "Accommodation relaxed",
+   "payoff": "The physical reason for the distance",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "gap_carrier": "voice",
+   "answer_in_hook": false,
+   "beat2_question": "",
+   "not_a_test_disclaimer": true,
+   "payoff_ready": true,
+   "beats": [
+    {
+     "t": "0-3",
+     "purpose": "hook",
+     "new_info": "poses the question: Why 6 m and not 3? (carried by voice)",
+     "spoken": "ليش فحص النظر يصير على ٦ أمتار؟"
+    },
+    {
+     "t": "3-10",
+     "purpose": "tape measure",
+     "new_info": "the chair is 6 m from the chart",
+     "spoken": "الكرسي على ٦ أمتار بالضبط."
+    },
+    {
+     "t": "10-18",
+     "purpose": "reason",
+     "new_info": "looking far relaxes the focusing muscle so the eye is tested without extra focusing",
+     "spoken": "لأن النظر البعيد يريّح عضلة التركيز، فنفحص العين من غير تركيز زايد."
+    },
+    {
+     "t": "18-23",
+     "purpose": "same in feet",
+     "new_info": "20 feet is the same distance",
+     "spoken": "وبالقدم هي ٢٠ قدم — ولهذا ٢٠/٢٠."
+    },
+    {
+     "t": "23-25",
+     "purpose": "close",
+     "new_info": "clinics without space use mirrors",
+     "spoken": "والعيادات الصغيرة تستعمل مراية."
+    }
+   ],
+   "claims": [
+    {
+     "text": "The eye is tested looking at distance (usually 6 metres) so the focusing muscle is relaxed",
+     "source": "S94",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": true,
+     "support_quote": "measured looking in the distance (usually 6 metres) so that the ciliary muscle is relaxed",
+     "scope": "teaching article; far-point testing",
+     "needs_professional_review": false
+    },
+    {
+     "text": "20 feet equals 6 metres (20/20 = 6/6)",
+     "source": "S47",
+     "status": "verified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "6/6 (20/20)",
+     "scope": "Snellen notation in metres and feet",
+     "needs_professional_review": false
+    },
+    {
+     "text": "Clinics with limited space use mirrors",
+     "source": "S94",
+     "status": "unverified",
+     "claim_form": "assertion",
+     "in_hook": false,
+     "support_quote": "(no source retrieved)",
+     "scope": "script-only claim, unverified",
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Mirror line unsourced (script-only, marked)",
+   "confidence": "likely"
+  }
+ ]
+}
