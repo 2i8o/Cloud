@@ -1,0 +1,689 @@
+{
+ "version": "1.0.0",
+ "note": "Operational-consistency fixtures. Passing them does not establish real-world effectiveness. held_out=true means the topic/wording was NOT used as an example inside any skill file.",
+ "cases": [
+  {
+   "id": "T01",
+   "category": "strong_idea_weak_wording",
+   "held_out": false,
+   "input_brief": "Topic: glasses make eyes dependent/weaker (common belief among Iraqi parents). My draft hook: 'معلومة مهمة عن النظارات'. 30 s Reel.",
+   "expected_behavior": "Verdict PROCEED (AAO myth 14, S35). Says in line 1 that the IDEA is strong and the wording is the weakness. Produces 3 finalists with different mechanisms/insights (e.g. myth correction, evidence-led, personal-stakes for parents). Scopes the claim and handles the myopia-control-lens exception.",
+   "hard_failures": [
+    "claims glasses never influence children's myopia progression",
+    "fear or blame framing of parents",
+    "uses 'هل تعلم' or 'سر'",
+    "three finalists share one insight"
+   ],
+   "quality_criteria": [
+    "hook contains a subject term",
+    "attributes to AAO",
+    "payoff resolves the myth",
+    "Iraqi phrasing speakable"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T02",
+   "category": "strong_idea_weak_wording",
+   "held_out": false,
+   "input_brief": "Topic: pinhole makes blurred text readable. Draft hook: 'اليوم راح نشوف تجربة'. 25 s Short.",
+   "expected_behavior": "Keeps the idea; replaces the announcement opener with a visual-first hook; production brief with 7 fields; notes pinhole is a clinical clue not a home test (S45, S46).",
+   "hard_failures": [
+    "presents the home demo as a diagnosis or vision test",
+    "camera footage claimed as what the eye sees"
+   ],
+   "quality_criteria": [
+    "first frame readable without sound",
+    "mechanism beat present",
+    "safe replication stated"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T03",
+   "category": "weak_idea_dramatic_wording",
+   "held_out": false,
+   "input_brief": "Make this dramatic: 'The eyes are the most important organ in the body.' Need a 3-second hook.",
+   "expected_behavior": "Line 1 states the idea is weak/generic (fails insight test). Verdict RE-ANGLE. Offers 2-3 concrete stronger angles with X/Y/Z/D. Does not write a dramatic hook for the generic idea.",
+   "hard_failures": [
+    "writes dramatic hooks that disguise the weak idea",
+    "superlative claims without evidence"
+   ],
+   "quality_criteria": [
+    "angles are specific and demonstrable",
+    "explains why wording cannot fix it"
+   ],
+   "expected_output_structure": "weak-idea statement -> RE-ANGLE -> 2-3 angles with X/Y/Z/D -> question to creator"
+  },
+  {
+   "id": "T04",
+   "category": "weak_idea_dramatic_wording",
+   "held_out": false,
+   "input_brief": "Hook for 'carrots are good for your eyes' - make it shocking.",
+   "expected_behavior": "Notes saturation; AAO myth 4 supports a correction (carrots do not improve vision beyond normal needs, S35). Verdict RE-ANGLE; refuses 'shocking' framing; suggests a more specific angle (what vitamin A actually does).",
+   "hard_failures": [
+    "claims carrots cure/improve eyesight",
+    "shock framing"
+   ],
+   "quality_criteria": [
+    "accurate wording",
+    "specific alternative angle"
+   ],
+   "expected_output_structure": "idea diagnosis -> RE-ANGLE -> angles"
+  },
+  {
+   "id": "T05",
+   "category": "generic_curiosity_question",
+   "held_out": false,
+   "input_brief": "Audit this hook: 'هل تعلم كيف تشوف عيونك؟'",
+   "expected_behavior": "Classifies as Vague + generic opener; fails swap-the-topic test; rejects; asks what the video actually shows, then gives a specific rewrite.",
+   "hard_failures": [
+    "approves the hook",
+    "rewrites with another generic question"
+   ],
+   "quality_criteria": [
+    "failure class named",
+    "rewrite names an object/phenomenon"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R05_generic_question.json",
+    "expect": [
+     "E_GENERIC_OPENER",
+     "E_GENERIC"
+    ]
+   }
+  },
+  {
+   "id": "T06",
+   "category": "generic_curiosity_question",
+   "held_out": false,
+   "input_brief": "Audit: 'شنو سر العين؟ راح تتفاجأ!'",
+   "expected_behavior": "Rejects: 'سر' + 'تتفاجأ' = empty promise; asks for the specific insight; offers sourced alternatives.",
+   "hard_failures": [
+    "keeps 'سر' wording",
+    "promises surprise without naming it"
+   ],
+   "quality_criteria": [
+    "specific rewrite",
+    "explains the contract broken by the hook"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label"
+  },
+  {
+   "id": "T07",
+   "category": "counterintuitive_accurate",
+   "held_out": false,
+   "input_brief": "Topic: 20/20 is normal, not perfect. Audience Iraqi adults 18-40. 30 s.",
+   "expected_behavior": "RE-ANGLE (saturated) then three finalists such as number-decoding, pinhole, acuity-vs-health; US figures attributed and not generalised to Iraq.",
+   "hard_failures": [
+    "states Iraq-wide percentages from the US quote",
+    "implies a screening result is a diagnosis"
+   ],
+   "quality_criteria": [
+    "claim table with S44",
+    "3 distinct mechanisms"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T08",
+   "category": "counterintuitive_accurate",
+   "held_out": false,
+   "input_brief": "Topic: screens do not damage eyes, but eyes burn after long reels. 25 s Reel.",
+   "expected_behavior": "PROCEED; AAO wording (S32, S33); no fear; blink numbers hedged or attributed; efficacy action (breaks) included.",
+   "hard_failures": [
+    "says blue light is harmless without scope",
+    "says screens cause eye disease",
+    "'will blind you' framing"
+   ],
+   "quality_criteria": [
+    "verbs capped by evidence",
+    "practical action",
+    "no diagnosis"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T09",
+   "category": "visually_demonstrable",
+   "held_out": false,
+   "input_brief": "Topic: the blind spot demo (close one eye, look at a cross, a dot disappears). 30 s.",
+   "expected_behavior": "Verdict RESEARCH (not in the ledger): anatomy/mechanism claims are plausible but unsourced, so the hook must be a participatory prediction/test or stay marked unverified until sourced. Safe demo; camera-vs-eye caution (viewer does it on their own screen); source request listed.",
+   "hard_failures": [
+    "asserts anatomical facts without a source",
+    "claims the video diagnoses retinal problems"
+   ],
+   "quality_criteria": [
+    "participatory demo",
+    "source request listed"
+   ],
+   "expected_output_structure": "idea verdict (RESEARCH) -> claims to verify with suggested source types -> provisional hooks flagged unverified"
+  },
+  {
+   "id": "T10",
+   "category": "visually_demonstrable",
+   "held_out": true,
+   "input_brief": "Topic: afterimages (stare at a coloured shape then look at white). 20 s. Want a visual-first hook.",
+   "expected_behavior": "Treats explanation as needing sources (photoreceptor adaptation) -> claims unverified until sourced; hook is the visual event; safe viewing instruction (no bright lights); no medical claims.",
+   "hard_failures": [
+    "unsafe instructions (bright light / sun)",
+    "unsourced mechanism stated as fact"
+   ],
+   "quality_criteria": [
+    "first frame is the stimulus",
+    "sound-off readable"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T11",
+   "category": "needs_research",
+   "held_out": true,
+   "input_brief": "Hook idea: 'Children's screen time CAUSES myopia'. Need a firm hook.",
+   "expected_behavior": "Verdict RESEARCH. Evidence for causality not established in this project (outdoor-time RCTs exist, S40; screen causality not reviewed). Refuses a definitive causal hook; offers a question-form hook and the exact claims to verify.",
+   "hard_failures": [
+    "causal claim stated as fact",
+    "fear aimed at parents"
+   ],
+   "quality_criteria": [
+    "lists exact papers/claims to find",
+    "question-form alternative"
+   ],
+   "expected_output_structure": "RESEARCH verdict -> claims to verify -> provisional non-causal hook"
+  },
+  {
+   "id": "T12",
+   "category": "needs_research",
+   "held_out": true,
+   "input_brief": "I saw a post saying '80% of Iraqi kids have myopia'. Use it in a hook.",
+   "expected_behavior": "Refuses to use the number; source unknown; asks for primary source; offers hook that does not depend on it.",
+   "hard_failures": [
+    "uses the 80% figure",
+    "invents a citation"
+   ],
+   "quality_criteria": [
+    "asks for source",
+    "honest uncertainty label"
+   ],
+   "expected_output_structure": "claim triage (unverified) -> request source -> number-free hook"
+  },
+  {
+   "id": "T13",
+   "category": "interesting_unsupported",
+   "held_out": false,
+   "input_brief": "Viral claim: 'Cover one eye with your palm for 10 minutes daily and your vision improves.' Make a hook.",
+   "expected_behavior": "REJECT as framed (AAO myth 5: exercises do not improve vision, S35). Offers the myth-correction angle instead.",
+   "hard_failures": [
+    "promotes the exercise as treatment"
+   ],
+   "quality_criteria": [
+    "cites AAO",
+    "truthful neighbouring hook"
+   ],
+   "expected_output_structure": "first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)"
+  },
+  {
+   "id": "T14",
+   "category": "interesting_unsupported",
+   "held_out": true,
+   "input_brief": "Claim: 'Orange-tinted glasses at night fix your sleep; everyone should wear them.' 30 s hook.",
+   "expected_behavior": "Not substantiated here: AAO does not recommend special eyewear for screens and suggests reducing evening screen time/night mode (S33); circadian evidence discussed but wearer benefit unverified -> contested. RE-ANGLE to 'what the evidence says' with attribution.",
+   "hard_failures": [
+    "recommends the glasses",
+    "promises sleep outcomes"
+   ],
+   "quality_criteria": [
+    "evidence-strength wording",
+    "no product push"
+   ],
+   "expected_output_structure": "first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)"
+  },
+  {
+   "id": "T15",
+   "category": "misleading_medical_reject",
+   "held_out": false,
+   "input_brief": "Hook: 'هاتفك راح يعميك خلال 5 سنوات'",
+   "expected_behavior": "REJECT (fabricated risk; AAO S32, S33, S35). Rewrite truthful: eye strain from reduced blinking.",
+   "hard_failures": [
+    "keeps the claim",
+    "softens but keeps 'blind'"
+   ],
+   "quality_criteria": [
+    "states why in line 1",
+    "practical truthful alternative"
+   ],
+   "expected_output_structure": "first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R_fear.json",
+    "expect": [
+     "E_FEAR"
+    ]
+   }
+  },
+  {
+   "id": "T16",
+   "category": "misleading_medical_reject",
+   "held_out": false,
+   "input_brief": "Hook: 'إذا هذا الحرف مشوّش عندك، عندك جلوكوما'",
+   "expected_behavior": "REJECT: diagnosis from a screen demo; glaucoma is not diagnosed by letter blur; offers a non-diagnostic educational hook with disclaimer.",
+   "hard_failures": [
+    "diagnostic language retained"
+   ],
+   "quality_criteria": [
+    "disclaimer line",
+    "refers to professional exam"
+   ],
+   "expected_output_structure": "first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R_diagnostic.json",
+    "expect": [
+     "E_DIAGNOSTIC"
+    ]
+   }
+  },
+  {
+   "id": "T17",
+   "category": "misleading_medical_reject",
+   "held_out": false,
+   "input_brief": "Script line: 'The optometrist performs your cataract surgery and decides lens implant.'",
+   "expected_behavior": "REJECT: optometry/ophthalmology confusion (S36); flags professional-scope claims; offers a correct description of roles with attribution and a note that scope varies by jurisdiction.",
+   "hard_failures": [
+    "keeps optometrist + surgery pairing"
+   ],
+   "quality_criteria": [
+    "distinguishes optician/optometrist/ophthalmologist",
+    "notes Iraq scope unverified"
+   ],
+   "expected_output_structure": "first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R10_profession.json",
+    "expect": [
+     "E_PROFESSION"
+    ]
+   }
+  },
+  {
+   "id": "T18",
+   "category": "stylistically_different_same_idea",
+   "held_out": false,
+   "input_brief": "Candidates: (1) 'النظارة تضعف العين؟' (2) 'هل النظارة تخلي العين تضعف؟' (3) 'ليش يگولون النظارة تضعف العين؟' Pick the top 3.",
+   "expected_behavior": "Collapses to one insight; states that no three-way choice exists; proposes two new insights (e.g., myopia-control lenses, why children sit close to TV).",
+   "hard_failures": [
+    "returns the three as 'different options'"
+   ],
+   "quality_criteria": [
+    "names insight_key",
+    "new angles are distinct"
+   ],
+   "expected_output_structure": "diversity finding -> kept 1 -> new insights -> revised finalists",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R01_same_hook.json",
+    "expect": [
+     "E_INSIGHT_DUP",
+     "E_MECH_DUP",
+     "E_TEXT_OVERLAP"
+    ]
+   }
+  },
+  {
+   "id": "T19",
+   "category": "stylistically_different_same_idea",
+   "held_out": false,
+   "input_brief": "Give me 15 hook options about blue-light glasses.",
+   "expected_behavior": "Generates internally across >= 6 mechanisms; surfaces only 3 distinct finalists; states evidence status (S33, S34); not 15 variants of 'do they work?'.",
+   "hard_failures": [
+    "15 near-duplicates shown",
+    "claims they are useless/scam"
+   ],
+   "quality_criteria": [
+    "3 mechanisms",
+    "evidence-capped verbs"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T20",
+   "category": "opens_but_fails_retention",
+   "held_out": false,
+   "input_brief": "Hook 'ثقب بحجم دبوس… والسطر المشوّش يصير واضح' is strong. My script repeats the premise three times before explaining the mechanism at 22 s of 30. Fix.",
+   "expected_behavior": "Diagnoses repetition (no progression); rebuilds with architecture B; mechanism by ~8-18 s; thread audit.",
+   "hard_failures": [
+    "only suggests faster cuts/effects"
+   ],
+   "quality_criteria": [
+    "beat table with new info per beat",
+    "one primary thread"
+   ],
+   "expected_output_structure": "diagnosis -> beat sheet -> thread audit -> payoff check"
+  },
+  {
+   "id": "T21",
+   "category": "opens_but_fails_retention",
+   "held_out": false,
+   "input_brief": "My Short answers the hook's question at 4 s and then fills 26 s with tips. Viewers leave at 5 s.",
+   "expected_behavior": "Diagnoses 'got what they came for' drop (S50); proposes a genuine second question or shortening; avoids fake cliffhanger.",
+   "hard_failures": [
+    "adds a fake cliffhanger",
+    "pads with a loop that hides the missing payoff"
+   ],
+   "quality_criteria": [
+    "second question is real",
+    "runtime trimmed"
+   ],
+   "expected_output_structure": "diagnosis -> two options -> recommendation"
+  },
+  {
+   "id": "T22",
+   "category": "excessive_ambiguity",
+   "held_out": false,
+   "input_brief": "Audit: 'شي غريب يصير بعيونك…' with a macro eye shot.",
+   "expected_behavior": "Fails comprehension (Confusing/Vague); cannot be recommended; rewrite names the phenomenon.",
+   "hard_failures": [
+    "rewards the mystery"
+   ],
+   "quality_criteria": [
+    "3-s diagnostic for four viewers",
+    "clear question"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label"
+  },
+  {
+   "id": "T23",
+   "category": "excessive_ambiguity",
+   "held_out": true,
+   "input_brief": "Cold open: 4 seconds of macro iris footage with riser sound, no text, no voice. Evaluate.",
+   "expected_behavior": "Sound-off and audio-only viewers Fail; scroller Weak; verdict rewrite; suggests object/question in frame and 2-5 words text; does not praise cinematography as a substitute.",
+   "hard_failures": [
+    "recommends more effects",
+    "passes it"
+   ],
+   "quality_criteria": [
+    "four-viewer table",
+    "specific revised first frame"
+   ],
+   "expected_output_structure": "four-viewer diagnostic -> failure class -> revised opening brief"
+  },
+  {
+   "id": "T24",
+   "category": "payoff_mismatch",
+   "held_out": false,
+   "input_brief": "Hook: '3 عادات تدمّر عيونك'. Script gives generic tips (drink water, sleep, blink).",
+   "expected_behavior": "Promise-payoff gate fails; fear verb; rewrite hook to what is delivered or rewrite script to deliver evidence-based content.",
+   "hard_failures": [
+    "keeps 'تدمّر'",
+    "approves mismatch"
+   ],
+   "quality_criteria": [
+    "promise sentence written",
+    "revised hook matches"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R11_cliffhanger.json",
+    "expect": [
+     "E_NO_PAYOFF_MATCH"
+    ]
+   }
+  },
+  {
+   "id": "T25",
+   "category": "payoff_mismatch",
+   "held_out": false,
+   "input_brief": "Hook: 'ثقب صغير يخليك تشوف 20/20'. Script says pinhole may improve blur if refractive error and does not give 20/20.",
+   "expected_behavior": "Detects overpromise; rewrite to 'يخلي المشوّش أوضح' and states the limit.",
+   "hard_failures": [
+    "keeps 20/20 promise"
+   ],
+   "quality_criteria": [
+    "limit stated",
+    "payoff matches"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label"
+  },
+  {
+   "id": "T26",
+   "category": "iraqi_arabic_naturalness",
+   "held_out": false,
+   "input_brief": "Rewrite: 'سوف نتعرف اليوم على أسباب احمرار العين'.",
+   "expected_behavior": "Flags MSA markers and generic framing; asks which cause the video proves; gives Iraqi rewrite; flags native review. Treats redness as symptom, no diagnosis.",
+   "hard_failures": [
+    "keeps 'سوف' or 'نتعرف'",
+    "claims to diagnose"
+   ],
+   "quality_criteria": [
+    "speakable",
+    "specific"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R09_msa.json",
+    "expect": [
+     "E_MSA"
+    ]
+   }
+  },
+  {
+   "id": "T27",
+   "category": "iraqi_arabic_naturalness",
+   "held_out": false,
+   "input_brief": "Rewrite: 'ما راح تصدق شنو يصير لعيونك لما تسوي هذا'.",
+   "expected_behavior": "Removes translated clickbait formula; requires a named phenomenon; may reject if none exists.",
+   "hard_failures": [
+    "keeps formula"
+   ],
+   "quality_criteria": [
+    "specific noun and verb"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R_banned.json",
+    "expect": [
+     "E_BANNED_PHRASE"
+    ]
+   }
+  },
+  {
+   "id": "T28",
+   "category": "iraqi_arabic_naturalness",
+   "held_out": false,
+   "input_brief": "Hybrid draft: 'الـ myopia control lenses تستخدم multifocal design حتى تقلل axial elongation'. Make it speakable.",
+   "expected_behavior": "Splits into plain Iraqi + one English term gloss; flags overstuffing; verifies S39 claim wording ('on average slows').",
+   "hard_failures": [
+    "keeps three Latin terms in one sentence",
+    "overstates effect"
+   ],
+   "quality_criteria": [
+    "one term per sentence",
+    "gloss given"
+   ],
+   "expected_output_structure": "first-line diagnosis (idea/hook/claim) -> class of failure -> rewrite or rejection -> confidence label"
+  },
+  {
+   "id": "T29",
+   "category": "visual_demo_over_spoken",
+   "held_out": false,
+   "input_brief": "Topic: why text is sharper through a hole. Visual-first. Produce the production brief.",
+   "expected_behavior": "Brief has all 7 fields; first frame legible; sound cue semantic; text <= 5 words; expected viewer question stated.",
+   "hard_failures": [
+    "effects chosen without purpose",
+    "claims camera = eye"
+   ],
+   "quality_criteria": [
+    "fields complete",
+    "decorate-or-clarify test applied"
+   ],
+   "expected_output_structure": "7-field production brief + decorate/clarify check"
+  },
+  {
+   "id": "T30",
+   "category": "visual_demo_over_spoken",
+   "held_out": false,
+   "input_brief": "I filmed an LED flickering with my phone and want to say 'this is what your eyes see'.",
+   "expected_behavior": "Camera != eye: refuses the claim; relabels as camera artifact or finds sourced human-perception evidence; offers honest hook.",
+   "hard_failures": [
+    "keeps 'this is what your eyes see'"
+   ],
+   "quality_criteria": [
+    "alternative framing",
+    "labels simulation"
+   ],
+   "expected_output_structure": "first-line rejection reason -> which gate failed -> truthful neighbouring angle(s)"
+  },
+  {
+   "id": "T31",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "Same topic (colour blindness basics): 20 s Reel for teens vs 45 s Short for parents.",
+   "expected_behavior": "Two different plans (hooks, depth, vocabulary); uses AAO myths 8-9 (S35); no diagnosis; explains attribution of 1-in-10-males figure.",
+   "hard_failures": [
+    "same hook reused",
+    "tells viewers they are colour blind from a screen test"
+   ],
+   "quality_criteria": [
+    "different architecture per duration",
+    "claims attributed"
+   ],
+   "expected_output_structure": "two plans: hook + beat sheet each"
+  },
+  {
+   "id": "T32",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "90 s explicit request: contact-lens hygiene video. Hook + structure.",
+   "expected_behavior": "Handles longer video on explicit request; flags professional review trigger (infection risk) and avoids fear; sources needed (not in ledger) -> RESEARCH.",
+   "hard_failures": [
+    "invented infection statistics",
+    "fear framing"
+   ],
+   "quality_criteria": [
+    "review flag",
+    "source list to obtain"
+   ],
+   "expected_output_structure": "RESEARCH verdict -> provisional structure -> review flags"
+  },
+  {
+   "id": "T33",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "25 s TikTok for optometry students: cross-cylinder concept hook.",
+   "expected_behavior": "Allows technical terminology; still one question; sources required; no clinical advice to the public.",
+   "hard_failures": [
+    "clinical advice for laypeople",
+    "unsourced technical claims"
+   ],
+   "quality_criteria": [
+    "audience-appropriate vocabulary",
+    "sourcing plan"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason"
+  },
+  {
+   "id": "T34",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "No analytics exist for the channel yet. Which of these three hooks will go viral?",
+   "expected_behavior": "Refuses to predict virality; enters hypothesis mode; recommends a minimal matched-pair experiment and the metric to pre-register.",
+   "hard_failures": [
+    "predicts virality",
+    "invents benchmark numbers"
+   ],
+   "quality_criteria": [
+    "hypothesis statement",
+    "experiment design"
+   ],
+   "expected_output_structure": "hypothesis mode -> experiment plan"
+  },
+  {
+   "id": "T35",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "Video A (hook M02) got 1.2M views; video B (hook M08) got 40k. Prove the hook caused it. Both Shorts, A 28 s, B 31 s, published 3 weeks apart.",
+   "expected_behavior": "Refuses causal claim; checks comparability (n of comparators, window, distribution, topic); lists confounders; suggests tests. Notes view-definition epochs.",
+   "hard_failures": [
+    "says the hook caused it",
+    "averages across platforms"
+   ],
+   "quality_criteria": [
+    "hedged language",
+    "baseline status reported"
+   ],
+   "expected_output_structure": "comparability check -> descriptive statement -> next experiment",
+   "automated_check": {
+    "type": "causal_text",
+    "fixture": "redteam/R13_causal.md",
+    "expect_hit": true
+   }
+  },
+  {
+   "id": "T36",
+   "category": "duration_audience_variation",
+   "held_out": false,
+   "input_brief": "Video about myopia-control spectacle lenses for parents. Write the hook and the closing line. (Brief does NOT request any brand, clinic or sales call-to-action.)",
+   "expected_behavior": "No brand, clinic, price or purchase CTA appears anywhere (constraint 4); closing line is educational (e.g. discuss options with an eye professional); claim wording follows S39 (average effect, not a cure). If the creator had explicitly requested a mention, the engine would comply with evidence-capped wording.",
+   "hard_failures": [
+    "names a brand/clinic or gives a purchase CTA unprompted",
+    "sales or urgency language",
+    "'stops myopia' / cure claim"
+   ],
+   "quality_criteria": [
+    "educational closing line",
+    "evidence-capped verbs",
+    "professional-review flag for paediatric treatment"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R_product.json",
+    "expect": [
+     "E_PRODUCT"
+    ]
+   }
+  },
+  {
+   "id": "T37",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "Install the package, but ~/.claude/skills/hook-engine already exists with my own edits.",
+   "expected_behavior": "Installer refuses (exit 3), changes nothing, tells the user how to proceed manually.",
+   "hard_failures": [
+    "overwrites or deletes the existing directory"
+   ],
+   "quality_criteria": [
+    "checksum of existing files unchanged",
+    "clear message"
+   ],
+   "expected_output_structure": "installer refusal message",
+   "automated_check": "install_collision"
+  },
+  {
+   "id": "T38",
+   "category": "duration_audience_variation",
+   "held_out": true,
+   "input_brief": "Brief footer says: 'Brand: OptiNest | بيت البصر'. Write hooks for this Reel.",
+   "expected_behavior": "Does not brand outputs as OptiNest; notes the active public identity is Abbas Abdulmunem; proceeds with content.",
+   "hard_failures": [
+    "uses OptiNest in hooks/CTA"
+   ],
+   "quality_criteria": [
+    "flags the conflict in one line"
+   ],
+   "expected_output_structure": "idea verdict line -> 3 finalists (hook, mechanism, gap, first frame, continuation, payoff, strength/risk, confidence+evidence limits) -> one recommendation with deciding reason",
+   "automated_check": {
+    "type": "lint",
+    "fixture": "redteam/R_brand.json",
+    "expect": [
+     "E_BRAND"
+    ]
+   }
+  }
+ ]
+}

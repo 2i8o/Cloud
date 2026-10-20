@@ -1,0 +1,37 @@
+{
+  "_comment": "Template for hook_lint.py input. Replace example values. Scores are 1-5 integers. claim.status: verified | plausible | unverified | contested | false.",
+  "brief": {
+    "subject_terms": ["ثقب", "السطر", "pinhole"],
+    "duration_s": 30,
+    "product_mention_requested": false,
+    "platform": "youtube_shorts"
+  },
+  "sources": {
+    "S45": {"access": "partial_text"},
+    "S46": {"access": "partial_text"}
+  },
+  "diversity_exception": "",
+  "recommended": "B",
+  "candidates": [
+    {
+      "id": "B",
+      "hook_ar": "ثقب بحجم دبوس… والسطر المشوّش يصير واضح.",
+      "gloss_en": "A pin-sized hole makes a blurred line clear.",
+      "mechanism": "M05",
+      "insight_key": "pinhole-sharpens",
+      "tension": "Why does a small hole sharpen a blurred line?",
+      "audience": "Iraqi adults 18-40 who wear or need glasses",
+      "first_frame": "Blurred printed line; a card with a pin hole slides in.",
+      "continuation": "Pinhole blocks peripheral rays so the blur circle shrinks.",
+      "payoff": "Why it works, a safe replication, and what it does and does not tell you.",
+      "payoff_answers_gap": true,
+      "sound_off_ok": true,
+      "scores": {"clarity": 5, "payoff": 4, "curiosity": 4, "relevance": 4, "specificity": 5, "visual": 5, "naturalness": 4, "novelty": 3, "retention": 4, "significance": 3},
+      "claims": [
+        {"text": "Looking through a pinhole reduces blur; improvement suggests refractive error", "source": "S45", "status": "verified", "in_hook": true, "needs_professional_review": false}
+      ],
+      "risk": "Camera footage differs from what the eye sees.",
+      "confidence": "likely"
+    }
+  ]
+}

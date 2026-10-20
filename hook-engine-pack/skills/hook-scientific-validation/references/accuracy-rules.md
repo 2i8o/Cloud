@@ -1,0 +1,51 @@
+# Scientific accuracy rules and claim registry
+
+Applies to every hook, script line, overlay, caption and thumbnail. Entries marked **verified** were read in this project on 2026-10-20 through search-tool page excerpts (full pages may add caveats - re-open before publishing). Registry = *allowed wording*, not a substitute for professional review.
+
+## A. Core rules (restated from the skill)
+1. Verify before any definitive hook. 2. Separate evidence / interpretation / speculation. 3. No exaggerated risk. 4. No behaviour -> disease causal claim without evidence. 5. No misleading before/after. 6. Screening observation != diagnosis. 7. Preserve a standard's meaning and scope. 8. Optometry != Ophthalmology. 9. Flag claims for professional review. 10. Cite. 11. Reject what cannot be substantiated. 12. Compel through overlooked facts, useful demos, or unexpected explanations - never fear.
+
+## B. Optometry vs ophthalmology (do not blur)
+| | Ophthalmologist | Optometrist | Optician |
+|---|---|---|---|
+| Training (AAO description, S36) | MD/DO; medical school + residency; surgery | OD; 4 yrs optometry school after college; "not a medical doctor" in AAO's wording | technician fitting eyewear |
+| Typical role (S36, S37) | diagnoses/treats all eye disease; eye surgery | primary vision care, exams, lens prescription, detection of abnormalities; medication prescribing "in some states" | verifies/fits lenses, frames; no vision testing or Rx |
+Notes: AOA frames doctors of optometry as primary eye-health care providers who "examine, diagnose, treat and manage" eye disorders (S37). The professional bodies **disagree** on scope and training equivalence (S36, S38 vs S37). Hooks must not adjudicate this dispute. Scope in Iraq = **unverified**; ask the creator for the locally correct role description.
+
+## C. Claim registry (allowed wording)
+
+| ID | Topic | Allowed wording | Source / status |
+|---|---|---|---|
+| C01 | Screens and retinal damage | "According to the AAO, so far the evidence shows no meaningful link between blue light (from screens) and damage to human retinas or AMD." | S32 (2025-12-05), S33 verified. Lab/animal blue-light damage studies did not mimic screen exposure (S32). Overexposure to sunlight blue/UV can raise risk (S32). |
+| C02 | Long-term unknowns | "Potential long-term cumulative effects are unknown" (2023 review) | S34 verified. Do not say "100% safe". |
+| C03 | Blue-light glasses | "AAO doesn't recommend special blue-light glasses for computer use; several studies suggest no improvement in eye-strain symptoms." / "A 2023 review found no consistent evidence of benefit for eye strain or disease prevention." | S33, S34 verified. Do not say "useless/scam". |
+| C04 | Why eyes feel tired at screens | "Discomfort is linked to reduced blinking and how devices are used, not to blue light, per AAO." Numbers: "about 15 blinks/min normally; AAO text cites 5-7/min at screens in one page and 'cut in half' in another" | S32 verified; use the softer "roughly halved or more" unless the exact AAO line is re-opened. |
+| C05 | 20-20-20 | "AAO recommends: every 20 minutes look at something 20 feet (6 m) away for 20 seconds." | S33 verified as a recommendation; efficacy evidence **not reviewed** here -> do not say "proven". |
+| C06 | Do glasses weaken eyes? | "AAO: using glasses won't worsen your vision or lead to eye disease." Also: wrong prescription won't damage the eyes but may cause strain/headache. | S35 myths 14-15 verified. Do not extend to children's myopia-control lenses (C09) - those intentionally alter progression. |
+| C07 | 20/20 | "20/20 is the normal reference, not perfect; some people see 20/15." "Top number = your testing distance, bottom = distance at which a person with normal sight reads that line." | S44 verified. "About 35% of adults have 20/20 uncorrected; ~75% corrected" is one clinician's US estimate -> attribute; do not apply to Iraq. |
+| C08 | Snellen geometry | "At 6/6 (20/20) the critical stroke of a letter subtends 1 arcminute; the whole letter 5 arcminutes." | S47 verified. |
+| C09 | Myopia-control spectacle lenses | "A 2025 meta-analysis of 23 RCTs (13,315 children/adolescents) found specialty lenses slowed progression vs single-vision on average: AL -0.15 mm, SER -0.31 D; effect depends on design." | S39 verified (abstract). Not a cure; individual response varies; clinical advice needed. |
+| C10 | Outdoor time and myopia | "A 2024 meta-analysis of 7 RCTs (9,437 children, all conducted in China) found more outdoor time lowered myopia incidence (RR 0.84) and slowed refractive shift." Effect on already-myopic children: mixed (S41). | S40 verified abstract; S41 verified excerpt. UV/sun-safety caveat applies. |
+| C11 | Under/over-correction in myopia | "Trials found under-correcting glasses doesn't slow myopia progression and may speed it." | S41 verified (review excerpt). |
+| C12 | Eye exercises | "AAO: eye exercises will not improve or preserve vision or reduce the need for glasses; exception - convergence insufficiency." | S35 myth 5 verified. |
+| C13 | Pinhole | "Looking through a pinhole reduces blur; if acuity improves, it suggests a refractive error rather than disease - used as a clinical clue, not a diagnosis." | S45, S46 verified. Home demo is illustrative, not a test. |
+| C14 | Sitting close to TV / dim light / computers | "AAO: it can cause strain but does not damage vision." (myth 10, 11, 12) | S35 verified. Sitting close may hint at nearsightedness in kids. |
+| C15 | Carrots | "Vitamin A is needed for vision but carrots won't improve it beyond normal needs." | S35 myth 4 verified. |
+| C16 | Colour blindness | "Most people with colour blindness see partial colour; women can be affected though men are at higher risk; AAO estimates ~1 in 10 males have some colour deficiency." | S35 myths 8-9 verified (AAO's own estimate; epidemiology varies by population -> attribute). |
+| C17 | Sun gazing | "Looking at the sun can permanently damage the retina; only ISO 12312-2 solar viewers are safe." | S35 myth 6 verified. |
+| C18 | ISO 8596 | "ISO 8596:2017 specifies Landolt-ring optotypes and a method for measuring distance acuity; it is neither a clinical-measurement standard nor for certifying blindness." | S42 verified (scope note). |
+| C19 | Line-scoring convention | "In the 1984 ICO visual acuity standard, a line is considered read when more than 50% of its optotypes are read." | S43 verified (hosted copy). Clinical practice varies. |
+| C20 | Driving thresholds | US-specific: "In most US states 20/40 or better is needed for an unrestricted licence." | S44 verified; **not applicable to Iraq** without local source. |
+
+## D. Needs research before use (do not assert)
+Dry-eye mechanisms and screen time - children's screen time and myopia causality - atropine and red-light therapy specifics (outside this project's verification) - contact-lens infection statistics - prevalence figures for Iraq - glaucoma/OCT screening claims - any "X% of people" figure not in section C - evidence on 20-20-20 efficacy - night-mode/sleep effects beyond AAO's advice - eyewear coatings/marketing claims.
+
+## E. Wording patterns
+- "According to [body, year]..." > "Science says...".
+- "On average" for pooled effects; "in these trials" for RCT populations.
+- "Is associated with" for observational links.
+- Replace "destroys / blinds / ruins" with the specific, evidenced consequence (e.g. temporary dryness, strain).
+- Add efficacy: whenever a concern is named, give a realistic action.
+
+## F. Review checklist (copy into the claim table)
+[ ] claim extracted [ ] source opened [ ] exact wording supported [ ] population/date stated [ ] verb capped [ ] no fear/diagnosis [ ] optometry/ophthalmology correct [ ] regional scope checked [ ] professional review flag decided [ ] overlay/caption text included

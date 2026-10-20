@@ -1,0 +1,63 @@
+# Examples - weak -> improved -> strong
+
+All Arabic = draft for creator review. Claims tagged with source IDs are backed by the ledger; **[verify]** = plausible but no source read in this project, so it must pass hook-scientific-validation before use.
+
+## A. Ladders (one idea, three levels)
+
+| # | Idea / mechanism | Weak (why it fails) | Improved | Strong |
+|---|---|---|---|---|
+| 1 | 20/20 meaning - M01 | `شنو سر النظر المثالي؟` (generic, "سر", false premise) | `20/20 مو نظر مثالي.` | `20/20 مو يعني نظرك ممتاز… يعني نظرك عادي. وفي ناس يشوفون أحسن.` S44 |
+| 2 | Glasses myth - M02 | `النظارة تدمّر عيونك؟! الجواب صادم!` (fear + clickbait) | `النظارة تضعّف العين؟ لا.` | `يگولون النظارة تضعّف العين. الأكاديمية الأمريكية لطب العيون تگول: لا. بس في استثناء مهم عند الأطفال… ` S35, S39 (exception must be paid off) |
+| 3 | Pinhole - M05+M11 | `كيف تشتغل العدسة؟` (broad, no image) | `ليش ثقب صغير يحدّ الصورة؟` | (frame 1: blurred line of text; card with pin hole enters) `ثقب بحجم دبوس… والسطر المشوّش يصير واضح.` S45, S46 |
+| 4 | Blink rate - M03 | `الشاشة تخرّب عيونك.` (fear, unsupported) | `ساعة ريلز تقلل رمشك.` | `عيونك تحترق بعد ساعة ريلز؟ مو من الضوء… تغمّض أقل.` S32, S33 [wording: AAO says discomfort is not due to blue light; "reduced blinking" is the reason it names] |
+| 5 | Blue-light glasses - M18 | `الحقيقة عن نظارات الضوء الأزرق!` (empty promise) | `نظارات الضوء الأزرق… شنو يگول البحث؟` | `نظارات الضوء الأزرق تخفف إجهاد العين؟ مراجعة ٢٠٢٣ ما لقت دليل ثابت.` S34 [say "narrative review"; do not call it a meta-analysis] |
+| 6 | Outdoor time - M07 | `اطلع برا يحسن نظرك!` (over-claim) | `وقت برا البيت يقلل خطر قصر النظر عند الأطفال.` | `٧ تجارب عشوائية، ٩٤٠٠ طفل تقريباً: وقت أكثر برا البيت قلل حدوث قصر النظر. شكد؟ ` S40 [state RR 0.84; population China-only trials; do not extend to adults] |
+| 7 | Myopia-control lenses - M18 | `عدسات سحرية توقف قصر النظر` (false: slow, not stop) | `عدسات خاصة تبطّئ قصر النظر عند الأطفال.` | `٢٣ تجربة، ١٣ ألف طفل: عدسات خاصة تبطّئ تقدّم قصر النظر بمتوسط ٠.٣ دايوبتر. مو توقفه.` S39 [average; design-specific effects differ] |
+| 8 | Sitting close to TV - M09 | `طفلك يخرّب عيونه!` | `طفلك يگعد گريب من التلفزيون؟` | `يگعد گريب من التلفزيون؟ ما يخرّب عيونه… بس ممكن يحتاج نظارة.` S35 myth 10 |
+| 9 | Eye exercises - M02 | `تمارين تشفي النظر` (REJECT) | - | `تمارين العين تحسّن النظر؟ AAO: لا، إلا بحالة وحدة.` S35 myth 5 (convergence insufficiency) |
+| 10 | Standard line scoring - M01 [verify as demo] | `الفحص صعب` | `شنو يعتبرون السطر مقروء؟` | `بالمعيار، السطر يعتبر مقروء إذا قريت أكثر من نصف حروفه.` S43 (1984 ICO standard text; clinical practice varies - say "بالمعيار") |
+
+## B. Failure patterns (annotate in reviews)
+- **Synonym cloud:** `ليش عيونك تتعب؟` / `شنو سبب تعب العين؟` / `سبب تعب عيونك` -> one insight. Reject two.
+- **Mystery without handle:** `شي غريب يصير بعيونك…` - viewer cannot hold a question.
+- **Giveaway:** `النظارة ما تضعف العين لأن العين ما تتأثر بالعدسة الخارجية` - hook states conclusion and mechanism; nothing left to wait for.
+- **Fear driver:** `الشاشة راح تعميك` - fabricated risk.
+- **Premise rescued by effects:** "add zoom + riser + red flash" to a topic with no insight.
+
+## C. Full worked example - ordinary topic -> 3 hook concepts + retention plan
+Run by the model as a dry run of the pipeline (not published). **Topic:** "20/20 vision".
+
+**Stage 1 brief:** audience = Iraqi adults 18-40 who have heard "20/20"; takeaway = what the number means; duration 30 s; visual = chart + simple pinhole prop; evidence = AAO 20/20 page (S44), Webvision (S47), pinhole sources (S45, S46).
+
+**Stage 2 verdict - weak idea in the first line:** *"20/20 vision" as framed ("what 20/20 means") is a saturated, chart-explainer topic; the problem is the idea, not the wording.* Insight test: X = "20/20 = perfect"; Y = "it's the average-normal reference, many see better, and the chart measures sharpness only, not eye health"; Z = Snellen compares your distance with a reference distance; D = chart. Score ~15/28 -> **RE-ANGLE**. Stronger angles taken forward: (1) the myth in the number; (2) why a pinhole changes the chart result; (3) what the chart cannot tell you. Confidence: **مرجح** (scoring is a judgement aid).
+
+**Stage 3 curiosity map:** believes "20/20 = ideal eyes"; misunderstands "normal" vs "best" and "acuity" vs "eye health"; missing: the two numbers' meaning; accurate surprise: many people exceed 20/20 and ~65% of adults lack it uncorrected (one clinician's US figure in S44 - **مرجح**, do not generalise to Iraq); evidence: chart + AAO quote on screen.
+
+**Stage 7 - three finalists (different mechanisms and insights)**
+
+| | A | B | C |
+|---|---|---|---|
+| Hook (Iraqi) | `20/20 مو يعني نظرك ممتاز… يعني نظرك عادي.` | `ثقب بحجم دبوس… والسطر المشوّش يصير واضح.` | `نتيجة فحص نظرك 20/20؟ هذا ما يعني إن عيونك سليمة.` |
+| Gloss | 20/20 isn't excellent; it's average-normal | A pin-sized hole makes a blurred line clear | A 20/20 score doesn't mean your eyes are healthy |
+| Mechanism / insight | M01 counterintuitive fact / `twenty-twenty-is-normal` | M11+M05 visual reveal + hidden mechanism / `pinhole-sharpens` | M16 challenge to assumption / `acuity-not-health` |
+| Curiosity gap | "If not perfect, then what do the numbers mean?" | "Why does a hole sharpen blur?" | "What can a chart not see?" |
+| First frame | big chart line, 20/20 overlay `≠ مثالي` | blurred text on phone/chart; hand slides in a card with a pin hole | chart line next to retina-photo-style graphic [simulated, labelled] |
+| Continuation | explain top = your distance, bottom = distance a normal-sighted person reads it; 20/15 example | reveal: pinhole blocks peripheral rays, shrinks blur circle; works when blur is refractive | acuity tests sharpness at a distance; a comprehensive exam checks health, depth, pressure etc. [verify and phrase with AAO/AOA wording] |
+| Payoff | the two numbers decoded + "normal != perfect" | mechanism + safe at-home version + "if it sharpens, tell your optometrist; it is not a diagnosis" | why full exams matter, without implying a hidden disease |
+| Risks | low novelty (saturated) | demo captured by camera != eye perception; must film so viewers can replicate on their own screen/card | easy to slip into fear / diagnosis language; needs professional review |
+| Evidence status | S44, S47 - verified | S45, S46 - verified | partially verified; wording needs clinical review |
+| Confidence | مرجح | مرجح | تخمين |
+
+**Recommendation: B.** Reason: visual mechanism in frame 1, strongest sourced payoff, lowest ethics risk, most different from saturated chart explainers. What would change it: if the pinhole cannot be filmed legibly, fall back to A with a new visual.
+
+**Stage 6 retention plan for B (30 s; timings are a hypothesis to test, not a law)**
+- 0-2 s: blurred line; card slides in; line becomes readable. Voice: hook. On-screen: `ثقب = وضوح` (<= 3 words).
+- 2-8 s: *Question sharpened:* "ليش؟" -> show the blur-circle animation (rays from far object, lens, retina) - signal: label "صورة مشوّشة / ثقب".
+- 8-18 s: *Mechanism:* pinhole removes peripheral rays so the blur circle shrinks (S46). Escalation: pupil analogy - bright light, small pupil, slightly sharper (S46). Intermediate reveal: "ولهذا يستعملونه بالفحص".
+- 18-25 s: *Meaning:* if vision improves through a pinhole, it suggests the blur is refractive rather than a disease of the eye - clinically a clue, not a diagnosis (S45, S46).
+- 25-30 s: *Close:* one honest line + a re-hook to the next video (e.g. the 20/20 numbers) - an invitation, not a cliffhanger. 
+- Secondary question allowed: ONE ("ليش بالضوء القوي أحسن؟") - answered by beat 18.
+- Payoff check: hook promised "ثقب -> واضح"; payoff = why, with safe replication. Match: yes.
+- Open loops: 1 (the "why"), closed at ~15 s. No dangling threads.
+
+Dry-run limits: figures and wording above were checked against the sources listed; Iraqi phrasing is unreviewed; timings untested.

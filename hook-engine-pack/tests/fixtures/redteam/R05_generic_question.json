@@ -1,0 +1,148 @@
+{
+ "brief": {
+  "subject_terms": [
+   "ثقب",
+   "pinhole"
+  ],
+  "duration_s": 30,
+  "platform": "youtube_shorts"
+ },
+ "sources": {
+  "S44": {
+   "access": "partial_text"
+  },
+  "S45": {
+   "access": "partial_text"
+  },
+  "S46": {
+   "access": "partial_text"
+  },
+  "S35": {
+   "access": "partial_text"
+  },
+  "S32": {
+   "access": "partial_text"
+  },
+  "S39": {
+   "access": "abstract_only"
+  },
+  "S50": {
+   "access": "not_accessed"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "B",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "20/20 مو يعني نظرك ممتاز… يعني نظرك عادي.",
+   "gloss_en": "(gloss)",
+   "mechanism": "M01",
+   "insight_key": "twenty-twenty-is-normal",
+   "tension": "q",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Big chart line with 20/20 overlay and a not-equal sign",
+   "continuation": "Top number = your distance; bottom = distance a normal-sighted person reads the line; 20/15 example",
+   "payoff": "The two numbers decoded and why normal is not perfect",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 4,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
+    {
+     "text": "20/20 is normal, not perfect",
+     "source": "S44",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "r",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "هل تعلم كيف تشوف عيونك؟",
+   "gloss_en": "(gloss)",
+   "mechanism": "M05",
+   "insight_key": "pinhole-sharpens",
+   "tension": "q",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Blurred printed line; card with pin hole slides in",
+   "continuation": "Pinhole blocks peripheral rays so the blur circle shrinks",
+   "payoff": "Why it works, safe replication, what it does not prove",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 4,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
+    {
+     "text": "Pinhole improvement suggests refractive error, not a diagnosis",
+     "source": "S45",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "r",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "نتيجة فحص نظرك 20/20؟ هذا ما يعني إن عيونك سليمة.",
+   "gloss_en": "(gloss)",
+   "mechanism": "M16",
+   "insight_key": "acuity-not-health",
+   "tension": "q",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Chart line beside an exam-room object",
+   "continuation": "Acuity measures sharpness at distance; an exam checks more",
+   "payoff": "Why a full exam still matters, without fear",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 4,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
+    {
+     "text": "20/20 acuity does not replace a comprehensive eye exam",
+     "source": "S44",
+     "status": "plausible",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "r",
+   "confidence": "likely"
+  }
+ ]
+}

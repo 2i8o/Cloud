@@ -1,0 +1,150 @@
+{
+ "brief": {
+  "subject_terms": [
+   "النظارة",
+   "عيون",
+   "عدسات",
+   "العين"
+  ],
+  "duration_s": 30,
+  "platform": "instagram_reels"
+ },
+ "sources": {
+  "S44": {
+   "access": "partial_text"
+  },
+  "S45": {
+   "access": "partial_text"
+  },
+  "S46": {
+   "access": "partial_text"
+  },
+  "S35": {
+   "access": "partial_text"
+  },
+  "S32": {
+   "access": "partial_text"
+  },
+  "S39": {
+   "access": "abstract_only"
+  },
+  "S50": {
+   "access": "not_accessed"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "يگولون النظارة تضعّف العين. الأكاديمية الأمريكية لطب العيون تگول: لا.",
+   "gloss_en": "(gloss)",
+   "mechanism": "M02",
+   "insight_key": "glasses-dont-weaken",
+   "tension": "q",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Parent-and-child glasses shot with the claim on screen",
+   "continuation": "AAO statement on screen; then the nuance about children's myopia-control lenses",
+   "payoff": "What glasses do and do not change",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 4,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
+    {
+     "text": "AAO: using glasses will not worsen vision or cause eye disease",
+     "source": "S35",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "r",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "عيونك تحترق بعد ساعة ريلز؟ تغمّض أقل من المعتاد.",
+   "gloss_en": "(gloss)",
+   "mechanism": "M03",
+   "insight_key": "blink-rate",
+   "tension": "q",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Close-up of a phone with a blink counter overlay",
+   "continuation": "Blink rate falls during screen use; discomfort tied to use not blue light",
+   "payoff": "A practical break habit",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 4,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
+    {
+     "text": "AAO: discomfort is linked to reduced blinking and device use",
+     "source": "S32",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "r",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "٢٣ تجربة، ١٣ ألف طفل: عدسات خاصة تبطّئ قصر النظر بالمتوسط.",
+   "gloss_en": "(gloss)",
+   "mechanism": "M18",
+   "insight_key": "myopia-lenses-slow",
+   "tension": "q",
+   "audience": "Iraqi adults 18-40",
+   "first_frame": "Number counter then lens close-up",
+   "continuation": "Average effect on axial length and refraction; design differences",
+   "payoff": "Not a cure; clinical advice needed",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "scores": {
+    "clarity": 5,
+    "payoff": 4,
+    "curiosity": 4,
+    "relevance": 4,
+    "specificity": 4,
+    "visual": 4,
+    "naturalness": 4,
+    "novelty": 3,
+    "retention": 4,
+    "significance": 3
+   },
+   "claims": [
+    {
+     "text": "23 RCTs: specialty lenses slow progression on average",
+     "source": "S39",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "r",
+   "confidence": "likely"
+  }
+ ]
+}

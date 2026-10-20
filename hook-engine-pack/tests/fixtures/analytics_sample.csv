@@ -1,0 +1,14 @@
+video_id,platform,publish_date,observation_days,lane,duration_s,hook_mechanism,views,engaged_views,stayed_to_watch_pct,avg_view_duration_s,avg_pct_viewed,skip_rate_pct,retention_3s_pct,completion_pct,shown_in_feed,confounders
+V01,youtube_shorts,2026-02-11,14,vision-myths,25,M02,23000,9600,60,15,55,,,34,65000,
+V02,youtube_shorts,2026-03-12,14,vision-myths,26,M08,26000,10200,62,16,58,,,35,70000,
+V03,youtube_shorts,2026-04-13,14,vision-myths,27,M02,29000,10800,64,17,61,,,36,75000,
+V04,youtube_shorts,2026-05-14,14,vision-myths,28,M08,32000,11400,66,14,64,,,37,80000,
+V05,youtube_shorts,2026-06-15,14,vision-myths,29,M02,35000,12000,68,15,52,,,38,85000,
+V06,youtube_shorts,2026-01-16,14,vision-myths,30,M08,38000,12600,70,16,55,,,33,90000,
+V07,youtube_shorts,2026-02-17,14,vision-myths,31,M02,41000,13200,58,17,58,,,34,95000,
+V08,youtube_shorts,2026-03-18,14,vision-myths,32,M08,44000,13800,60,14,61,,,35,100000,
+V09,youtube_shorts,2026-04-10,14,vision-myths,33,M02,47000,14400,62,15,64,,,36,105000,
+V10,youtube_shorts,2026-05-11,14,vision-myths,34,M08,50000,15000,64,16,52,,,37,110000,
+NEW1,youtube_shorts,2026-10-01,14,vision-myths,30,M05,41000,19500,74,19,66,,,45,80000,trending sound
+SMALL1,instagram_reels,2026-10-02,7,vision-myths,30,M02,9000,,,11,45,38,62,28,,
+IG2,instagram_reels,2026-09-02,7,vision-myths,28,M01,7000,,,10,40,44,56,24,,
