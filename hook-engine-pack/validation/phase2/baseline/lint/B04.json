@@ -1,0 +1,101 @@
+{
+ "brief": {
+  "subject_terms": [
+   "قصر النظر",
+   "عدسات",
+   "طفل"
+  ],
+  "duration_s": 40,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S40": {
+   "access": "abstract_only"
+  },
+  "S41": {
+   "access": "partial_text"
+  },
+  "S39": {
+   "access": "abstract_only"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "B",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "٢٣ تجربة، ١٣ ألف طفل: عدسات خاصة تبطّئ قصر النظر بالمتوسط.",
+   "gloss_en": "23 trials, 13k children: special lenses slow myopia on average.",
+   "mechanism": "M18",
+   "insight_key": "lenses-slow-on-average",
+   "tension": "What does 'slow' mean for my child?",
+   "audience": "Iraqi parents of children 6-12",
+   "first_frame": "Counter animation then lens close-up",
+   "continuation": "Average effect, design differences",
+   "payoff": "Not a cure, ask a professional",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Specialty lenses slow progression on average",
+     "source": "S39",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Number-heavy opening; paediatric advice",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "تقليل قوة نظارة الطفل يبطّئ قصر النظر؟ لا — يمكن العكس.",
+   "gloss_en": "Under-correcting a child's glasses slows myopia? No - maybe the opposite.",
+   "mechanism": "M02",
+   "insight_key": "undercorrection-myth",
+   "tension": "Is that true?",
+   "audience": "Iraqi parents of children 6-12",
+   "first_frame": "Parent adjusting child's glasses (staged)",
+   "continuation": "RCT evidence",
+   "payoff": "Use correct prescription",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Under-correction doesn't slow progression and may accelerate it",
+     "source": "S41",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Review excerpt only",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "وقت أكثر برا البيت يقلل خطر قصر النظر عند الأطفال.",
+   "gloss_en": "More time outdoors lowers myopia risk in children.",
+   "mechanism": "M07",
+   "insight_key": "outdoor-time",
+   "tension": "How much time?",
+   "audience": "Iraqi parents of children 6-12",
+   "first_frame": "Kids playing outdoors",
+   "continuation": "RCT meta-analysis",
+   "payoff": "Evidence + caveats",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "More outdoor time lowers myopia incidence in children",
+     "source": "S40",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Statement hook, no curiosity gap",
+   "confidence": "likely"
+  }
+ ]
+}

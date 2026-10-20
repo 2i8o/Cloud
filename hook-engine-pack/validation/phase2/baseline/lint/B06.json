@@ -1,0 +1,95 @@
+{
+ "brief": {
+  "subject_terms": [
+   "عين",
+   "النقطة",
+   "الصليب"
+  ],
+  "duration_s": 30,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S69": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "غمّض عين، شوف الصليب، وقرّب النقطة… راح تختفي.",
+   "gloss_en": "Close one eye, look at the cross, move the dot closer... it will vanish.",
+   "mechanism": "M10",
+   "insight_key": "blind-spot-demo",
+   "tension": "Why does it vanish?",
+   "audience": "Iraqi 16-45, curious",
+   "first_frame": "Cross and dot on screen",
+   "continuation": "Retina has no photoreceptors at the optic disc",
+   "payoff": "Explanation + filling-in",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Blind spot is where the optic nerve leaves; no photoreceptors",
+     "source": "S69",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Distance/eye instructions must be exact",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "عندك ثقب بنظرك وما تلاحظه.",
+   "gloss_en": "You have a hole in your vision and don't notice.",
+   "mechanism": "M04",
+   "insight_key": "brain-fills-in",
+   "tension": "Why don't I notice?",
+   "audience": "Iraqi 16-45, curious",
+   "first_frame": "Static pattern with a gap",
+   "continuation": "Filling-in",
+   "payoff": "Perceptual completion",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Blind spot appears filled in",
+     "source": "S69",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'ثقب' may alarm; ambiguous",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "الدماغ يخفي حتى فجوات المرض — لهذا الفحص مهم.",
+   "gloss_en": "The brain hides even disease gaps - that's why exams matter.",
+   "mechanism": "M07",
+   "insight_key": "scotoma-filled-in",
+   "tension": "Can I miss a problem?",
+   "audience": "Iraqi 16-45, curious",
+   "first_frame": "Fading spot in a visual field plot",
+   "continuation": "Scotomas filled in",
+   "payoff": "Get checked",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Pathological scotomas are filled in; patients may not notice",
+     "source": "S69",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Fear/diagnostic territory; needs review",
+   "confidence": "likely"
+  }
+ ]
+}

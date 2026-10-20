@@ -1,0 +1,98 @@
+{
+ "brief": {
+  "subject_terms": [
+   "لوحة",
+   "حروف",
+   "السطر"
+  ],
+  "duration_s": 25,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S43": {
+   "access": "partial_text"
+  },
+  "S47": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "ليش حروف لوحة الفحص مربعة وثقيلة؟",
+   "gloss_en": "Why are chart letters blocky and heavy?",
+   "mechanism": "M05",
+   "insight_key": "letter-geometry",
+   "tension": "Why that shape?",
+   "audience": "Iraqi 18-40",
+   "first_frame": "Close-up of chart letters with a 5x5 grid overlay",
+   "continuation": "Stroke = 1/5 height",
+   "payoff": "Geometry tied to 1 arcminute",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Snellen letters: stroke width = 1/5 of letter height",
+     "source": "S47",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'Heavy' is vague",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "السطر يعتبر مقروء إذا قريت أكثر من نصف حروفه.",
+   "gloss_en": "A line counts as read if you read more than half its letters.",
+   "mechanism": "M01",
+   "insight_key": "line-scoring",
+   "tension": "So how 'exact' is 20/20?",
+   "audience": "Iraqi 18-40",
+   "first_frame": "Chart line with some letters struck out",
+   "continuation": "Standard's rule",
+   "payoff": "Scoring conventions vary",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "A line is read if more than 50% of optotypes are correct",
+     "source": "S43",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Practice varies; source host unusual",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "شنو يعني ٦/٦ بالمتر ونفسه ٢٠/٢٠؟",
+   "gloss_en": "What does 6/6 in metres mean, the same as 20/20?",
+   "mechanism": "M08",
+   "insight_key": "notation-6-6",
+   "tension": "Are they the same?",
+   "audience": "Iraqi 18-40",
+   "first_frame": "Two charts labelled 6/6 and 20/20",
+   "continuation": "Feet vs metres",
+   "payoff": "Notation decoded",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "6/6 equals 20/20",
+     "source": "S47",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Low novelty; overlaps the 20/20 theme",
+   "confidence": "likely"
+  }
+ ]
+}

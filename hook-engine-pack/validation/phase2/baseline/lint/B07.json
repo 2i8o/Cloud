@@ -1,0 +1,98 @@
+{
+ "brief": {
+  "subject_terms": [
+   "الألوان",
+   "الأرقام",
+   "اختبار"
+  ],
+  "duration_s": 35,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S73": {
+   "access": "partial_text"
+  },
+  "S35": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "تشوف الرقم بصفحة الألوان؟ هذا مو يعني إنك ما عندك مشكلة ألوان.",
+   "gloss_en": "You see the number on the plate? That doesn't mean you have no colour issue.",
+   "mechanism": "M02",
+   "insight_key": "ishihara-red-green-only",
+   "tension": "What can't it detect?",
+   "audience": "Iraqi adults/parents",
+   "first_frame": "An Ishihara-style plate (own artwork)",
+   "continuation": "Only red-green",
+   "payoff": "Limits",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Ishihara identifies red-green deficiency only",
+     "source": "S73",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Long hook",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "أغلب عمى الألوان يشوف ألوان — مو أبيض وأسود.",
+   "gloss_en": "Most colour blindness still sees colours - not black and white.",
+   "mechanism": "M01",
+   "insight_key": "partial-color",
+   "tension": "So what do they see?",
+   "audience": "Iraqi adults/parents",
+   "first_frame": "Split image: normal vs simulated deficiency (labelled simulation)",
+   "continuation": "Muted red/green",
+   "payoff": "Myth corrected",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Most colour-blind people see partial colour",
+     "source": "S35",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Simulation images can mislead",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "اختبار عمى الألوان أونلاين… يشخّصك لو لا؟",
+   "gloss_en": "Online colour-blind test... does it diagnose you or not?",
+   "mechanism": "M08",
+   "insight_key": "online-test-limits",
+   "tension": "Can I trust it?",
+   "audience": "Iraqi adults/parents",
+   "first_frame": "Phone showing a plate",
+   "continuation": "Cleveland Clinic: can't diagnose",
+   "payoff": "See a professional",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Online tests can't diagnose",
+     "source": "S73",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Generic question form",
+   "confidence": "likely"
+  }
+ ]
+}

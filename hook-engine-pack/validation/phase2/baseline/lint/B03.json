@@ -1,0 +1,98 @@
+{
+ "brief": {
+  "subject_terms": [
+   "نظارات",
+   "الضوء الأزرق",
+   "نظارة"
+  ],
+  "duration_s": 30,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S33": {
+   "access": "partial_text"
+  },
+  "S34": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "مراجعة ٢٠٢٣: ما اكو دليل ثابت إن نظارات الضوء الأزرق تخفف إجهاد العين.",
+   "gloss_en": "2023 review: no consistent evidence blue-light glasses reduce eye strain.",
+   "mechanism": "M18",
+   "insight_key": "no-consistent-evidence",
+   "tension": "So what does help?",
+   "audience": "Iraqi 20-40 considering glasses",
+   "first_frame": "Paper title on screen, then glasses",
+   "continuation": "Review details",
+   "payoff": "What the evidence says and does not",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "2023 review: no consistent evidence for benefit",
+     "source": "S34",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Long hook; narrative review not meta-analysis",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "عيونك تتعب بآخر اليوم؟ قبل لا تشتري نظارة… جرّب هذا.",
+   "gloss_en": "Eyes tired at day's end? Before buying glasses, try this.",
+   "mechanism": "M09",
+   "insight_key": "habits-vs-glasses",
+   "tension": "What is 'this'?",
+   "audience": "Iraqi 20-40 considering glasses",
+   "first_frame": "Person rubbing eyes at a desk",
+   "continuation": "Breaks, blinking, distance",
+   "payoff": "Habits list",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Breaks and blinking reduce screen discomfort",
+     "source": "S33",
+     "status": "plausible",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'قبل لا تشتري' can read as shopping advice; generic",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "إذا تريد تنام أحسن: مو نظارة، وقت الشاشة.",
+   "gloss_en": "Want better sleep: not glasses, screen time.",
+   "mechanism": "M16",
+   "insight_key": "sleep-habits",
+   "tension": "Why does screen timing matter?",
+   "audience": "Iraqi 20-40 considering glasses",
+   "first_frame": "Bedside phone at night",
+   "continuation": "AAO suggests avoiding screens 2-3 h before bed",
+   "payoff": "Sleep advice",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "AAO: avoid screens 2-3 hours before bed",
+     "source": "S33",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Drifts from eye topic; sleep claims need depth",
+   "confidence": "likely"
+  }
+ ]
+}

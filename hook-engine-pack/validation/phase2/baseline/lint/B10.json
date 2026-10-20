@@ -1,0 +1,96 @@
+{
+ "brief": {
+  "subject_terms": [
+   "الجهاز",
+   "فحص",
+   "واحد",
+   "اثنين"
+  ],
+  "duration_s": 30,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S81": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "هالجهاز يسألك \"واحد لو اثنين؟\"… ولا تحتاج تكون متأكد.",
+   "gloss_en": "This machine asks 'one or two?'... and you needn't be sure.",
+   "mechanism": "M13",
+   "insight_key": "unsure-is-fine",
+   "tension": "Why is a guess okay?",
+   "audience": "Iraqi adults, anxious about eye tests",
+   "first_frame": "Phoropter close-up, lenses flipping",
+   "continuation": "Neither is crystal clear; JND",
+   "payoff": "Reassurance + mechanism",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Patients often can't decide; that's expected",
+     "source": "S81",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Trade-journal evidence",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "ليش الدكتور يبدّل العدسات بسرعة؟ لأن الفرق الصغير ما يحسّه أحد.",
+   "gloss_en": "Why does the doctor flip lenses fast? Small differences aren't noticed.",
+   "mechanism": "M05",
+   "insight_key": "just-noticeable-difference",
+   "tension": "Why fast?",
+   "audience": "Iraqi adults, anxious about eye tests",
+   "first_frame": "Lens flipping demonstration",
+   "continuation": "JND",
+   "payoff": "Why quick comparison",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Rapid comparison is used to detect small differences",
+     "source": "S81",
+     "status": "plausible",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'الدكتور' - the examiner may be optometrist",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "شوف السطر… هسه ثاني… أي أوضح؟ هذا نص الفحص.",
+   "gloss_en": "Look at the line... now another... which is clearer? This is half the test.",
+   "mechanism": "M23",
+   "insight_key": "ab-demo",
+   "tension": "Can I do the test?",
+   "audience": "Iraqi adults, anxious about eye tests",
+   "first_frame": "Two blurred versions labelled 1 and 2",
+   "continuation": "Simulate choosing",
+   "payoff": "Why unsure is normal",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "A/B choice is half of the eye test",
+     "source": "S81",
+     "status": "plausible",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Screen simulation is not the test; 'half of the test' unsourced",
+   "confidence": "likely"
+  }
+ ]
+}

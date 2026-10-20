@@ -1,0 +1,115 @@
+{
+ "brief": {
+  "subject_terms": [
+   "ثقب",
+   "السطر",
+   "pinhole"
+  ],
+  "duration_s": 30,
+  "platform": "YouTube Short"
+ },
+ "sources": {
+  "S66": {
+   "access": "partial_text"
+  },
+  "S45": {
+   "access": "partial_text"
+  },
+  "S65": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "ثقب بحجم دبوس… والسطر المشوّش يصير واضح.",
+   "gloss_en": "A pin-sized hole and the blurred line becomes clear.",
+   "mechanism": "M05",
+   "insight_key": "pinhole-sharpens",
+   "tension": "Why does a tiny hole sharpen a blurred line?",
+   "audience": "Iraqi adults 18-40, many wear glasses",
+   "first_frame": "Blurred printed line; card with a pin hole slides in; line sharpens",
+   "continuation": "Blur circle shrinks because peripheral rays are blocked",
+   "payoff": "Mechanism + why clinics use it + what it does and does not tell you",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "A pin-sized hole sharpens blurred text",
+     "source": "S45",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    },
+    {
+     "text": "Improvement suggests refractive error",
+     "source": "S45",
+     "status": "verified",
+     "in_hook": false,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Camera footage differs from the eye",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "هالقرص الأسود بعيادات النظر… شنو يسوي بعيونك؟",
+   "gloss_en": "This black disc in eye clinics - what does it do to your eyes?",
+   "mechanism": "M13",
+   "insight_key": "clinic-occluder-purpose",
+   "tension": "What is the disc for and what does it tell the examiner?",
+   "audience": "Iraqi adults 18-40, many wear glasses",
+   "first_frame": "Hand holds a pinhole occluder disc up to the camera, then to an eye chart",
+   "continuation": "Clinician looks through it to check if blur is refractive",
+   "payoff": "What the test is for and its limits",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Pinhole occluders are used in clinics to test whether blur is refractive",
+     "source": "S45",
+     "status": "verified",
+     "in_hook": false,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Overlaps A's mechanism (same demo)",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "كل ما تصغّر الثقب تشوف أحدّ… لين لحظة معينة وبعدها تنقلب.",
+   "gloss_en": "The smaller the hole, the sharper... until a point, then it reverses.",
+   "mechanism": "M04",
+   "insight_key": "pinhole-tradeoff",
+   "tension": "Why does a smaller hole eventually make things worse?",
+   "audience": "Iraqi adults 18-40, many wear glasses",
+   "first_frame": "Three cards with decreasing hole sizes in a row",
+   "continuation": "Diffraction and less light",
+   "payoff": "Optimal size around 1 mm and the trade-off",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Holes below ~0.75 mm cause diffraction blur",
+     "source": "S66",
+     "status": "verified",
+     "in_hook": false,
+     "needs_professional_review": false
+    },
+    {
+     "text": "Clinical pinhole about 1.2 mm",
+     "source": "S65",
+     "status": "verified",
+     "in_hook": false,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Hole sizes hard to film",
+   "confidence": "likely"
+  }
+ ]
+}

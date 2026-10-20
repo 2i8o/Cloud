@@ -1,0 +1,98 @@
+{
+ "brief": {
+  "subject_terms": [
+   "العدسات",
+   "النوم",
+   "عدسة"
+  ],
+  "duration_s": 35,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S76": {
+   "access": "partial_text"
+  },
+  "S75": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "النوم بالعدسات اللاصقة يرفع خطر التهاب القرنية ٦ إلى ٨ أضعاف.",
+   "gloss_en": "Sleeping in contacts raises corneal infection risk 6-8x.",
+   "mechanism": "M03",
+   "insight_key": "sleep-risk-6-8x",
+   "tension": "How serious?",
+   "audience": "Iraqi 18-35 lens wearers",
+   "first_frame": "Case with lenses on a bedside table",
+   "continuation": "CDC figures",
+   "payoff": "Habit change",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Sleeping in lenses raises infection risk six- to eightfold",
+     "source": "S76",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Fear-adjacent; US observational data",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "نمت بالعدسات مرة؟ ثلث لابسي العدسات يسوونها.",
+   "gloss_en": "Slept in lenses once? A third of wearers do.",
+   "mechanism": "M09",
+   "insight_key": "common-behavior",
+   "tension": "Is it that common?",
+   "audience": "Iraqi 18-35 lens wearers",
+   "first_frame": "Person yawning with lenses",
+   "continuation": "CDC survey",
+   "payoff": "Risk + habits",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "About one third report sleeping/napping in lenses",
+     "source": "S76",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "US figure for an Iraqi audience",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "عدستك والماي: ليش ممنوع حتى الدش؟",
+   "gloss_en": "Your lens and water: why is even showering discouraged?",
+   "mechanism": "M05",
+   "insight_key": "water-exposure",
+   "tension": "Why is water bad?",
+   "audience": "Iraqi 18-35 lens wearers",
+   "first_frame": "Lens case in a sink",
+   "continuation": "Microbes in tap water",
+   "payoff": "Rules",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "CDC: remove lenses before swimming/showering",
+     "source": "S75",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Same area as A",
+   "confidence": "likely"
+  }
+ ]
+}

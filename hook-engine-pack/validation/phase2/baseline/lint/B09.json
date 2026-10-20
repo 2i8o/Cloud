@@ -1,0 +1,102 @@
+{
+ "brief": {
+  "subject_terms": [
+   "الموبايل",
+   "القراءة",
+   "العدسة",
+   "عدسة"
+  ],
+  "duration_s": 30,
+  "platform": "TikTok"
+ },
+ "sources": {
+  "S73": {
+   "access": "partial_text"
+  },
+  "S79": {
+   "access": "partial_text"
+  },
+  "S78": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "تبعّد الموبايل حتى تقرأ؟ هذا مو مرض… هذا عمر.",
+   "gloss_en": "Holding your phone away to read? It's not a disease - it's age.",
+   "mechanism": "M09",
+   "insight_key": "presbyopia-normal-aging",
+   "tension": "What changed?",
+   "audience": "Iraqi 38-55",
+   "first_frame": "Person extending arm with phone",
+   "continuation": "Lens stiffens",
+   "payoff": "Name + correction",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Presbyopia is a normal part of aging",
+     "source": "S78",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "NEI classes it as a refractive error",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "عدسة عيونك تتصلب بعد الأربعين… وهذا يفسر القراية القريبة.",
+   "gloss_en": "Your lens stiffens after 40 - that explains near reading trouble.",
+   "mechanism": "M05",
+   "insight_key": "lens-stiffens",
+   "tension": "How does stiffness block reading?",
+   "audience": "Iraqi 38-55",
+   "first_frame": "Animated lens changing shape",
+   "continuation": "Accommodation",
+   "payoff": "Mechanism",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Lens becomes more rigid after 40",
+     "source": "S79",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Long; vague 'تتصلب'",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "عدسة العين مثل كاميرا بتركيز تلقائي… بعد الأربعين تتعطل.",
+   "gloss_en": "The eye lens is like an autofocus camera... after 40 it breaks.",
+   "mechanism": "M06",
+   "insight_key": "autofocus-analogy",
+   "tension": "What breaks?",
+   "audience": "Iraqi 38-55",
+   "first_frame": "Phone camera focusing then failing",
+   "continuation": "Analogy",
+   "payoff": "Where analogy breaks",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Eye focusing resembles camera autofocus",
+     "source": "S73",
+     "status": "plausible",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "'تتعطل' is overdramatic; analogy misleads",
+   "confidence": "likely"
+  }
+ ]
+}

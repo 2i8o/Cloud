@@ -1,0 +1,98 @@
+{
+ "brief": {
+  "subject_terms": [
+   "عيون",
+   "ريلز",
+   "رمش"
+  ],
+  "duration_s": 25,
+  "platform": "Instagram Reel"
+ },
+ "sources": {
+  "S32": {
+   "access": "partial_text"
+  },
+  "S33": {
+   "access": "partial_text"
+  }
+ },
+ "diversity_exception": "",
+ "recommended": "A",
+ "candidates": [
+  {
+   "id": "A",
+   "hook_ar": "عيونك تحترق بعد ساعة ريلز؟ تغمّض أقل من المعتاد.",
+   "gloss_en": "Eyes burn after an hour of reels? You blink less than usual.",
+   "mechanism": "M03",
+   "insight_key": "blink-rate",
+   "tension": "Why do they burn if screens don't damage them?",
+   "audience": "Iraqi 18-35 heavy phone users",
+   "first_frame": "Close-up of a face scrolling with a blink counter overlay",
+   "continuation": "Blink rate falls during screen use",
+   "payoff": "Cause + simple habit",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Discomfort linked to reduced blinking and device use",
+     "source": "S32",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Blink numbers vary between AAO pages",
+   "confidence": "likely"
+  },
+  {
+   "id": "B",
+   "hook_ar": "مو الضوء الأزرق الي يتعب عيونك.",
+   "gloss_en": "It's not the blue light that tires your eyes.",
+   "mechanism": "M02",
+   "insight_key": "blue-light-not-cause",
+   "tension": "If not blue light, what?",
+   "audience": "Iraqi 18-35 heavy phone users",
+   "first_frame": "Phone with a blue-light filter toggled on/off",
+   "continuation": "AAO: discomfort not caused by blue light",
+   "payoff": "Real cause + action",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "Digital eye discomfort is not caused by blue light",
+     "source": "S32",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Same payoff as A",
+   "confidence": "likely"
+  },
+  {
+   "id": "C",
+   "hook_ar": "بعد كل ٢٠ دقيقة شاشة: شوف شي بعيد ٢٠ ثانية.",
+   "gloss_en": "After every 20 minutes of screen: look at something far for 20 seconds.",
+   "mechanism": "M07",
+   "insight_key": "twenty-twenty-twenty",
+   "tension": "Does that really help?",
+   "audience": "Iraqi 18-35 heavy phone users",
+   "first_frame": "Person looks out of a window; timer overlay",
+   "continuation": "AAO recommendation",
+   "payoff": "The habit",
+   "payoff_answers_gap": true,
+   "sound_off_ok": true,
+   "claims": [
+    {
+     "text": "AAO recommends the 20-20-20 rule",
+     "source": "S33",
+     "status": "verified",
+     "in_hook": true,
+     "needs_professional_review": false
+    }
+   ],
+   "risk": "Instruction list, weak curiosity",
+   "confidence": "likely"
+  }
+ ]
+}
