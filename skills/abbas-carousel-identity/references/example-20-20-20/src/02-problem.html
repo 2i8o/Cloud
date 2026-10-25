@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  .slide { background: var(--blue); }
+  .was { top: 132px; right: var(--margin); color: var(--navy); font-size: 60px; font-weight: 500; }
+  .was .strike { position: relative; }
+  .was .strike::after { content: ""; position: absolute; left: -6px; right: -6px; top: 59%; height: 5px; border-radius: 3px; background: var(--white); transform: rotate(-2deg); }
+  .now { top: 206px; right: var(--margin); color: var(--navy); font-size: 132px; font-weight: 700; line-height: 1.12; }
+  .now .w { color: var(--white); }
+  .why { top: 420px; right: var(--margin); color: var(--navy); font-size: 44px; font-weight: 500; line-height: 1.55; }
+  .tag { top: 800px; right: var(--margin); color: var(--blue); font-size: 40px; font-weight: 600; }
+  .sym { top: 870px; right: var(--margin); color: var(--white); font-size: 46px; font-weight: 500; line-height: 1.6; }
+</style></head>
+<body><div class="slide">
+  <svg class="layer" viewBox="0 0 1080 1350">
+    <!-- night plane: the hours that slipped away; a gentle slope, not a wedge -->
+    <path style="fill:var(--navy)" d="M0 690 L1080 760 L1080 1350 L0 1350 Z"/>
+    <!-- phone: upright-ish, crossing the boundary between day and night -->
+    <g transform="translate(205 1010) rotate(-8)">
+      <rect style="fill:var(--navy);stroke:var(--blue)" x="-170" y="-360" width="340" height="700" rx="52" stroke-width="5"/>
+      <rect style="fill:var(--white)" x="-152" y="-342" width="304" height="664" rx="38"/>
+      <rect style="fill:var(--navy)" x="-42" y="-328" width="84" height="22" rx="11"/>
+      <text style="fill:var(--navy)" x="0" y="-170" text-anchor="middle" font-family="Plex Ar" font-weight="600" font-size="112" direction="ltr">2:47</text>
+      <text style="fill:var(--navy)" x="0" y="-112" text-anchor="middle" font-family="Plex Ar" font-weight="500" font-size="30">بعد منتصف الليل</text>
+      <g style="fill:var(--blue)">
+        <circle cx="104" cy="-14" r="22"/>
+        <rect x="-124" y="-28" width="196" height="12" rx="6"/>
+        <rect x="-124" y="-4" width="138" height="10" rx="5"/>
+        <circle cx="104" cy="74" r="22"/>
+        <rect x="-124" y="60" width="172" height="12" rx="6"/>
+        <rect x="-124" y="84" width="106" height="10" rx="5"/>
+      </g>
+    </g>
+  </svg>
+  <div class="abs was"><span class="strike">بس دقيقة…</span></div>
+  <div class="abs now"><span class="brush">صارت</span> <span class="w">ساعتين</span></div>
+  <div class="abs why">شاشة قريبة لساعات،<br>يعني تركيز قريب بلا راحة.</div>
+  <div class="abs tag">والنتيجة: إجهاد العين الرقمي</div>
+  <div class="abs sym">إجهاد وجفاف بالعين،<br>صداع، تشوّش بالرؤية،<br>وألم بالرگبة والكتف.</div>
+  <div class="sig" style="right: var(--margin); color: var(--white);"><span class="dot" style="background:var(--yellow)"></span>عباس عبدالمنعم</div>
+  <div class="pager" style="left: var(--margin); color: var(--navy);">02 / 08</div>
+</div><script src="shaping.js"></script></body></html>

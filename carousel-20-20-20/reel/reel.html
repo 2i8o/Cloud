@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../src/base.css">
+<!--
+  Native 9:16 layout (1080×1920) for Instagram Reels — every scene composed for this canvas, nothing stretched.
+  Safe zone used for text: top ≥ 250, bottom ≤ 1500, and right edge ≤ 940 below y≈1080 (Reels action column).
+  Background art may bleed to all edges.
+-->
+<style>
+  html, body { width: 1080px; height: 1920px; margin: 0; overflow: hidden; background: var(--blue); }
+  .scene { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; }
+  .cam, .dots { position: absolute; inset: 0; width: 1080px; height: 1920px; transform-origin: 540px 900px; }
+  .dots i { position: absolute; left: 0; top: 0; display: block; border-radius: 50%; }
+  svg.layer { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: visible; }
+  svg * { transform-box: view-box; }
+  .ww { display: inline-block; }
+  .brush::before { transform: scaleX(var(--b, 1)); transform-origin: 100% 50%; }
+  .nowrap { white-space: nowrap; }
+  /* signature: one fixed place for the whole Reel, top-left, inside the safe zone */
+  .mast { position: absolute; top: 250px; left: 88px; font-size: 30px; font-weight: 600; display: flex; align-items: center; gap: 12px; direction: rtl; }
+  .mast .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--yellow); }
+  .R { right: 88px; }      /* text above the action column */
+  .RS { right: 140px; }    /* text level with the action column (y > ~1080) */
+  .lbl { font-size: 40px; font-weight: 500; color: var(--navy); }
+
+  /* S1 hook */
+  #s1 .head { top: 380px; font-size: 140px; font-weight: 700; line-height: 1.1; color: var(--navy); }
+  #s1 .rule { top: 724px; font-size: 46px; font-weight: 500; color: var(--navy); }
+  #s1 .rule .num { font-weight: 600; }
+  #s1 .time { top: 930px; left: 220px; width: 640px; text-align: center; color: var(--white); font-size: 124px; font-weight: 500; line-height: 1; letter-spacing: -2px; }
+  #s1 .note { top: 1136px; left: 294px; width: 492px; }
+  #s1 .note .app { display: flex; align-items: center; gap: 14px; color: var(--navy); font-size: 30px; font-weight: 600; }
+  #s1 .note .app .when { margin-right: auto; font-weight: 500; }
+  #s1 .note .t { display: block; margin-top: 14px; color: var(--navy); font-size: 36px; font-weight: 700; line-height: 1.35; }
+  #s1 .note .d { display: block; margin-top: 6px; color: var(--navy); font-size: 35px; font-weight: 500; line-height: 1.45; }
+
+  /* S2 problem */
+  #s2 .was { top: 322px; font-size: 64px; font-weight: 500; color: var(--navy); }
+  #s2 .was .strike { position: relative; }
+  #s2 .was .strike::after { content: ""; position: absolute; left: -6px; right: -6px; top: 59%; height: 6px; border-radius: 3px; background: var(--white); transform: rotate(-2deg) scaleX(var(--s, 1)); transform-origin: 100% 50%; }
+  #s2 .now { top: 398px; font-size: 140px; font-weight: 700; line-height: 1.15; color: var(--navy); }
+  #s2 .now .w { color: var(--white); }
+  #s2 .why { top: 600px; font-size: 44px; font-weight: 500; line-height: 1.55; color: var(--navy); }
+  #s2 .tag { top: 1010px; font-size: 42px; font-weight: 600; color: var(--blue); }
+  #s2 .sym { top: 1080px; font-size: 46px; font-weight: 500; line-height: 1.55; color: var(--white); }
+
+  /* S3 twenty minutes */
+  #s3 .head, #s4 .head, #s5 .head { top: 372px; font-size: 112px; font-weight: 700; line-height: 1.15; color: var(--navy); }
+  #s3 .two { top: 640px; left: 40px; font-size: 600px; font-weight: 700; line-height: 1; color: var(--navy); direction: ltr; }
+  #s3 .note { top: 1364px; font-size: 40px; font-weight: 500; line-height: 1.55; color: var(--navy); }
+  #s3 .note b { font-weight: 700; }
+
+  /* S4 twenty feet */
+  #s4 .head { font-size: 104px; }
+  #s5 .head { top: 394px; }
+  #s4 .big { top: 500px; display: flex; align-items: baseline; gap: 20px; }
+  #s4 .big .n { font-size: 210px; font-weight: 600; line-height: 1; letter-spacing: -4px; color: var(--white); }
+  #s4 .big .u { font-size: 78px; font-weight: 600; color: var(--navy); }
+  #s4 .eq { top: 728px; font-size: 50px; font-weight: 600; color: var(--navy); }
+  #s4 .ex { top: 806px; font-size: 40px; font-weight: 500; line-height: 1.45; color: var(--navy); }
+
+  /* S5 twenty seconds (white) */
+  #s5 .center { left: 340px; width: 400px; top: 790px; text-align: center; }
+  #s5 .center .n { font-size: 220px; font-weight: 600; line-height: 1; letter-spacing: -5px; color: var(--navy); }
+  #s5 .center .u { display: block; font-size: 52px; font-weight: 500; color: var(--navy); margin-top: -4px; }
+  #s5 .center .least { display: inline-block; margin-top: 10px; font-size: 42px; font-weight: 700; color: var(--navy); }
+  #s5 .note { top: 1366px; font-size: 40px; font-weight: 500; line-height: 1.55; color: var(--navy); }
+  #s5 .note b { font-weight: 700; }
+
+  /* S6 full rule — each row on ONE line */
+  #s6 .head { top: 322px; font-size: 88px; font-weight: 700; line-height: 1.2; color: var(--navy); }
+  #s6 .st { display: flex; align-items: center; gap: 30px; white-space: nowrap; }
+  #s6 .st .n { font-size: 150px; font-weight: 600; line-height: .9; letter-spacing: -4px; color: var(--white); }
+  #s6 .st .u { display: block; font-size: 50px; font-weight: 600; line-height: 1.15; color: var(--navy); }
+  #s6 .st .d { display: block; font-size: 40px; font-weight: 500; line-height: 1.4; color: var(--navy); }
+  #s6 .caveat { top: 1190px; width: 852px; font-size: 38px; font-weight: 500; line-height: 1.5; color: var(--navy); }
+  #s6 .caveat b { font-weight: 700; }
+  #s6 .src { top: 1392px; font-size: 26px; font-weight: 500; color: var(--navy); direction: ltr; }
+
+  /* S7 call to action — sends first */
+  #s7 .kick { top: 322px; font-size: 40px; font-weight: 500; color: var(--blue); }
+  #s7 .q { top: 382px; font-size: 100px; font-weight: 700; line-height: 1.26; color: var(--white); }
+  #s7 .cta { top: 1140px; font-size: 76px; font-weight: 700; line-height: 1.25; color: var(--navy); }
+  #s7 .cta2 { top: 1246px; font-size: 44px; font-weight: 500; line-height: 1.5; color: var(--navy); }
+</style></head>
+<body>
+
+<!-- S1 HOOK — first frame already carries the hook -->
+<section class="scene" id="s1" style="background:var(--blue)"><div class="dots" data-scheme="blue" data-seed="1"></div><div class="cam">
+  <svg class="layer" viewBox="0 0 1080 1920">
+    <!-- phone at true proportions (≈0.48), cropped by the frame, not stretched -->
+    <g class="a-phone">
+      <rect style="fill:var(--white)" x="220" y="840" width="640" height="1330" rx="92"/>
+      <rect style="fill:var(--navy)" x="236" y="856" width="608" height="1298" rx="78"/>
+      <rect style="fill:var(--white)" x="490" y="878" width="100" height="26" rx="13"/>
+    </g>
+    <g class="a-note">
+      <rect style="fill:var(--white)" x="262" y="1110" width="556" height="292" rx="40"/>
+      <g transform="translate(762 1164)">
+        <circle style="fill:var(--blue)" r="26"/>
+        <path style="fill:var(--white)" d="M-17 0 C-9 -11 9 -11 17 0 C9 11 -9 11 -17 0 Z"/>
+        <circle style="fill:var(--navy)" r="6.5"/>
+      </g>
+    </g>
+  </svg>
+  <div class="abs lbl R" style="top:322px">طلاب السادس وجماعة الموبايل</div>
+  <div class="abs head R">عيونك<br>دزّتلك <span class="brush">رسالة</span></div>
+  <div class="abs rule R">قاعدة <span class="num">20-20-20</span></div>
+  <div class="abs time num">5:40</div>
+  <div class="abs note">
+    <span class="app"><span style="width:64px"></span>عيونك<span class="when">هسه</span></span>
+    <span class="t">صارلك <span class="num">20</span> دقيقة تباوع للشاشة</span>
+    <span class="d">عندي طلب صغير…<br>ياخذ <span class="brush"><span class="num">20</span> ثانية</span> بس</span>
+  </div>
+</div><div class="mast" style="color:var(--navy)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<!-- S2 PROBLEM -->
+<section class="scene" id="s2" style="background:var(--blue)"><div class="dots" data-scheme="blue" data-seed="2"></div><div class="cam">
+  <svg class="layer" viewBox="0 0 1080 1920">
+    <path class="a-night" style="fill:var(--navy)" d="M0 900 L1080 980 L1080 1920 L0 1920 Z"/>
+    <g class="a-phone"><g transform="translate(220 1500) rotate(-8)">
+      <rect style="fill:var(--white)" x="-210" y="-440" width="420" height="880" rx="64"/>
+      <rect style="fill:var(--navy)" x="-196" y="-426" width="392" height="852" rx="52"/>
+      <rect style="fill:var(--white)" x="-40" y="-410" width="80" height="20" rx="10"/>
+      <text style="fill:var(--white)" x="0" y="-250" text-anchor="middle" font-family="Plex Ar" font-weight="500" font-size="104" direction="ltr">2:47</text>
+      <text style="fill:var(--blue)" x="0" y="-196" text-anchor="middle" font-family="Plex Ar" font-weight="500" font-size="30">بعد منتصف الليل</text>
+    </g></g>
+  </svg>
+  <div class="abs was R"><span class="strike">بس دقيقة…</span></div>
+  <div class="abs now R"><span class="brush">صارت</span> <span class="w">ساعتين</span></div>
+  <div class="abs why R">شاشة قريبة لساعات،<br>يعني تركيز قريب بلا راحة.</div>
+  <div class="abs tag RS">والنتيجة: إجهاد العين الرقمي</div>
+  <div class="abs sym RS">جفاف، صداع،<br>وتشوّش بالرؤية.</div>
+</div><div class="mast" style="color:var(--navy)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<!-- S3 TWENTY MINUTES — the "0" of 20 is the clock -->
+<section class="scene" id="s3" style="background:var(--blue)"><div class="dots" data-scheme="blue" data-seed="3"></div><div class="cam">
+  <div class="abs two">2</div>
+  <svg class="layer" viewBox="0 0 1080 1920">
+    <g class="a-clock"><g transform="translate(676 984)">
+      <circle style="fill:var(--navy)" cx="18" cy="20" r="280"/>
+      <circle style="fill:var(--white)" r="280"/>
+      <path class="a-sector" style="fill:var(--yellow)" d="M0 0 L0 -256 A256 256 0 0 1 221.7 128 Z"/>
+      <g style="stroke:var(--navy)" stroke-linecap="round">
+        <g stroke-width="9"><line x1="0" y1="-264" x2="0" y2="-230"/><line x1="0" y1="264" x2="0" y2="230"/><line x1="264" y1="0" x2="230" y2="0"/><line x1="-264" y1="0" x2="-230" y2="0"/></g>
+        <g stroke-width="4">
+          <line x1="132" y1="-228.6" x2="118" y2="-204.4"/><line x1="228.6" y1="-132" x2="204.4" y2="-118"/>
+          <line x1="228.6" y1="132" x2="204.4" y2="118"/><line x1="132" y1="228.6" x2="118" y2="204.4"/>
+          <line x1="-132" y1="228.6" x2="-118" y2="204.4"/><line x1="-228.6" y1="132" x2="-204.4" y2="118"/>
+          <line x1="-228.6" y1="-132" x2="-204.4" y2="-118"/><line x1="-132" y1="-228.6" x2="-118" y2="-204.4"/>
+        </g>
+        <g class="a-min"><line x1="0" y1="0" x2="180" y2="104" stroke-width="13"/></g>
+        <line x1="0" y1="0" x2="-99" y2="-83" stroke-width="16"/>
+      </g>
+      <circle style="fill:var(--navy)" r="20"/><circle style="fill:var(--white)" r="8"/>
+    </g></g>
+  </svg>
+  <div class="abs lbl R" style="top:322px">الخطوة الأولى</div>
+  <div class="abs head R">كل <span class="num">20</span> دقيقة</div>
+  <div class="abs note RS">شغّل منبّه بالموبايل،<br>لأن <b class="brush">محّد يتذكر</b> وهو غاطس بالدراسة أو بالريلز.</div>
+</div><div class="mast" style="color:var(--navy)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<!-- S4 TWENTY FEET — eye level travels to the horizon -->
+<section class="scene" id="s4" style="background:var(--blue)"><div class="dots" data-scheme="sky" data-seed="4"></div><div class="cam">
+  <svg class="layer" viewBox="0 0 1080 1920">
+    <rect class="a-ground" style="fill:var(--white)" x="-60" y="1000" width="1200" height="980"/>
+    <path class="a-road" style="fill:var(--blue)" d="M300 1000 L-700 1980 L900 1980 Z"/>
+    <g class="a-dash" style="fill:var(--white)">
+      <path d="M297 1022 L303 1022 L302 1040 L295 1040 Z"/><path d="M290 1080 L301 1080 L298 1112 L285 1112 Z"/>
+      <path d="M276 1180 L294 1180 L289 1236 L268 1236 Z"/><path d="M250 1340 L278 1340 L270 1440 L238 1440 Z"/>
+      <path d="M206 1590 L248 1590 L236 1760 L188 1760 Z"/>
+    </g>
+    <line class="a-horizon" style="stroke:var(--navy)" x1="-40" y1="1000" x2="1120" y2="1000" stroke-width="4"/>
+    <g class="a-tree"><g transform="translate(220 1000) scale(1.15)" style="fill:var(--navy)">
+      <rect x="-5" y="-40" width="10" height="40"/><circle cx="0" cy="-62" r="30"/><circle cx="-20" cy="-48" r="20"/><circle cx="20" cy="-48" r="20"/>
+    </g></g>
+    <path class="a-sight" style="stroke:var(--navy)" d="M700 1236 L262 928" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 16" fill="none"/>
+    <circle class="a-sightend" style="fill:var(--white);stroke:var(--navy)" cx="262" cy="928" r="13" stroke-width="4"/>
+    <!-- viewer from behind: natural proportions, cropped by the frame -->
+    <g class="a-person"><g transform="translate(790 1420)">
+      <path style="fill:var(--white)" d="M-290 600 L-280 290 C-268 160 -180 106 -76 92 L76 92 C180 106 268 160 280 290 L290 600 Z"/>
+      <path style="stroke:var(--navy)" d="M-290 600 L-280 290 C-268 160 -180 106 -76 92 L76 92 C180 106 268 160 280 290 L290 600" fill="none" stroke-width="5"/>
+      <path style="fill:var(--skin-shade)" d="M-50 30 L50 30 L56 106 L-56 106 Z"/>
+      <ellipse style="fill:var(--skin-shade)" cx="-106" cy="-64" rx="22" ry="34"/>
+      <path style="fill:var(--navy)" d="M0 -204 C84 -204 112 -136 112 -72 C112 0 72 56 0 56 C-72 56 -112 0 -112 -72 C-112 -136 -84 -204 0 -204 Z"/>
+    </g></g>
+  </svg>
+  <div class="abs lbl R" style="top:322px">الخطوة الثانية</div>
+  <div class="abs head R">باوع على شي بعيد</div>
+  <div class="abs big R"><span class="n num">20</span><span class="u">قدم</span></div>
+  <div class="abs eq R">يعني تقريباً <span class="brush"><span class="num">6</span> متر</span> أو أكثر</div>
+  <div class="abs ex R">شباك، شجرة، آخر الشارع…<br>مو الحايط اللي گدامك.</div>
+</div><div class="mast" style="color:var(--navy)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<!-- S5 TWENTY SECONDS — the quiet white scene -->
+<section class="scene" id="s5" style="background:var(--white)"><div class="dots" data-scheme="white" data-seed="5"></div><div class="cam">
+  <svg class="layer" viewBox="0 0 1080 1920"><g class="a-ticks"></g></svg>
+  <div class="abs lbl R" style="top:322px">الخطوة الثالثة</div>
+  <div class="abs head R">خلّي عيونك ترتاح</div>
+  <div class="abs center"><span class="n num">20</span><span class="u">ثانية</span><span class="least"><span class="brush">على الأقل</span></span></div>
+  <div class="abs note RS">عدّ لـ<span class="num">20</span> بهدوء وإنت تباوع لبعيد،<br>و<b>رمّش على راحتك</b>.</div>
+</div><div class="mast" style="color:var(--navy)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<!-- S6 THE FULL RULE — one line per step, honest footnote as the floor -->
+<section class="scene" id="s6" style="background:var(--blue)"><div class="dots" data-scheme="blue" data-seed="6"></div><div class="cam">
+  <svg class="layer" viewBox="0 0 1080 1920">
+    <path class="a-land" style="fill:var(--white)" d="M-40 1150 C300 1132 720 1146 1120 1180 L1120 1980 L-40 1980 Z"/>
+  </svg>
+  <div class="abs head R">القاعدة كاملة،<br><span class="brush">احفظها</span></div>
+  <div class="abs st R r1" style="top:584px"><span class="n num">20</span><span><span class="u">دقيقة</span><span class="d">كل ما تمر <span class="num">20</span> دقيقة على الشاشة</span></span></div>
+  <div class="abs st R r2" style="top:768px"><span class="n num">20</span><span><span class="u">قدم</span><span class="d">باوع على شي يبعد <span class="num">6</span> متر أو أكثر</span></span></div>
+  <div class="abs st R r3" style="top:952px"><span class="n num">20</span><span><span class="u">ثانية</span><span class="d">لمدة <span class="num">20</span> ثانية على الأقل</span></span></div>
+  <div class="abs caveat RS"><b>للأمانة العلمية:</b> هاي القاعدة تذكير عملي<br>حتى تاخذ استراحة، مو علاج مثبت.<br>والأدلة العلمية على فائدتها لحد الآن محدودة.</div>
+  <div class="abs src RS">AOA · Johnson &amp; Rosenfield, Optom Vis Sci 2023</div>
+</div><div class="mast" style="color:var(--navy)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<!-- S7 CALL TO ACTION — the eyelid closes; "send it to a friend" leads (sends = strongest reach signal) -->
+<section class="scene" id="s7" style="background:var(--blue)"><div class="dots" data-scheme="blue" data-seed="7"></div><div class="cam">
+  <svg class="layer" viewBox="0 0 1080 1920">
+    <path class="a-lid" style="fill:var(--navy)" d="M-40 -60 H1120 V880 C860 1080 220 1080 -40 880 Z"/>
+    <g class="a-lashes" style="stroke:var(--navy)" stroke-width="10" stroke-linecap="round">
+      <line x1="196" y1="988" x2="176" y2="1039"/><line x1="368" y1="1020" x2="360" y2="1076"/>
+      <line x1="540" y1="1030" x2="540" y2="1087"/><line x1="712" y1="1020" x2="720" y2="1076"/>
+      <line x1="884" y1="988" x2="904" y2="1039"/>
+    </g>
+  </svg>
+  <div class="abs kick R">سؤال صريح</div>
+  <div class="abs q R">آخر مرة شِلت<br>عينك من الشاشة،<br>چانت شوكت؟</div>
+  <div class="abs cta RS"><span class="brush">دزّه</span> لصديقك</div>
+  <div class="abs cta2 RS">اللي يدرس من الموبايل،<br>وجاوب بالتعليقات.</div>
+</div><div class="mast" style="color:var(--white)"><span class="dot"></span>عباس عبدالمنعم</div></section>
+
+<script src="../src/shaping.js"></script>
+<script src="reel.js"></script>
+</body></html>

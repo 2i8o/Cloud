@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  /* Concept A — «عيونك دزّتلك رسالة»: the viewer's own lock screen, interrupted by a message from their eyes */
+  .slide { background: var(--blue); }
+  .kicker { top: 116px; right: var(--margin); color: var(--navy); font-size: 40px; font-weight: 500; }
+  .head { top: 172px; right: var(--margin); color: var(--navy); font-size: 132px; font-weight: 700; line-height: 1.12; }
+  .time { top: 710px; left: 100px; width: 660px; text-align: center; color: var(--white); font-size: 132px; font-weight: 500; line-height: 1; letter-spacing: -2px; }
+  /* secondary label: names the topic quietly, under the hook, never competing with it */
+  .rule { top: 492px; right: var(--margin); color: var(--navy); font-size: 46px; font-weight: 500; }
+  .rule .num { font-weight: 600; }
+  .note { top: 898px; left: 164px; width: 532px; }
+  .note .app { display: flex; align-items: center; gap: 14px; color: var(--navy); font-size: 30px; font-weight: 600; }
+  .note .app .when { margin-right: auto; font-weight: 500; }
+  .note .t { display: block; margin-top: 14px; color: var(--navy); font-size: 40px; font-weight: 700; line-height: 1.35; }
+  .note .d { display: block; margin-top: 6px; color: var(--navy); font-size: 38px; font-weight: 500; line-height: 1.45; }
+</style></head>
+<body><div class="slide">
+  <svg class="layer" viewBox="0 0 1080 1350"><g transform="translate(0 34)">
+    <!-- phone: real object, cropped by the bottom edge; neutral time (late night is slide 02's punchline, 2:47) -->
+    <rect style="fill:var(--white)" x="100" y="560" width="660" height="900" rx="88"/>
+    <rect style="fill:var(--navy)" x="116" y="576" width="628" height="880" rx="74"/>
+    <rect style="fill:var(--white)" x="380" y="596" width="100" height="26" rx="13"/>
+    <!-- notification: the one bright surface on the dark screen -->
+    <rect style="fill:var(--white)" x="132" y="836" width="596" height="304" rx="40"/>
+    <!-- sender icon: the eye from the carousel, at notification scale -->
+    <g transform="translate(670 890)">
+      <circle style="fill:var(--blue)" r="26"/>
+      <path style="fill:var(--white)" d="M-17 0 C-9 -11 9 -11 17 0 C9 11 -9 11 -17 0 Z"/>
+      <circle style="fill:var(--navy)" r="6.5"/>
+    </g>
+  </g></svg>
+  <div class="abs kicker">طلاب السادس وجماعة الموبايل</div>
+  <div class="abs head">عيونك<br>دزّتلك <span class="brush">رسالة</span></div>
+  <div class="abs rule">قاعدة <span class="num">20-20-20</span></div>
+  <div class="abs time num">5:40</div>
+  <div class="abs note">
+    <span class="app"><span style="width:64px"></span>عيونك<span class="when">هسه</span></span>
+    <span class="t">صارلك <span class="num">20</span> دقيقة تباوع للشاشة</span>
+    <span class="d">عندي طلب صغير…<br>ياخذ <span class="brush"><span class="num">20</span> ثانية</span> بس</span>
+  </div>
+  <div class="sig" style="right: var(--margin); color: var(--navy);"><span class="dot" style="background:var(--yellow)"></span>عباس عبدالمنعم</div>
+  <div class="pager" style="left: var(--margin); color: var(--navy);">01 / 08</div>
+</div><script src="shaping.js"></script></body></html>

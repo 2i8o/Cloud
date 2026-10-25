@@ -1,0 +1,71 @@
+/* ============================================================
+   Abbas Abdulmunem — Carousel design system (20-20-20)
+   SINGLE SOURCE OF COLOR: every slide, SVG shape and the brush
+   read these variables. No hex values exist anywhere else in src/.
+   ============================================================ */
+
+@font-face { font-family: 'Plex Ar'; font-weight: 400; src: url(../fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Plex Ar'; font-weight: 500; src: url(../fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Plex Ar'; font-weight: 600; src: url(../fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Plex Ar'; font-weight: 700; src: url(../fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F; }
+@font-face { font-family: 'Plex Ar'; font-weight: 400; src: url(../fonts/ibm-plex-sans-arabic-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-05FF, U+2000-200B, U+2010-2BFF; }
+@font-face { font-family: 'Plex Ar'; font-weight: 500; src: url(../fonts/ibm-plex-sans-arabic-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-05FF, U+2000-200B, U+2010-2BFF; }
+@font-face { font-family: 'Plex Ar'; font-weight: 600; src: url(../fonts/ibm-plex-sans-arabic-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-05FF, U+2000-200B, U+2010-2BFF; }
+@font-face { font-family: 'Plex Ar'; font-weight: 700; src: url(../fonts/ibm-plex-sans-arabic-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-05FF, U+2000-200B, U+2010-2BFF; }
+
+:root {
+  /* Brand tokens — see ART-DIRECTION.md §1 for verification status */
+  --blue:   #5599D9;   /* VERIFIED reference */
+  --navy:   #0E2A47;   /* PROVISIONAL — not verified against brand.ts */
+  --yellow: #FFC83D;   /* PROVISIONAL — not verified against brand.ts */
+  --white:  #FFFFFF;   /* standard white; brand token file not available */
+
+  /* Illustration material for the placeholder figure only (not brand colors) */
+  --skin: #E3AE88;
+  --skin-shade: #CB9370;
+
+  --margin: 88px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1350px; }
+body {
+  font-family: 'Plex Ar', sans-serif;
+  direction: rtl;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern";
+}
+.slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; }
+.abs { position: absolute; }
+svg.layer { position: absolute; inset: 0; width: 1080px; height: 1350px; }
+
+/* Typography */
+.num { font-feature-settings: "tnum"; direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* Brush underlay — color comes from --yellow via a mask, so the token drives it */
+.brush { position: relative; display: inline-block; z-index: 0; padding: 0 .12em; }
+.brush::before {
+  content: ""; position: absolute; z-index: -1;
+  left: -.08em; right: -.1em; top: .34em; bottom: .02em;
+  background: var(--yellow);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100' preserveAspectRatio='none'><path d='M6 22 C40 10 90 14 140 9 C200 4 260 12 320 7 C350 5 380 9 396 14 L392 30 C396 46 388 62 394 78 C380 90 340 86 300 92 C240 97 170 90 110 95 C70 98 30 94 8 88 C2 70 10 52 3 38 Z'/></svg>") no-repeat center / 100% 100%;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100' preserveAspectRatio='none'><path d='M6 22 C40 10 90 14 140 9 C200 4 260 12 320 7 C350 5 380 9 396 14 L392 30 C396 46 388 62 394 78 C380 90 340 86 300 92 C240 97 170 90 110 95 C70 98 30 94 8 88 C2 70 10 52 3 38 Z'/></svg>") no-repeat center / 100% 100%;
+}
+
+/* Full-height variant: use when the text color equals the background (e.g. navy on navy) */
+.brush.full::before { top: .08em; bottom: -.04em; left: -.18em; right: -.2em; }
+
+/* IBM Plex Sans Arabic 1.101 ships its tooth+alef-maksura ligatures inside `rlig`
+   (e.g. تى → glyph uniFC74, which reads as «ق»; نى → uniFC8E, reads as «ف»).
+   `rlig` also builds lam-alef (لا), so it must NOT be disabled globally.
+   shaping.js wraps only the affected words in .rlig-off. */
+.rlig-off { font-feature-settings: "kern", "rlig" 0; }
+
+/* Signature — same on every slide */
+.sig {
+  position: absolute; z-index: 5; bottom: 56px; font-size: 30px; font-weight: 600; letter-spacing: .2px;
+  display: flex; align-items: center; gap: 14px;
+}
+.sig .dot { width: 10px; height: 10px; border-radius: 50%; }
+.pager { position: absolute; z-index: 5; top: 60px; font-size: 26px; font-weight: 600; direction: ltr; letter-spacing: 2px; }

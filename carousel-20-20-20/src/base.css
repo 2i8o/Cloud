@@ -64,8 +64,8 @@ svg.layer { position: absolute; inset: 0; width: 1080px; height: 1350px; }
 
 /* Signature — same on every slide */
 .sig {
-  position: absolute; z-index: 5; bottom: 52px; font-size: 26px; font-weight: 600; letter-spacing: .2px;
+  position: absolute; z-index: 5; bottom: 56px; font-size: 30px; font-weight: 600; letter-spacing: .2px;
   display: flex; align-items: center; gap: 14px;
 }
 .sig .dot { width: 10px; height: 10px; border-radius: 50%; }
-.pager { position: absolute; z-index: 5; top: 56px; font-size: 24px; font-weight: 600; direction: ltr; letter-spacing: 2px; }
+.pager { position: absolute; z-index: 5; top: 60px; font-size: 26px; font-weight: 600; direction: ltr; letter-spacing: 2px; }
