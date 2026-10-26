@@ -1,8 +1,9 @@
 // Reel timeline (1080×1920, 30 fps, seamless loop). window.render(t) draws the exact state at time t.
 // Picture, floating dots, camera and every sound cue come from this one file.
 (() => {
-  const FPS = 30, END = 21.6, WIPE = 0.55, LOOP_AT = 21.0;
-  const START = [0, 3.3, 6.3, 8.6, 10.9, 13.2, 17.8];
+  const FPS = 30, END = 33.6, WIPE = 0.9, LOOP_AT = 33.0;
+  const K = 1.2;                          // slow-down factor for every entrance (at / duration / word stagger) — easy-to-read pace
+  const START = [0, 3.5, 8.4, 12.8, 17.2, 21.9, 27.3];   // 14 bars @ 100 BPM = 33.6 s (loop-safe)
   // art-zoom origin per scene; null = no art zoom (S1/S2 phones carry text, S6 is text-led)
   const ZOOM = [null, null, '676px 984px', '300px 1000px', '540px 960px', null, '540px 420px'];
 
@@ -53,9 +54,9 @@
   // ── timeline ──
   const tracks = [], cues = [];
   const add = (scene, sel, at, dur, fx, o = {}) => {
-    const T = START[scene - 1] + at;
+    const T = START[scene - 1] + at * K; dur *= K;
     tracks.push({ scene, sel: `#s${scene} ${sel}`, at: T, dur, fx, o, els: null });
-    if (o.sfx) cues.push({ t: +(T + (o.sfxAt || 0)).toFixed(3), name: o.sfx, gain: o.gain ?? 1 });
+    if (o.sfx) cues.push({ t: +(T + (o.sfxAt || 0) * K).toFixed(3), name: o.sfx, gain: o.gain ?? 1 });
   };
   const cue = (t, name, gain = 1) => cues.push({ t: +t.toFixed(3), name, gain });
 
@@ -111,7 +112,7 @@
     el.setAttribute('d', e <= 0 ? 'M0 0 Z' : `M0 0 L0 ${-r} A${r} ${r} 0 0 1 ${(r * Math.sin(a)).toFixed(2)} ${(-r * Math.cos(a)).toFixed(2)} Z`);
   } });
   add(3, '.a-min', 0.6, 1.0, 'fn', { ease: 'inOut', fn: (el, e) => { el.style.transformOrigin = '0px 0px'; el.style.transform = `rotate(${e * 120 - 120}deg)`; } });
-  for (let i = 0; i < 20; i++) cue(START[2] + 0.6 + 1.0 * (i + .5) / 20, 'tick', .45);
+  for (let i = 0; i < 20; i++) cue(START[2] + K * (0.6 + 1.0 * (i + .5) / 20), 'tick', .45);
   add(3, '.note', 1.3, .45, 'words', { stagger: .04 });
   add(3, '.note .brush', 1.75, .4, 'brush');
 
@@ -139,8 +140,8 @@
   add(5, '.tk', 0.05, .4, 'fade');
   for (let i = 0; i < 20; i++) {
     const at = 0.45 + i * 0.075;
-    if (i < 13) { add(5, `.tk${i}`, at, .1, 'fn', { fn: (el, e) => { el.style.stroke = e >= .5 ? 'var(--navy)' : 'var(--blue)'; } }); cue(START[4] + at + .05, 'click', .5); }
-    else if (i === 13) { add(5, `.tk${i}`, at, .2, 'fn', { fn: (el, e) => { el.style.stroke = e >= .3 ? 'var(--yellow)' : 'var(--blue)'; el.style.strokeWidth = e >= .3 ? 16 : 12; } }); cue(START[4] + at + .06, 'accent', .7); }
+    if (i < 13) { add(5, `.tk${i}`, at, .1, 'fn', { fn: (el, e) => { el.style.stroke = e >= .5 ? 'var(--navy)' : 'var(--blue)'; } }); cue(START[4] + K * (at + .05), 'click', .5); }
+    else if (i === 13) { add(5, `.tk${i}`, at, .2, 'fn', { fn: (el, e) => { el.style.stroke = e >= .3 ? 'var(--yellow)' : 'var(--blue)'; el.style.strokeWidth = e >= .3 ? 16 : 12; } }); cue(START[4] + K * (at + .06), 'accent', .7); }
   }
   add(5, '.center .n', 0.2, .6, 'scale', { from: .8 });
   add(5, '.center .u', 0.4, .45, 'rise', { dy: 16 });
@@ -228,7 +229,7 @@
       const ez = ease[tr.o.ease || 'out'];
       if (tr.fx === 'words') {
         for (const el of tr.els) [...el.querySelectorAll(':scope > .ww')].forEach((w, k) => {
-          const e = ez(clamp((tt - tr.at - k * (tr.o.stagger ?? .08)) / tr.dur));
+          const e = ez(clamp((tt - tr.at - k * K * (tr.o.stagger ?? .08)) / tr.dur));
           w.style.opacity = e; w.style.transform = `translateY(${(1 - e) * (tr.o.dy ?? 30)}px)`;
         });
         continue;
@@ -239,5 +240,13 @@
       for (const el of tr.els) FX[tr.fx](el, e, tr.o);
     }
   };
-  window.TIMELINE = { FPS, END, START, WIPE, LOOP_AT, cues: cues.sort((a, b) => a.t - b.t) };
+  const computeEnds = () => {
+    const ends = START.map(() => 0);
+    for (const tr of tracks) {
+      const n = tr.fx === 'words' ? Math.max(1, ...tr.els.map(e => e.querySelectorAll(':scope > .ww').length)) : 1;
+      ends[tr.scene - 1] = Math.max(ends[tr.scene - 1], tr.at + tr.dur + (tr.fx === 'words' ? (n - 1) * K * (tr.o.stagger ?? .08) : 0));
+    }
+    return ends;
+  };
+  window.TIMELINE = { FPS, END, START, WIPE, LOOP_AT, get ends() { return computeEnds(); }, cues: cues.sort((a, b) => a.t - b.t) };
 })();

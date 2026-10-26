@@ -90,7 +90,8 @@ nbars = int(np.ceil(DUR / BAR)) + 1
 for b in range(nbars):
     t0 = b * BAR
     if t0 >= DUR - 1e-6: break
-    ch = CHORDS[(b // 2) % 4] if (LOOP or t0 < DUR - 4.2) else CHORDS[0]   # loop: ends on A, which resolves to D at the restart
+    ch = CHORDS[(b // 2) % 4] if (LOOP or t0 < DUR - 4.2) else CHORDS[0]
+    if LOOP and t0 >= DUR - 2 * BAR - 1e-6: ch = CHORDS[3]       # loop: last two bars sit on A, which resolves to D at the restart
     # pad: one swell per bar
     n = int((BAR + 1.6) * SR)
     pad = sum(pad_voice(hz(m + 12), n) for m in ch[1:]) * env_adsr(n, 1.1, .8, .8, 1.6)
@@ -172,7 +173,8 @@ PAN = dict(ping=-.15, tick=.2, click=.1, accent=-.2, pop=0, swipe=.15)
 
 # per-effect trims from measured level above the music at each hit (target ≈ +2…+8 dB; ticks/whoosh sit under)
 TRIM = dict(ping=.26, accent=.62, chime=1.0, lid=1.0, swipe=1.0, click=.88, pop=1.57, tick=1.76, whoosh=2.0)
-if LOOP: TRIM['ping'] = .96             # full-level music from the first beat in the loop edit
+if LOOP:                                # full-level music from the first beat: re-trim against the measured balance
+    TRIM.update(ping=.46, swipe=1.5, click=1.15, pop=2.0, tick=2.4, accent=.57, lid=1.2, chime=1.05, whoosh=2.6)
 fx = np.zeros((N, 2))
 for c in TL['cues']:
     place(fx, BANK[c['name']](), c['t'], c['gain'] * TRIM[c['name']], PAN.get(c['name'], 0))

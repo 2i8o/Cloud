@@ -12,7 +12,7 @@ const root = __dirname;
   await p.goto('file://' + path.join(root, 'reel.html'));
   await p.evaluate(() => document.fonts.ready);
   await p.waitForLoadState('networkidle');
-  const TL = await p.evaluate(() => { window.render(0); return window.TIMELINE; });
+  const TL = await p.evaluate(() => { window.render(0); const T = window.TIMELINE; return { ...T, ends: T.ends, cues: T.cues }; });
   fs.writeFileSync(path.join(root, 'cues-reel.json'), JSON.stringify(TL, null, 1));
   const prev = process.argv.indexOf('--preview');
   if (prev > 0) {

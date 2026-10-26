@@ -184,7 +184,7 @@ Reference implementation: `references/example-20-20-20/reel/` (`reel.html`, `ree
    - **Kept clear of all text**, including their drift range, because a dot near Arabic letters reads as a letter dot.
 7. **Algorithm-aware structure.** Per Instagram's head, the top signals are watch time, likes per reach and sends per reach; sends matter most for non-followers.
    - The first frame already carries the hook.
-   - Length about 20 s, with a seamless loop: the last frame equals the first, and the music is an integer number of bars ending on V→I.
+   - Pace for a quick read: entrance times and word stagger ×1.2, 0.9 s scene wipes, every scene holds its full text ≥ 1.7 s (measured: `ends` in the cue file), so about 34 s; the trade-off is a lower completion rate. Seamless loop: the last frame equals the first, and the music is an integer number of bars (14 @ 100 BPM) ending on V→I.
    - "Send it to a friend" (دزّه لصديقك) is the lead CTA.
    - On-screen text throughout, since much viewing is muted.
    - Never trade scientific accuracy for reach. Keep the qualification slide.
